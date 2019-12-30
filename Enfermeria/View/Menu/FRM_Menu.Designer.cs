@@ -37,14 +37,14 @@
             this.btnModificarPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tbMedicamentos = new System.Windows.Forms.TabPage();
-            this.tbPrescripciones = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnBuscarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tbPrescripciones = new System.Windows.Forms.TabPage();
             this.btnBuscarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.subMenu.SuspendLayout();
             this.tbPacientes.SuspendLayout();
@@ -308,9 +308,9 @@
             this.btnBuscarPacientes.Iconimage_Selected = null;
             this.btnBuscarPacientes.IconMarginLeft = 0;
             this.btnBuscarPacientes.IconMarginRight = 0;
-            this.btnBuscarPacientes.IconRightVisible = true;
+            this.btnBuscarPacientes.IconRightVisible = false;
             this.btnBuscarPacientes.IconRightZoom = 0D;
-            this.btnBuscarPacientes.IconVisible = true;
+            this.btnBuscarPacientes.IconVisible = false;
             this.btnBuscarPacientes.IconZoom = 40D;
             this.btnBuscarPacientes.IsTab = true;
             this.btnBuscarPacientes.Location = new System.Drawing.Point(0, 170);
@@ -345,9 +345,9 @@
             this.btnModificarPacientes.Iconimage_Selected = null;
             this.btnModificarPacientes.IconMarginLeft = 0;
             this.btnModificarPacientes.IconMarginRight = 0;
-            this.btnModificarPacientes.IconRightVisible = true;
+            this.btnModificarPacientes.IconRightVisible = false;
             this.btnModificarPacientes.IconRightZoom = 0D;
-            this.btnModificarPacientes.IconVisible = true;
+            this.btnModificarPacientes.IconVisible = false;
             this.btnModificarPacientes.IconZoom = 40D;
             this.btnModificarPacientes.IsTab = true;
             this.btnModificarPacientes.Location = new System.Drawing.Point(0, 85);
@@ -382,9 +382,9 @@
             this.btnAgregarPacientes.Iconimage_Selected = null;
             this.btnAgregarPacientes.IconMarginLeft = 0;
             this.btnAgregarPacientes.IconMarginRight = 0;
-            this.btnAgregarPacientes.IconRightVisible = true;
+            this.btnAgregarPacientes.IconRightVisible = false;
             this.btnAgregarPacientes.IconRightZoom = 0D;
-            this.btnAgregarPacientes.IconVisible = true;
+            this.btnAgregarPacientes.IconVisible = false;
             this.btnAgregarPacientes.IconZoom = 40D;
             this.btnAgregarPacientes.IsTab = true;
             this.btnAgregarPacientes.Location = new System.Drawing.Point(0, 0);
@@ -414,27 +414,6 @@
             this.tbMedicamentos.TabIndex = 2;
             this.tbMedicamentos.Text = "Medicamentos";
             // 
-            // tbPrescripciones
-            // 
-            this.tbPrescripciones.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbPrescripciones.Controls.Add(this.btnBuscarPrescripcion);
-            this.tbPrescripciones.Controls.Add(this.btnModificarPrescripcion);
-            this.tbPrescripciones.Controls.Add(this.btnAgregarPrescripcion);
-            this.tbPrescripciones.Location = new System.Drawing.Point(4, 24);
-            this.tbPrescripciones.Name = "tbPrescripciones";
-            this.tbPrescripciones.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPrescripciones.Size = new System.Drawing.Size(241, 609);
-            this.tbPrescripciones.TabIndex = 3;
-            this.tbPrescripciones.Text = "Prescripciones";
-            // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(504, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(571, 606);
-            this.panel2.TabIndex = 2;
-            // 
             // btnBuscarMedicamentos
             // 
             this.btnBuscarMedicamentos.Active = false;
@@ -453,9 +432,9 @@
             this.btnBuscarMedicamentos.Iconimage_Selected = null;
             this.btnBuscarMedicamentos.IconMarginLeft = 0;
             this.btnBuscarMedicamentos.IconMarginRight = 0;
-            this.btnBuscarMedicamentos.IconRightVisible = true;
+            this.btnBuscarMedicamentos.IconRightVisible = false;
             this.btnBuscarMedicamentos.IconRightZoom = 0D;
-            this.btnBuscarMedicamentos.IconVisible = true;
+            this.btnBuscarMedicamentos.IconVisible = false;
             this.btnBuscarMedicamentos.IconZoom = 40D;
             this.btnBuscarMedicamentos.IsTab = true;
             this.btnBuscarMedicamentos.Location = new System.Drawing.Point(0, 170);
@@ -490,9 +469,9 @@
             this.btnModificarMedicamentos.Iconimage_Selected = null;
             this.btnModificarMedicamentos.IconMarginLeft = 0;
             this.btnModificarMedicamentos.IconMarginRight = 0;
-            this.btnModificarMedicamentos.IconRightVisible = true;
+            this.btnModificarMedicamentos.IconRightVisible = false;
             this.btnModificarMedicamentos.IconRightZoom = 0D;
-            this.btnModificarMedicamentos.IconVisible = true;
+            this.btnModificarMedicamentos.IconVisible = false;
             this.btnModificarMedicamentos.IconZoom = 40D;
             this.btnModificarMedicamentos.IsTab = true;
             this.btnModificarMedicamentos.Location = new System.Drawing.Point(0, 85);
@@ -527,9 +506,9 @@
             this.btnAgregarMedicamentos.Iconimage_Selected = null;
             this.btnAgregarMedicamentos.IconMarginLeft = 0;
             this.btnAgregarMedicamentos.IconMarginRight = 0;
-            this.btnAgregarMedicamentos.IconRightVisible = true;
+            this.btnAgregarMedicamentos.IconRightVisible = false;
             this.btnAgregarMedicamentos.IconRightZoom = 0D;
-            this.btnAgregarMedicamentos.IconVisible = true;
+            this.btnAgregarMedicamentos.IconVisible = false;
             this.btnAgregarMedicamentos.IconZoom = 40D;
             this.btnAgregarMedicamentos.IsTab = true;
             this.btnAgregarMedicamentos.Location = new System.Drawing.Point(0, 0);
@@ -545,6 +524,19 @@
             this.btnAgregarMedicamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarMedicamentos.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAgregarMedicamentos.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // tbPrescripciones
+            // 
+            this.tbPrescripciones.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbPrescripciones.Controls.Add(this.btnBuscarPrescripcion);
+            this.tbPrescripciones.Controls.Add(this.btnModificarPrescripcion);
+            this.tbPrescripciones.Controls.Add(this.btnAgregarPrescripcion);
+            this.tbPrescripciones.Location = new System.Drawing.Point(4, 24);
+            this.tbPrescripciones.Name = "tbPrescripciones";
+            this.tbPrescripciones.Padding = new System.Windows.Forms.Padding(3);
+            this.tbPrescripciones.Size = new System.Drawing.Size(241, 609);
+            this.tbPrescripciones.TabIndex = 3;
+            this.tbPrescripciones.Text = "Prescripciones";
             // 
             // btnBuscarPrescripcion
             // 
@@ -564,9 +556,9 @@
             this.btnBuscarPrescripcion.Iconimage_Selected = null;
             this.btnBuscarPrescripcion.IconMarginLeft = 0;
             this.btnBuscarPrescripcion.IconMarginRight = 0;
-            this.btnBuscarPrescripcion.IconRightVisible = true;
+            this.btnBuscarPrescripcion.IconRightVisible = false;
             this.btnBuscarPrescripcion.IconRightZoom = 0D;
-            this.btnBuscarPrescripcion.IconVisible = true;
+            this.btnBuscarPrescripcion.IconVisible = false;
             this.btnBuscarPrescripcion.IconZoom = 40D;
             this.btnBuscarPrescripcion.IsTab = true;
             this.btnBuscarPrescripcion.Location = new System.Drawing.Point(0, 170);
@@ -601,9 +593,9 @@
             this.btnModificarPrescripcion.Iconimage_Selected = null;
             this.btnModificarPrescripcion.IconMarginLeft = 0;
             this.btnModificarPrescripcion.IconMarginRight = 0;
-            this.btnModificarPrescripcion.IconRightVisible = true;
+            this.btnModificarPrescripcion.IconRightVisible = false;
             this.btnModificarPrescripcion.IconRightZoom = 0D;
-            this.btnModificarPrescripcion.IconVisible = true;
+            this.btnModificarPrescripcion.IconVisible = false;
             this.btnModificarPrescripcion.IconZoom = 40D;
             this.btnModificarPrescripcion.IsTab = true;
             this.btnModificarPrescripcion.Location = new System.Drawing.Point(0, 85);
@@ -638,9 +630,9 @@
             this.btnAgregarPrescripcion.Iconimage_Selected = null;
             this.btnAgregarPrescripcion.IconMarginLeft = 0;
             this.btnAgregarPrescripcion.IconMarginRight = 0;
-            this.btnAgregarPrescripcion.IconRightVisible = true;
+            this.btnAgregarPrescripcion.IconRightVisible = false;
             this.btnAgregarPrescripcion.IconRightZoom = 0D;
-            this.btnAgregarPrescripcion.IconVisible = true;
+            this.btnAgregarPrescripcion.IconVisible = false;
             this.btnAgregarPrescripcion.IconZoom = 40D;
             this.btnAgregarPrescripcion.IsTab = true;
             this.btnAgregarPrescripcion.Location = new System.Drawing.Point(0, 0);
@@ -657,6 +649,14 @@
             this.btnAgregarPrescripcion.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAgregarPrescripcion.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(504, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(571, 606);
+            this.panel2.TabIndex = 2;
+            // 
             // FRM_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -666,6 +666,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.subMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FRM_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
