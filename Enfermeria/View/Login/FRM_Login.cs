@@ -16,7 +16,7 @@ namespace Enfermeria {
         }
 
         public bool VerificarCampos() {
-            return string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text);
+            return string.IsNullOrEmpty(txtUsuario.Text) && string.IsNullOrEmpty(txtContrasenia.Text);
         }
 
         public void MostrarContrasenia() {
@@ -31,8 +31,8 @@ namespace Enfermeria {
         }
 
         public bool VerificarContraseña(DataTable usuario) {
-            byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][3].ToString(), txtContrasenia.Text);
-            return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][4]);
+            byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][4].ToString(), txtContrasenia.Text);
+            return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][5]);
         }
 
         public void EstadoInicial() {
@@ -46,5 +46,11 @@ namespace Enfermeria {
             MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public bool ConfirmarEnvioCodigo() {
+            string message = "¿Seguro que desea recibir un código para restaurar su contraseña?";
+            DialogResult boton = MessageBox.Show(message, "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            return boton == DialogResult.Yes;
+        }
     }
 }
