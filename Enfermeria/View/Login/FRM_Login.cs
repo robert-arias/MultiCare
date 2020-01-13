@@ -30,6 +30,10 @@ namespace Enfermeria {
             return txtUsuario.Text;
         }
 
+        public string GetContrasenia() {
+            return txtContrasenia.Text;
+        }
+
         public bool VerificarContraseña(DataTable usuario) {
             byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][4].ToString(), txtContrasenia.Text);
             return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][5]);

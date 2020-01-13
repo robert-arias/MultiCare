@@ -19,7 +19,7 @@ namespace Enfermeria.Model {
         }
 
         public DataTable GetUsuario(string usuario) {
-            string busqueda = "select * from usuarios where usuario = @usuario";
+            string busqueda = "select nombre, apellidos, correo from usuarios where usuario = @usuario";
             try {
                 sqlConnection.Open();
                 SQLiteCommand command = new SQLiteCommand(busqueda, sqlConnection);
@@ -34,6 +34,30 @@ namespace Enfermeria.Model {
                 Debug.WriteLine(e.ToString());
                 throw;
             }
+        }
+
+        private DataTable GetContrasenia(string usuario) {
+            string busqueda = "select sal, contrasenia from usuarios where usuario = @usuario";
+            try {
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(busqueda, sqlConnection);
+                command.Parameters.AddWithValue("@usuario", usuario);
+                SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter(command);
+                DataTable data = new DataTable();
+                sqlDataAdapter.Fill(data);
+                sqlConnection.Close();
+                return data;
+            }
+            catch (SQLiteException e) {
+                Debug.WriteLine(e.ToString());
+                throw;
+            }
+        }
+
+        public bool VerificarContrasenia(string nombreUsuario, string txtContrasenia) {
+            DataTable usuario = GetContrasenia(nombreUsuario);
+            byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][0].ToString(), txtContrasenia);
+            return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][1]);
         }
 
     }

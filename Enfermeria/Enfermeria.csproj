@@ -58,6 +58,7 @@
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll</HintPath>
@@ -86,6 +87,7 @@
     <Compile Include="Controller\Menu\MenuController.cs" />
     <Compile Include="Model\Conexion.cs" />
     <Compile Include="Model\ConexionUsuarios.cs" />
+    <Compile Include="Model\RecuperacionEmail.cs" />
     <Compile Include="Model\Seguridad.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
@@ -93,6 +95,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\Alerta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Login\Alerta.Designer.cs">
+      <DependentUpon>Alerta.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login\FRM_Login.cs">
       <SubType>Form</SubType>
@@ -111,6 +119,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\Alerta.resx">
+      <DependentUpon>Alerta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login\FRM_Login.resx">
       <DependentUpon>FRM_Login.cs</DependentUpon>

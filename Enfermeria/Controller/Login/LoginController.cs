@@ -2,12 +2,8 @@
 using Enfermeria.Model;
 using Enfermeria.View.Menu;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Enfermeria.Controller.Login {
@@ -16,6 +12,8 @@ namespace Enfermeria.Controller.Login {
         private FRM_Login frm_Login;
         private ConexionUsuarios db;
         private FRM_Menu frm_Menu;
+
+        public string codigo_recuperacion = null;
 
         public LoginController(FRM_Login frm_Login) {
             this.frm_Login = frm_Login;
@@ -46,12 +44,39 @@ namespace Enfermeria.Controller.Login {
         }
 
         private void EnviarCodigo(object sender, EventArgs e) {
-            if (frm_Login.ConfirmarEnvioCodigo()) {
-                frm_Login.btnCancelar.Enabled = false;
-                frm_Login.pbCargando.Visible = true;
-                frm_Login.pbCargando.animated = true;
-                frm_Login.pbCargando.BackColor = Color.GhostWhite;
+            if (!string.IsNullOrEmpty(frm_Login.txtUsuarioRecuperar.Text)) {
+                DataTable usuario = db.GetUsuario(frm_Login.txtUsuarioRecuperar.Text);
+                if (usuario.Rows.Count > 0) {
+                    if (RecuperacionEmail.VerificarConexionInternet()) {
+                        if (frm_Login.ConfirmarEnvioCodigo()) {
+                            frm_Login.btnCancelar.Enabled = false;
+                            frm_Login.pbCargando.Visible = true;
+                            frm_Login.pbCargando.animated = true;
+                            frm_Login.pbCargando.BackColor = Color.GhostWhite;
+
+                            codigo_recuperacion = Seguridad.GetSalt();
+                            if(RecuperacionEmail.EnviarCodigo(frm_Login.GetNombreUsuario(),
+                                (usuario.Rows[0][0].ToString() + " " + usuario.Rows[0][1].ToString()),
+                                usuario.Rows[0][2].ToString(), codigo_recuperacion)) {
+                                frm_Login.MostrarMensaje("Enviado.");
+                            }
+                            else {
+                                frm_Login.MostrarMensaje("Error.");
+                            }
+                        }
+                        else
+                            frm_Login.MostrarMensaje("No se ha enviado el código de recuperación.");
+                    }
+                    else {
+                        BunifuTransition transition = new BunifuTransition();
+                        transition.ShowSync(frm_Login.alertaNoInternet, false, Animation.VertSlide);
+                    }
+                }
+                else
+                    frm_Login.MostrarMensaje("El nombre de usuario ingresado no se encuentra registrado.");
             }
+            else
+                frm_Login.MostrarMensaje("El campo nombre de usuario se encuentra vacío.");
         }
 
         private void RecuperarContrasenia(object sender, EventArgs e) {
@@ -83,7 +108,7 @@ namespace Enfermeria.Controller.Login {
                     if (!string.IsNullOrEmpty(frm_Login.txtContrasenia.Text)) {
                         DataTable usuario = db.GetUsuario(frm_Login.GetNombreUsuario());
                         if (usuario.Rows.Count > 0) {
-                            if (frm_Login.VerificarContraseña(usuario)) {
+                            if (db.VerificarContrasenia(frm_Login.GetNombreUsuario(), frm_Login.GetContrasenia())) {
                                 frm_Login.MostrarMensaje("Hola, " + usuario.Rows[0][0].ToString() + ".\n" +
                                     "Se ha ingresado al sistema correctamente");
                                 frm_Login.EstadoInicial();
