@@ -13,6 +13,7 @@ namespace Enfermeria {
         public FRM_Login() {
             InitializeComponent();
             controlador = new LoginController(this);
+            pbCargando.BackColor = Color.GhostWhite;
         }
 
         public bool VerificarCampos() {

@@ -9,13 +9,25 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Enfermeria.Model {
-    public static class RecuperacionEmail {
+    public class RecuperacionEmail {
+
+        public SmtpClient MailClient;
+
+        public RecuperacionEmail() {
+            string key = File.ReadAllText(@"./scripts/key.dat");
+            string decryptedPasskey = Seguridad.Decrypt(ConfigurationManager.AppSettings["passkey"], key);
+            MailClient = new SmtpClient("smtp.gmail.com", 587) {
+                EnableSsl = true,
+                Credentials = new NetworkCredential(ConfigurationManager.AppSettings["source"],
+                decryptedPasskey)
+            };
+        }
 
         /*
          * Obtenido de:
          * https://stackoverflow.com/questions/2031824/what-is-the-best-way-to-check-for-internet-connectivity-using-net
          */
-        public static bool VerificarConexionInternet() {
+        public bool VerificarConexionInternet() {
             try {
                 using (var client = new WebClient())
                 using (client.OpenRead("http://google.com/generate_204"))
@@ -30,7 +42,7 @@ namespace Enfermeria.Model {
          * Obtenido de:
          * https://stackoverflow.com/questions/17962784/using-mailmessage-to-send-emails-in-c-sharp
          */
-        public static bool EnviarCodigo(string usuario, string nombreCompleto, string correo, string codigo) {
+        public void EnviarCodigo(string usuario, string nombreCompleto, string correo, string codigo) {
             string key = File.ReadAllText(@"./scripts/key.dat");
             string decryptedPasskey = Seguridad.Decrypt(ConfigurationManager.AppSettings["passkey"], key);
 
@@ -39,23 +51,13 @@ namespace Enfermeria.Model {
             emailMessage.To.Add(new MailAddress(correo));
             emailMessage.Subject = "Código de recuperación";
             string body = File.ReadAllText(@"./scripts/recovery-mail.dat").Replace("#NombreCompleto#", nombreCompleto);
+            body = body.Replace("#NombreUsuario#", $"@{usuario}");
+            body = body.Replace("#CorreoElectronico#", $"{correo}");
             emailMessage.Body = body.Replace("#Codigo#", codigo);
             emailMessage.IsBodyHtml = true;
             emailMessage.Priority = MailPriority.Normal;
 
-            SmtpClient MailClient = new SmtpClient("smtp.gmail.com", 587) {
-                EnableSsl = true,
-                Credentials = new NetworkCredential(ConfigurationManager.AppSettings["source"],
-                decryptedPasskey)
-            };
-
-            try {
-                MailClient.Send(emailMessage);
-                return true;
-            } catch (Exception ex) {
-                Console.WriteLine("Exception caught: {0}", ex.ToString());
-                return false;
-            }
+            MailClient.SendMailAsync(emailMessage);
         }
 
     }

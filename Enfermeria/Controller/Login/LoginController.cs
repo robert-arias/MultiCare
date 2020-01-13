@@ -2,8 +2,9 @@
 using Enfermeria.Model;
 using Enfermeria.View.Menu;
 using System;
+using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Net.Mail;
 using System.Windows.Forms;
 
 namespace Enfermeria.Controller.Login {
@@ -12,6 +13,7 @@ namespace Enfermeria.Controller.Login {
         private FRM_Login frm_Login;
         private ConexionUsuarios db;
         private FRM_Menu frm_Menu;
+        private RecuperacionEmail recuperacionEmail;
 
         public string codigo_recuperacion = null;
 
@@ -19,6 +21,7 @@ namespace Enfermeria.Controller.Login {
             this.frm_Login = frm_Login;
             db = new ConexionUsuarios();
             frm_Menu = new FRM_Menu();
+            recuperacionEmail = new RecuperacionEmail();
             AgregarEventos();
         }
 
@@ -32,6 +35,7 @@ namespace Enfermeria.Controller.Login {
             frm_Login.btnEnviarCodigo.Click += new EventHandler(EnviarCodigo);
             frm_Login.btnCancelar.Click += new EventHandler(CancelarEnvioCodigo);
             frm_Menu.FormClosed += Frm_Menu_FormClosed;
+            recuperacionEmail.MailClient.SendCompleted += new SendCompletedEventHandler(CorreoEnviado);
         }
 
         private void CancelarEnvioCodigo(object sender, EventArgs e) {
@@ -47,22 +51,16 @@ namespace Enfermeria.Controller.Login {
             if (!string.IsNullOrEmpty(frm_Login.txtUsuarioRecuperar.Text)) {
                 DataTable usuario = db.GetUsuario(frm_Login.txtUsuarioRecuperar.Text);
                 if (usuario.Rows.Count > 0) {
-                    if (RecuperacionEmail.VerificarConexionInternet()) {
+                    if (recuperacionEmail.VerificarConexionInternet()) {
                         if (frm_Login.ConfirmarEnvioCodigo()) {
                             frm_Login.btnCancelar.Enabled = false;
                             frm_Login.pbCargando.Visible = true;
                             frm_Login.pbCargando.animated = true;
-                            frm_Login.pbCargando.BackColor = Color.GhostWhite;
 
                             codigo_recuperacion = Seguridad.GetSalt();
-                            if(RecuperacionEmail.EnviarCodigo(frm_Login.GetNombreUsuario(),
+                            recuperacionEmail.EnviarCodigo(frm_Login.GetNombreUsuario(),
                                 (usuario.Rows[0][0].ToString() + " " + usuario.Rows[0][1].ToString()),
-                                usuario.Rows[0][2].ToString(), codigo_recuperacion)) {
-                                frm_Login.MostrarMensaje("Enviado.");
-                            }
-                            else {
-                                frm_Login.MostrarMensaje("Error.");
-                            }
+                                usuario.Rows[0][2].ToString(), codigo_recuperacion);
                         }
                         else
                             frm_Login.MostrarMensaje("No se ha enviado el código de recuperación.");
@@ -137,6 +135,19 @@ namespace Enfermeria.Controller.Login {
 
         private void CloseLogin(object sender, EventArgs e) {
             frm_Login.Close();
+        }
+
+        public void CorreoEnviado(object sender, AsyncCompletedEventArgs e) {
+            frm_Login.pbCargando.Visible = false;
+            frm_Login.pbCargando.animated = false;
+            if (e.Error != null) {
+                frm_Login.MostrarMensaje($"Ha ocurrido un error al enviar el enviar el código de recuperación. \n" +
+                    $"El error ocurrido fue: {e.Error.ToString()}");
+            }
+            else {
+                frm_Login.MostrarMensaje("El código de recuperación ha sido enviado con éxito.");
+            }
+            
         }
     }
 }
