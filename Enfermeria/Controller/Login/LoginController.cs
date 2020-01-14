@@ -1,4 +1,5 @@
-﻿using BunifuAnimatorNS;
+﻿using Bunifu.UI.WinForms.BunifuTextbox;
+using BunifuAnimatorNS;
 using Enfermeria.Model;
 using Enfermeria.View.Menu;
 using System;
@@ -34,8 +35,24 @@ namespace Enfermeria.Controller.Login {
             frm_Login.lkRecuperar.Click += new EventHandler(RecuperarContrasenia);
             frm_Login.btnEnviarCodigo.Click += new EventHandler(EnviarCodigo);
             frm_Login.btnCancelar.Click += new EventHandler(CancelarEnvioCodigo);
+            frm_Login.txt1.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
+            frm_Login.txt2.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
+            frm_Login.txt3.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
+            frm_Login.txt4.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
             frm_Menu.FormClosed += Frm_Menu_FormClosed;
             recuperacionEmail.MailClient.SendCompleted += new SendCompletedEventHandler(CorreoEnviado);
+        }
+
+        private void IngresandoCodigo(object sender, KeyPressEventArgs e) {
+            Console.WriteLine(sender == frm_Login.txt1);
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.CambiarFocus(sender, true);
+            }
+
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.CambiarFocus(sender, false);
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
         }
 
         private void CancelarEnvioCodigo(object sender, EventArgs e) {
@@ -137,7 +154,7 @@ namespace Enfermeria.Controller.Login {
             frm_Login.Close();
         }
 
-        public void CorreoEnviado(object sender, AsyncCompletedEventArgs e) {
+        private void CorreoEnviado(object sender, AsyncCompletedEventArgs e) {
             frm_Login.pbCargando.Visible = false;
             frm_Login.pbCargando.animated = false;
             if (e.Error != null) {
