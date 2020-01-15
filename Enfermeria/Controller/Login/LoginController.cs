@@ -59,48 +59,6 @@ namespace Enfermeria.Controller.Login {
             }
         }
 
-        private void IngresandoCodigo1(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
-                frm_Login.txt2.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt1.Text))
-                    frm_Login.txt2.Text = e.KeyChar.ToString();
-            }
-            e.Handled = e.KeyChar == (char)Keys.Space;
-        }
-
-        private void IngresandoCodigo2(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
-                frm_Login.txt3.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt2.Text))
-                    frm_Login.txt3.Text = e.KeyChar.ToString();
-            }
-
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
-                frm_Login.txt1.Focus();
-            }
-            e.Handled = e.KeyChar == (char)Keys.Space;
-        }
-
-        private void IngresandoCodigo3(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
-                frm_Login.txt4.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt3.Text))
-                    frm_Login.txt4.Text = e.KeyChar.ToString();
-            }
-
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
-                frm_Login.txt2.Focus();
-            }
-            e.Handled = e.KeyChar == (char)Keys.Space;
-        }
-
-        private void IngresandoCodigo4(object sender, KeyPressEventArgs e) {
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
-                frm_Login.txt3.Focus();
-            }
-            e.Handled = e.KeyChar == (char)Keys.Space;
-        }
-
         private void CancelarMostrarLogin(object sender, EventArgs e) {
             BunifuTransition transition = new BunifuTransition();
             transition.ShowSync(frm_Login.pLogin, false, Animation.HorizSlide);
@@ -182,23 +140,39 @@ namespace Enfermeria.Controller.Login {
                                 frm_Login.MostrarMensaje("Hola, " + usuario.Rows[0][0].ToString() + ".\n" +
                                     "Se ha ingresado al sistema correctamente");
                                 frm_Login.EstadoInicial();
+                                frm_Login.alertaLogin.Visible = false;
                                 frm_Login.Hide();
                                 frm_Menu.Show();
                             }
-                            else
-                                frm_Login.MostrarMensaje("La contraseña ingresada es incorrecta.");
+                            else {
+                                frm_Login.alertaLogin.CambiarMensaje("Contraseña incorrecta");
+                                BunifuTransition transition = new BunifuTransition();
+                                transition.ShowSync(frm_Login.alertaLogin, false, Animation.VertSlide);
+                            }
                         }
-                        else
-                            frm_Login.MostrarMensaje("El nombre de usuario ingresado no existe en nuestros registros.");
+                        else {
+                            frm_Login.alertaLogin.CambiarMensaje("Usuario no registrado");
+                            BunifuTransition transition = new BunifuTransition();
+                            transition.ShowSync(frm_Login.alertaLogin, false, Animation.VertSlide);
+                        }
                     }
-                    else
-                        frm_Login.MostrarMensaje("El campo contraseña se encuentra vacío.");
+                    else {
+                        frm_Login.alertaLogin.CambiarMensaje("Campo contraseña vacío");
+                        BunifuTransition transition = new BunifuTransition();
+                        transition.ShowSync(frm_Login.alertaLogin, false, Animation.VertSlide);
+                    }
                 }
-                else
-                    frm_Login.MostrarMensaje("El campo nombre de usuario se encuentra vacío.");
+                else {
+                    frm_Login.alertaLogin.CambiarMensaje("Campo nombre de usuario vacío");
+                    BunifuTransition transition = new BunifuTransition();
+                    transition.ShowSync(frm_Login.alertaLogin, false, Animation.VertSlide);
+                }
             }
-            else
-                frm_Login.MostrarMensaje("El campo de nombre de usuario y contraseña se encuentran vacíos.");
+            else {
+                frm_Login.alertaLogin.CambiarMensaje("Nombre de usuario y contraseña vacíos");
+                BunifuTransition transition = new BunifuTransition();
+                transition.ShowSync(frm_Login.alertaLogin, false, Animation.VertSlide);
+            }
         }
 
         private void MostrarContrasenia(object sender, EventArgs e) {
@@ -222,7 +196,49 @@ namespace Enfermeria.Controller.Login {
                 transition.HideSync(frm_Login.pEnviarCodigo, false, Animation.HorizSlide);
                 frm_Login.txt1.Focus();
             }
-            
         }
+
+        private void IngresandoCodigo1(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt2.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt1.Text))
+                    frm_Login.txt2.Text = e.KeyChar.ToString();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void IngresandoCodigo2(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt3.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt2.Text))
+                    frm_Login.txt3.Text = e.KeyChar.ToString();
+            }
+
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt1.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void IngresandoCodigo3(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt4.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt3.Text))
+                    frm_Login.txt4.Text = e.KeyChar.ToString();
+            }
+
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt2.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void IngresandoCodigo4(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt3.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
     }
 }

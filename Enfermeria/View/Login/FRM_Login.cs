@@ -14,6 +14,21 @@ namespace Enfermeria {
             InitializeComponent();
             controlador = new LoginController(this);
             pbCargando.BackColor = Color.GhostWhite;
+            alertaLogin.CambiarImagenWarning();
+        }
+
+        public void ErrorUsuario() {
+            txtUsuario.Reset();
+            txtUsuario.BorderColorIdle = Color.Red;
+            txtUsuario.BorderColorHover = Color.Red;
+            txtUsuario.BorderColorActive = Color.Red;
+        }
+
+        public void ErrorContrasenia() {
+            txtContrasenia.ResetColors();
+            txtContrasenia.BorderColorIdle = Color.Red;
+            txtContrasenia.BorderColorHover = Color.Red;
+            txtContrasenia.BorderColorActive = Color.Red;
         }
 
         public bool VerificarCampos() {
