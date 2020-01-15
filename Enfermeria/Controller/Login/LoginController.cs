@@ -34,34 +34,86 @@ namespace Enfermeria.Controller.Login {
             frm_Login.txtContrasenia.KeyDown += new KeyEventHandler(IngresarEnter);
             frm_Login.lkRecuperar.Click += new EventHandler(RecuperarContrasenia);
             frm_Login.btnEnviarCodigo.Click += new EventHandler(EnviarCodigo);
-            frm_Login.btnCancelar.Click += new EventHandler(CancelarEnvioCodigo);
-            frm_Login.txt1.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
-            frm_Login.txt2.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
-            frm_Login.txt3.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
-            frm_Login.txt4.KeyPress += new KeyPressEventHandler(IngresandoCodigo);
+            frm_Login.btnCancelarEnviarCodigo.Click += new EventHandler(CancelarMostrarLogin);
+            frm_Login.btnCancelarIngresarCodigo.Click += new EventHandler(CancelarMostrarLogin);
+            frm_Login.txt1.KeyPress += new KeyPressEventHandler(IngresandoCodigo1);
+            frm_Login.txt2.KeyPress += new KeyPressEventHandler(IngresandoCodigo2);
+            frm_Login.txt3.KeyPress += new KeyPressEventHandler(IngresandoCodigo3);
+            frm_Login.txt4.KeyPress += new KeyPressEventHandler(IngresandoCodigo4);
+            frm_Login.btnConfirmarCodigo.Click += new EventHandler(VerificarCodigoActivacion);
             frm_Menu.FormClosed += Frm_Menu_FormClosed;
             recuperacionEmail.MailClient.SendCompleted += new SendCompletedEventHandler(CorreoEnviado);
         }
 
-        private void IngresandoCodigo(object sender, KeyPressEventArgs e) {
-            Console.WriteLine(sender == frm_Login.txt1);
-            if (char.IsLetterOrDigit(e.KeyChar)) {
-                frm_Login.CambiarFocus(sender, true);
+        private void VerificarCodigoActivacion(object sender, EventArgs e) {
+            string codigoIngresado = frm_Login.txt1.Text + frm_Login.txt2.Text + frm_Login.txt3.Text +
+                frm_Login.txt4.Text;
+            if (codigoIngresado.Equals(codigo_recuperacion)) {
+                frm_Login.MostrarMensaje("Código correcto");
             }
+            else {
+                frm_Login.alertaCodigoIncorrecto.CambiarImagenWarning();
+                frm_Login.alertaCodigoIncorrecto.CambiarMensaje("El código ingresado es incorrecto");
+                BunifuTransition transition = new BunifuTransition();
+                transition.ShowSync(frm_Login.alertaCodigoIncorrecto, false, Animation.VertSlide);
+            }
+        }
 
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
-                frm_Login.CambiarFocus(sender, false);
+        private void IngresandoCodigo1(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt2.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt1.Text))
+                    frm_Login.txt2.Text = e.KeyChar.ToString();
             }
             e.Handled = e.KeyChar == (char)Keys.Space;
         }
 
-        private void CancelarEnvioCodigo(object sender, EventArgs e) {
+        private void IngresandoCodigo2(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt3.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt2.Text))
+                    frm_Login.txt3.Text = e.KeyChar.ToString();
+            }
+
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt1.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void IngresandoCodigo3(object sender, KeyPressEventArgs e) {
+            if (char.IsLetterOrDigit(e.KeyChar)) {
+                frm_Login.txt4.Focus();
+                if (!string.IsNullOrEmpty(frm_Login.txt3.Text))
+                    frm_Login.txt4.Text = e.KeyChar.ToString();
+            }
+
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt2.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void IngresandoCodigo4(object sender, KeyPressEventArgs e) {
+            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+                frm_Login.txt3.Focus();
+            }
+            e.Handled = e.KeyChar == (char)Keys.Space;
+        }
+
+        private void CancelarMostrarLogin(object sender, EventArgs e) {
             BunifuTransition transition = new BunifuTransition();
             transition.ShowSync(frm_Login.pLogin, false, Animation.HorizSlide);
-            frm_Login.btnCancelar.Enabled = true;
+            frm_Login.pEnviarCodigo.Visible = true;
+            frm_Login.btnCancelarEnviarCodigo.Enabled = true;
             frm_Login.pbCargando.Visible = false;
             frm_Login.pbCargando.animated = false;
             frm_Login.txtUsuarioRecuperar.Text = "";
+            frm_Login.txt1.Text = "";
+            frm_Login.txt2.Text = "";
+            frm_Login.txt3.Text = "";
+            frm_Login.txt4.Text = "";
+            frm_Login.pCodigo.SendToBack();
         }
 
         private void EnviarCodigo(object sender, EventArgs e) {
@@ -69,8 +121,10 @@ namespace Enfermeria.Controller.Login {
                 DataTable usuario = db.GetUsuario(frm_Login.txtUsuarioRecuperar.Text);
                 if (usuario.Rows.Count > 0) {
                     if (recuperacionEmail.VerificarConexionInternet()) {
+                        frm_Login.alertaNoInternet.Visible = false;
                         if (frm_Login.ConfirmarEnvioCodigo()) {
-                            frm_Login.btnCancelar.Enabled = false;
+                            frm_Login.btnCancelarEnviarCodigo.Enabled = false;
+                            frm_Login.btnEnviarCodigo.Enabled = false;
                             frm_Login.pbCargando.Visible = true;
                             frm_Login.pbCargando.animated = true;
 
@@ -100,6 +154,7 @@ namespace Enfermeria.Controller.Login {
             }
             BunifuTransition transition = new BunifuTransition();
             transition.HideSync(frm_Login.pLogin, false, Animation.HorizSlide);
+            frm_Login.txtUsuarioRecuperar.Focus();
         }
 
         private void Frm_Menu_FormClosed(object sender, FormClosedEventArgs e) {
@@ -163,6 +218,9 @@ namespace Enfermeria.Controller.Login {
             }
             else {
                 frm_Login.MostrarMensaje("El código de recuperación ha sido enviado con éxito.");
+                BunifuTransition transition = new BunifuTransition();
+                transition.HideSync(frm_Login.pEnviarCodigo, false, Animation.HorizSlide);
+                frm_Login.txt1.Focus();
             }
             
         }

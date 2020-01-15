@@ -54,27 +54,8 @@ namespace Enfermeria {
         public bool ConfirmarEnvioCodigo() {
             string message = "¿Seguro que desea recibir un código para restaurar su contraseña?";
             DialogResult boton = MessageBox.Show(message, "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
+            
             return boton == DialogResult.Yes;
-        }
-
-        public void CambiarFocus(object sender, bool accion) {
-            if (accion) {
-                if (sender.GetHashCode() == 16454088) //txt1
-                    txt2.Focus();
-                else if (sender.GetHashCode() == 61494432) //txt2
-                    txt3.Focus();
-                else if (sender.GetHashCode() == 46729429) //txt3
-                    txt4.Focus();
-            }
-            else {
-                if (sender.GetHashCode() == 53046711) //txt4
-                    txt3.Focus();
-                else if (sender.GetHashCode() == 46729429) //txt3
-                    txt2.Focus();
-                else if (sender.GetHashCode() == 61494432) //txt2
-                    txt1.Focus();
-            }
         }
     }
 }
