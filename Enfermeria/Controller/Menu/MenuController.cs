@@ -13,20 +13,20 @@ namespace Enfermeria.Controller.Menu {
         private FRM_Menu frm_Menu;
         private FRM_AgregarPaciente frm_AgregarPaciente;
         private FRM_ModificarPaciente frm_ModificarPaciente;
-        private FRM_ConsultarPaciente frm_ConsultarPaciente;
+       // private FRM_ConsultarPaciente frm_ConsultarPaciente;
         private FRM_AgregarMedicamento frm_AgregarMedicamento;
         private FRM_ModificarMedicamento frm_ModificarMedicamento;
-        private FRM_ConsultarMedicamento frm_ConsultarMedicamento;
+      //  private FRM_ConsultarMedicamento frm_ConsultarMedicamento;
         
 
         public MenuController(FRM_Menu frm_Menu) {
             this.frm_Menu = frm_Menu;
             frm_AgregarPaciente = new FRM_AgregarPaciente();
             frm_ModificarPaciente = new FRM_ModificarPaciente();
-            frm_ConsultarPaciente = new FRM_ConsultarPaciente();
+           // frm_ConsultarPaciente = new FRM_ConsultarPaciente();
             frm_AgregarMedicamento = new FRM_AgregarMedicamento();
             frm_ModificarMedicamento = new FRM_ModificarMedicamento();
-            frm_ConsultarMedicamento = new FRM_ConsultarMedicamento();
+          //  frm_ConsultarMedicamento = new FRM_ConsultarMedicamento();
          
             AgregarEventos();
         }
@@ -43,11 +43,11 @@ namespace Enfermeria.Controller.Menu {
             frm_ModificarPaciente.FormClosed += CerrarAgregarPaciente;
 
             frm_Menu.btnBuscarPacientes.Click += new EventHandler(OpenConsultarPaciente);
-            frm_ConsultarPaciente.FormClosed += CerrarConsultarPaciente;
+          //  frm_ConsultarPaciente.FormClosed += CerrarConsultarPaciente;
 
 
             frm_Menu.btnBuscarMedicamentos.Click += new EventHandler(OpenConsultarMedicamento);
-            frm_ConsultarMedicamento.FormClosed += CerrarConsultarMedicamento;
+          //  frm_ConsultarMedicamento.FormClosed += CerrarConsultarMedicamento;
 
             frm_Menu.btnMedicamentos.Click += new EventHandler(CambiarSubMenu);
             frm_Menu.btnAgregarMedicamentos.Click += new EventHandler(OpenAgregarMedicamento);
@@ -119,13 +119,13 @@ namespace Enfermeria.Controller.Menu {
         private void OpenConsultarPaciente(object sender, EventArgs e)
         {
             frm_Menu.Hide();
-            frm_ConsultarPaciente.Show();
+           // frm_ConsultarPaciente.Show();
             //frm_ConsultarPaciente.EstadoInicial();
         }
 
         private void CerrarConsultarPaciente(object sender, EventArgs e)
         {
-            frm_ConsultarPaciente.Hide();
+           // frm_ConsultarPaciente.Hide();
            // frm_ConsultarPaciente.EstadoInicial();
             frm_Menu.Show();
 
@@ -184,13 +184,13 @@ namespace Enfermeria.Controller.Menu {
         private void OpenConsultarMedicamento(object sender, EventArgs e)
         {
             frm_Menu.Hide();
-            frm_ConsultarMedicamento.Show();
+          //  frm_ConsultarMedicamento.Show();
            // frm_ConsultarMedicamento.EstadoInicial();
         }
 
         private void CerrarConsultarMedicamento(object sender, EventArgs e)
         {
-            frm_ConsultarMedicamento.Hide();
+           // frm_ConsultarMedicamento.Hide();
           //  frm_ConsultarMedicamento.EstadoInicial();
             frm_Menu.Show();
 
