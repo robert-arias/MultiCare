@@ -2,6 +2,7 @@
 using Enfermeria.Model;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Enfermeria {
@@ -12,10 +13,27 @@ namespace Enfermeria {
         public FRM_Login() {
             InitializeComponent();
             controlador = new LoginController(this);
+            pbCargando.BackColor = Color.GhostWhite;
+            alertaLogin.CambiarImagenWarning();
+            alertaCambiarContrasenia.CambiarImagenWarning();
         }
 
-        public bool VerificarCampos() {
-            return string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrEmpty(txtContrasenia.Text);
+        public void ErrorUsuario() {
+            txtUsuario.Reset();
+            txtUsuario.BorderColorIdle = Color.Red;
+            txtUsuario.BorderColorHover = Color.Red;
+            txtUsuario.BorderColorActive = Color.Red;
+        }
+
+        public void ErrorContrasenia() {
+            txtContrasenia.ResetColors();
+            txtContrasenia.BorderColorIdle = Color.Red;
+            txtContrasenia.BorderColorHover = Color.Red;
+            txtContrasenia.BorderColorActive = Color.Red;
+        }
+
+        public bool VerificarCamposLogin() {
+            return string.IsNullOrEmpty(txtUsuario.Text) && string.IsNullOrEmpty(txtContrasenia.Text);
         }
 
         public void MostrarContrasenia() {
@@ -29,12 +47,16 @@ namespace Enfermeria {
             return txtUsuario.Text;
         }
 
-        public bool VerificarContraseña(DataTable usuario) {
-            byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][3].ToString(), txtContrasenia.Text);
-            return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][4]);
+        public string GetContrasenia() {
+            return txtContrasenia.Text;
         }
 
-        public void EstadoInicial() {
+        public bool VerificarContraseña(DataTable usuario) {
+            byte[] contrasenaIngresada = Seguridad.EncryptPassword(usuario.Rows[0][4].ToString(), txtContrasenia.Text);
+            return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][5]);
+        }
+
+        public void EstadoInicialLogin() {
             txtUsuario.Text = "";
             txtContrasenia.Text = "";
             cbMostrarContrasenia.Checked = false;
@@ -45,5 +67,26 @@ namespace Enfermeria {
             MessageBox.Show(mensaje, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public bool ConfirmarEnvioCodigo() {
+            string message = "¿Seguro que desea recibir un código para restaurar su contraseña?";
+            DialogResult boton = MessageBox.Show(message, "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            return boton == DialogResult.Yes;
+        }
+
+        public bool VerificarCamposCambiarContrasenia() {
+            return string.IsNullOrEmpty(txtNuevaContrasenia.Text) && string.IsNullOrEmpty(txtRepetirContrasenia.Text);
+        }
+
+        public void MostrarContrasenias() {
+            if (cbMostrarContrasenias.Checked) {
+                txtNuevaContrasenia.PasswordChar = '\0';
+                txtRepetirContrasenia.PasswordChar = '\0';
+            }
+            else {
+                txtNuevaContrasenia.PasswordChar = '●';
+                txtRepetirContrasenia.PasswordChar = '●';
+            }
+        }
     }
 }

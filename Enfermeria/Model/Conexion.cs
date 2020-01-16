@@ -43,28 +43,40 @@ namespace Enfermeria.Model {
 
         private void CrearAdmin() {
             string salt = Seguridad.GetSalt();
-            Usuario usuario = new Usuario("Admin", "", "admin", salt, Seguridad.EncryptPassword(salt, "admin"));
-            AgregarUsuario(usuario);
+            Usuario usuario = new Usuario("Admin", null, null, "admin", salt, Seguridad.EncryptPassword(salt, "admin"));
+            CrearUsuarioAdmin(usuario);
         }
 
         public SQLiteConnection GetConexion() {
             return connection;
         }
 
-        private bool AgregarUsuario(Usuario usuario) {
-            string insert = "insert into Usuarios (nombre, apellidos, usuario, sal, contrasenia) values " +
-                "(@nombre, @apellidos, @usuario, @sal, @contrasenia)";
+        private void CrearUsuarioAdmin(Usuario usuario) {
+            string x = "insert into Usuarios (nombre, apellidos, correo, usuario, sal, contrasenia) values " +
+                "(@nombre, @apellidos, @correo, @usuario, @sal, @contrasenia)";
+            string insert = "insert into Usuarios (nombre, usuario, sal, contrasenia) values " +
+                "(@nombre, @usuario, @sal, @contrasenia)";
             try {
                 connection.Open();
                 SQLiteCommand command = new SQLiteCommand(insert, connection);
                 command.Parameters.AddWithValue("@nombre", usuario.nombre);
-                command.Parameters.AddWithValue("@apellidos", usuario.apellidos);
                 command.Parameters.AddWithValue("@usuario", usuario.nombreUsuario);
                 command.Parameters.AddWithValue("@sal", usuario.salt);
                 command.Parameters.AddWithValue("@contrasenia", usuario.contrasenia);
                 command.ExecuteNonQuery();
+
+                string salt = Seguridad.GetSalt();
+                byte[] pass = Seguridad.EncryptPassword(salt, "12345678");
+
+                SQLiteCommand y = new SQLiteCommand(x, connection);
+                y.Parameters.AddWithValue("@nombre", "Robert");
+                y.Parameters.AddWithValue("@apellidos", "Arias Castro");
+                y.Parameters.AddWithValue("@correo", "roberthariascastro@gmail.com");
+                y.Parameters.AddWithValue("@usuario", "robertarias");
+                y.Parameters.AddWithValue("@sal", salt);
+                y.Parameters.AddWithValue("@contrasenia", pass);
+                y.ExecuteNonQuery();
                 connection.Close();
-                return true;
             }
             catch (SQLiteException) {
                 connection.Close();
