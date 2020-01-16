@@ -29,5 +29,7 @@ namespace Enfermeria.View.Menu {
             if (sender == btnMenu)
                 subMenu.SelectedTab = tbMenu;
         }
+
+      
     }
 }

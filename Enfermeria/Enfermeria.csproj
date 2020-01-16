@@ -40,8 +40,20 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
@@ -56,7 +68,9 @@
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -83,9 +97,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Login\LoginController.cs" />
+    <Compile Include="Controller\Medicamentos\AgregarMedicamentoController.cs" />
+    <Compile Include="Controller\Medicamentos\ModificarMedicamentoController.cs" />
     <Compile Include="Controller\Menu\MenuController.cs" />
+    <Compile Include="Controller\Pacientes\AgregarPacienteController.cs" />
+    <Compile Include="Controller\Pacientes\ModificarPacienteController.cs" />
     <Compile Include="Model\Conexion.cs" />
     <Compile Include="Model\ConexionUsuarios.cs" />
+    <Compile Include="Model\Medicamento.cs" />
+    <Compile Include="Model\Paciente.cs" />
     <Compile Include="Model\Seguridad.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="Program.cs" />
@@ -101,11 +121,47 @@
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Medicamentos\FRM_AgregarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_AgregarMedicamento.Designer.cs">
+      <DependentUpon>FRM_AgregarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ConsultarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ConsultarMedicamento.Designer.cs">
+      <DependentUpon>FRM_ConsultarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ModificarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ModificarMedicamento.Designer.cs">
+      <DependentUpon>FRM_ModificarMedicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Menu\FRM_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Menu\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_AgregarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_AgregarPaciente.Designer.cs">
+      <DependentUpon>FRM_AgregarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ConsultarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ConsultarPaciente.Designer.cs">
+      <DependentUpon>FRM_ConsultarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ModificarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ModificarPaciente.Designer.cs">
+      <DependentUpon>FRM_ModificarPaciente.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,8 +171,26 @@
     <EmbeddedResource Include="View\Login\FRM_Login.resx">
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\FRM_AgregarMedicamento.resx">
+      <DependentUpon>FRM_AgregarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\FRM_ConsultarMedicamento.resx">
+      <DependentUpon>FRM_ConsultarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\FRM_ModificarMedicamento.resx">
+      <DependentUpon>FRM_ModificarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Menu\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\FRM_AgregarPaciente.resx">
+      <DependentUpon>FRM_AgregarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\FRM_ConsultarPaciente.resx">
+      <DependentUpon>FRM_ConsultarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\FRM_ModificarPaciente.resx">
+      <DependentUpon>FRM_ModificarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -134,11 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\" />
-    <Folder Include="Controller\Medicamentos\" />
-    <Folder Include="Controller\Pacientes\" />
     <Folder Include="Controller\Prescripciones\" />
-    <Folder Include="View\Medicamentos\" />
-    <Folder Include="View\Pacientes\" />
     <Folder Include="View\Prescripciones\" />
   </ItemGroup>
   <ItemGroup>
