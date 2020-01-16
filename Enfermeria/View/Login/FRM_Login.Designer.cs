@@ -25,6 +25,17 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Login));
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties41 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties45 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties46 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties47 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties48 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -73,6 +84,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lkCerrar = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pCambiarContrasenia = new System.Windows.Forms.Panel();
+            this.txtNuevaContrasenia = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.btnCambiarContrasenia = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cbMostrarContrasenias = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtRepetirContrasenia = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.pLogin = new System.Windows.Forms.Panel();
             this.btnIngresar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -88,7 +106,7 @@
             this.btnEnviarCodigo = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtUsuarioRecuperar = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pCodigo = new System.Windows.Forms.Panel();
+            this.pIngresarCodigo = new System.Windows.Forms.Panel();
             this.txt1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -103,14 +121,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.alertaCambiarContrasenia = new Enfermeria.View.Login.Alerta();
             this.alertaLogin = new Enfermeria.View.Login.Alerta();
             this.alertaNoInternet = new Enfermeria.View.Login.Alerta();
             this.alertaCodigoIncorrecto = new Enfermeria.View.Login.Alerta();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pCambiarContrasenia.SuspendLayout();
             this.pLogin.SuspendLayout();
             this.pEnviarCodigo.SuspendLayout();
-            this.pCodigo.SuspendLayout();
+            this.pIngresarCodigo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +143,8 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.pLogin);
             this.panel2.Controls.Add(this.pEnviarCodigo);
-            this.panel2.Controls.Add(this.pCodigo);
+            this.panel2.Controls.Add(this.pIngresarCodigo);
+            this.panel2.Controls.Add(this.pCambiarContrasenia);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(399, 0);
             this.panel2.Name = "panel2";
@@ -171,6 +192,262 @@
             this.pictureBox1.Size = new System.Drawing.Size(53, 52);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // pCambiarContrasenia
+            // 
+            this.pCambiarContrasenia.Controls.Add(this.txtNuevaContrasenia);
+            this.pCambiarContrasenia.Controls.Add(this.alertaCambiarContrasenia);
+            this.pCambiarContrasenia.Controls.Add(this.btnCambiarContrasenia);
+            this.pCambiarContrasenia.Controls.Add(this.label12);
+            this.pCambiarContrasenia.Controls.Add(this.cbMostrarContrasenias);
+            this.pCambiarContrasenia.Controls.Add(this.label13);
+            this.pCambiarContrasenia.Controls.Add(this.txtRepetirContrasenia);
+            this.pCambiarContrasenia.Location = new System.Drawing.Point(0, 200);
+            this.pCambiarContrasenia.Name = "pCambiarContrasenia";
+            this.pCambiarContrasenia.Size = new System.Drawing.Size(534, 263);
+            this.pCambiarContrasenia.TabIndex = 76;
+            // 
+            // txtNuevaContrasenia
+            // 
+            this.txtNuevaContrasenia.AcceptsReturn = false;
+            this.txtNuevaContrasenia.AcceptsTab = false;
+            this.txtNuevaContrasenia.AnimationSpeed = 200;
+            this.txtNuevaContrasenia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtNuevaContrasenia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtNuevaContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.txtNuevaContrasenia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtNuevaContrasenia.BackgroundImage")));
+            this.txtNuevaContrasenia.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtNuevaContrasenia.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtNuevaContrasenia.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtNuevaContrasenia.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtNuevaContrasenia.BorderRadius = 5;
+            this.txtNuevaContrasenia.BorderThickness = 1;
+            this.txtNuevaContrasenia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtNuevaContrasenia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasenia.DefaultFont = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtNuevaContrasenia.DefaultText = "";
+            this.txtNuevaContrasenia.FillColor = System.Drawing.Color.White;
+            this.txtNuevaContrasenia.HideSelection = true;
+            this.txtNuevaContrasenia.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtNuevaContrasenia.IconLeft")));
+            this.txtNuevaContrasenia.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasenia.IconPadding = 10;
+            this.txtNuevaContrasenia.IconRight = null;
+            this.txtNuevaContrasenia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNuevaContrasenia.Lines = new string[0];
+            this.txtNuevaContrasenia.Location = new System.Drawing.Point(50, 36);
+            this.txtNuevaContrasenia.MaxLength = 32767;
+            this.txtNuevaContrasenia.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtNuevaContrasenia.Modified = false;
+            this.txtNuevaContrasenia.Multiline = false;
+            this.txtNuevaContrasenia.Name = "txtNuevaContrasenia";
+            stateProperties39.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties39.FillColor = System.Drawing.Color.Empty;
+            stateProperties39.ForeColor = System.Drawing.Color.Empty;
+            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasenia.OnActiveState = stateProperties39;
+            stateProperties40.BorderColor = System.Drawing.Color.Empty;
+            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.ForeColor = System.Drawing.Color.Empty;
+            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtNuevaContrasenia.OnDisabledState = stateProperties40;
+            stateProperties41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties41.FillColor = System.Drawing.Color.Empty;
+            stateProperties41.ForeColor = System.Drawing.Color.Empty;
+            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasenia.OnHoverState = stateProperties41;
+            stateProperties42.BorderColor = System.Drawing.Color.Silver;
+            stateProperties42.FillColor = System.Drawing.Color.White;
+            stateProperties42.ForeColor = System.Drawing.Color.Empty;
+            stateProperties42.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtNuevaContrasenia.OnIdleState = stateProperties42;
+            this.txtNuevaContrasenia.PasswordChar = '●';
+            this.txtNuevaContrasenia.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtNuevaContrasenia.PlaceholderText = "Contraseña";
+            this.txtNuevaContrasenia.ReadOnly = false;
+            this.txtNuevaContrasenia.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtNuevaContrasenia.SelectedText = "";
+            this.txtNuevaContrasenia.SelectionLength = 0;
+            this.txtNuevaContrasenia.SelectionStart = 0;
+            this.txtNuevaContrasenia.ShortcutsEnabled = true;
+            this.txtNuevaContrasenia.Size = new System.Drawing.Size(438, 35);
+            this.txtNuevaContrasenia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtNuevaContrasenia.TabIndex = 74;
+            this.txtNuevaContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNuevaContrasenia.TextMarginBottom = 0;
+            this.txtNuevaContrasenia.TextMarginLeft = 5;
+            this.txtNuevaContrasenia.TextMarginTop = 0;
+            this.txtNuevaContrasenia.TextPlaceholder = "Contraseña";
+            this.txtNuevaContrasenia.UseSystemPasswordChar = false;
+            this.txtNuevaContrasenia.WordWrap = true;
+            // 
+            // btnCambiarContrasenia
+            // 
+            this.btnCambiarContrasenia.AllowToggling = false;
+            this.btnCambiarContrasenia.AnimationSpeed = 200;
+            this.btnCambiarContrasenia.AutoGenerateColors = false;
+            this.btnCambiarContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.btnCambiarContrasenia.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(185)))));
+            this.btnCambiarContrasenia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCambiarContrasenia.BackgroundImage")));
+            this.btnCambiarContrasenia.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCambiarContrasenia.ButtonText = "Cambiar contraseña";
+            this.btnCambiarContrasenia.ButtonTextMarginLeft = 0;
+            this.btnCambiarContrasenia.ColorContrastOnClick = 45;
+            this.btnCambiarContrasenia.ColorContrastOnHover = 45;
+            this.btnCambiarContrasenia.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnCambiarContrasenia.CustomizableEdges = borderEdges6;
+            this.btnCambiarContrasenia.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCambiarContrasenia.DisabledBorderColor = System.Drawing.Color.Empty;
+            this.btnCambiarContrasenia.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCambiarContrasenia.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCambiarContrasenia.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnCambiarContrasenia.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btnCambiarContrasenia.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarContrasenia.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarContrasenia.IconMarginLeft = 11;
+            this.btnCambiarContrasenia.IconPadding = 10;
+            this.btnCambiarContrasenia.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarContrasenia.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(185)))));
+            this.btnCambiarContrasenia.IdleBorderRadius = 45;
+            this.btnCambiarContrasenia.IdleBorderThickness = 1;
+            this.btnCambiarContrasenia.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(185)))));
+            this.btnCambiarContrasenia.IdleIconLeftImage = null;
+            this.btnCambiarContrasenia.IdleIconRightImage = null;
+            this.btnCambiarContrasenia.IndicateFocus = false;
+            this.btnCambiarContrasenia.Location = new System.Drawing.Point(164, 175);
+            this.btnCambiarContrasenia.Name = "btnCambiarContrasenia";
+            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
+            stateProperties43.BorderRadius = 45;
+            stateProperties43.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties43.BorderThickness = 1;
+            stateProperties43.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
+            stateProperties43.ForeColor = System.Drawing.Color.White;
+            stateProperties43.IconLeftImage = null;
+            stateProperties43.IconRightImage = null;
+            this.btnCambiarContrasenia.onHoverState = stateProperties43;
+            stateProperties44.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(155)))));
+            stateProperties44.BorderRadius = 45;
+            stateProperties44.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties44.BorderThickness = 1;
+            stateProperties44.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(155)))));
+            stateProperties44.ForeColor = System.Drawing.Color.White;
+            stateProperties44.IconLeftImage = null;
+            stateProperties44.IconRightImage = null;
+            this.btnCambiarContrasenia.OnPressedState = stateProperties44;
+            this.btnCambiarContrasenia.Size = new System.Drawing.Size(206, 44);
+            this.btnCambiarContrasenia.TabIndex = 5;
+            this.btnCambiarContrasenia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCambiarContrasenia.TextMarginLeft = 0;
+            this.btnCambiarContrasenia.UseDefaultRadiusAndThickness = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(47, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(175, 28);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Nueva contraseña";
+            // 
+            // cbMostrarContrasenias
+            // 
+            this.cbMostrarContrasenias.AutoSize = true;
+            this.cbMostrarContrasenias.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMostrarContrasenias.ForeColor = System.Drawing.Color.Black;
+            this.cbMostrarContrasenias.Location = new System.Drawing.Point(54, 147);
+            this.cbMostrarContrasenias.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMostrarContrasenias.Name = "cbMostrarContrasenias";
+            this.cbMostrarContrasenias.Size = new System.Drawing.Size(157, 23);
+            this.cbMostrarContrasenias.TabIndex = 72;
+            this.cbMostrarContrasenias.Text = "Mostrar contraseñas";
+            this.cbMostrarContrasenias.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(46, 77);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(181, 28);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Repetir contraseña";
+            // 
+            // txtRepetirContrasenia
+            // 
+            this.txtRepetirContrasenia.AcceptsReturn = false;
+            this.txtRepetirContrasenia.AcceptsTab = false;
+            this.txtRepetirContrasenia.AnimationSpeed = 200;
+            this.txtRepetirContrasenia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtRepetirContrasenia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtRepetirContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.txtRepetirContrasenia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtRepetirContrasenia.BackgroundImage")));
+            this.txtRepetirContrasenia.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtRepetirContrasenia.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtRepetirContrasenia.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtRepetirContrasenia.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtRepetirContrasenia.BorderRadius = 5;
+            this.txtRepetirContrasenia.BorderThickness = 1;
+            this.txtRepetirContrasenia.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtRepetirContrasenia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRepetirContrasenia.DefaultFont = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.txtRepetirContrasenia.DefaultText = "";
+            this.txtRepetirContrasenia.FillColor = System.Drawing.Color.White;
+            this.txtRepetirContrasenia.HideSelection = true;
+            this.txtRepetirContrasenia.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtRepetirContrasenia.IconLeft")));
+            this.txtRepetirContrasenia.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRepetirContrasenia.IconPadding = 10;
+            this.txtRepetirContrasenia.IconRight = null;
+            this.txtRepetirContrasenia.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRepetirContrasenia.Lines = new string[0];
+            this.txtRepetirContrasenia.Location = new System.Drawing.Point(50, 107);
+            this.txtRepetirContrasenia.MaxLength = 32767;
+            this.txtRepetirContrasenia.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtRepetirContrasenia.Modified = false;
+            this.txtRepetirContrasenia.Multiline = false;
+            this.txtRepetirContrasenia.Name = "txtRepetirContrasenia";
+            stateProperties45.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties45.FillColor = System.Drawing.Color.Empty;
+            stateProperties45.ForeColor = System.Drawing.Color.Empty;
+            stateProperties45.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRepetirContrasenia.OnActiveState = stateProperties45;
+            stateProperties46.BorderColor = System.Drawing.Color.Empty;
+            stateProperties46.FillColor = System.Drawing.Color.White;
+            stateProperties46.ForeColor = System.Drawing.Color.Empty;
+            stateProperties46.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtRepetirContrasenia.OnDisabledState = stateProperties46;
+            stateProperties47.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties47.FillColor = System.Drawing.Color.Empty;
+            stateProperties47.ForeColor = System.Drawing.Color.Empty;
+            stateProperties47.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRepetirContrasenia.OnHoverState = stateProperties47;
+            stateProperties48.BorderColor = System.Drawing.Color.Silver;
+            stateProperties48.FillColor = System.Drawing.Color.White;
+            stateProperties48.ForeColor = System.Drawing.Color.Empty;
+            stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtRepetirContrasenia.OnIdleState = stateProperties48;
+            this.txtRepetirContrasenia.PasswordChar = '●';
+            this.txtRepetirContrasenia.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtRepetirContrasenia.PlaceholderText = "Contraseña";
+            this.txtRepetirContrasenia.ReadOnly = false;
+            this.txtRepetirContrasenia.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtRepetirContrasenia.SelectedText = "";
+            this.txtRepetirContrasenia.SelectionLength = 0;
+            this.txtRepetirContrasenia.SelectionStart = 0;
+            this.txtRepetirContrasenia.ShortcutsEnabled = true;
+            this.txtRepetirContrasenia.Size = new System.Drawing.Size(438, 35);
+            this.txtRepetirContrasenia.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtRepetirContrasenia.TabIndex = 2;
+            this.txtRepetirContrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtRepetirContrasenia.TextMarginBottom = 0;
+            this.txtRepetirContrasenia.TextMarginLeft = 5;
+            this.txtRepetirContrasenia.TextMarginTop = 0;
+            this.txtRepetirContrasenia.TextPlaceholder = "Contraseña";
+            this.txtRepetirContrasenia.UseSystemPasswordChar = false;
+            this.txtRepetirContrasenia.WordWrap = true;
             // 
             // pLogin
             // 
@@ -516,7 +793,7 @@
             this.btnCancelarEnviarCodigo.IdleIconLeftImage = null;
             this.btnCancelarEnviarCodigo.IdleIconRightImage = null;
             this.btnCancelarEnviarCodigo.IndicateFocus = false;
-            this.btnCancelarEnviarCodigo.Location = new System.Drawing.Point(285, 162);
+            this.btnCancelarEnviarCodigo.Location = new System.Drawing.Point(304, 162);
             this.btnCancelarEnviarCodigo.Name = "btnCancelarEnviarCodigo";
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(89)))));
             stateProperties11.BorderRadius = 45;
@@ -589,7 +866,7 @@
             this.btnEnviarCodigo.IdleIconLeftImage = null;
             this.btnEnviarCodigo.IdleIconRightImage = null;
             this.btnEnviarCodigo.IndicateFocus = false;
-            this.btnEnviarCodigo.Location = new System.Drawing.Point(68, 162);
+            this.btnEnviarCodigo.Location = new System.Drawing.Point(54, 162);
             this.btnEnviarCodigo.Name = "btnEnviarCodigo";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
             stateProperties13.BorderRadius = 45;
@@ -698,22 +975,22 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Ingrese el nombre de usuario de la contraseña\r\na recuperar:";
             // 
-            // pCodigo
+            // pIngresarCodigo
             // 
-            this.pCodigo.BackColor = System.Drawing.Color.GhostWhite;
-            this.pCodigo.Controls.Add(this.txt1);
-            this.pCodigo.Controls.Add(this.txt2);
-            this.pCodigo.Controls.Add(this.txt3);
-            this.pCodigo.Controls.Add(this.txt4);
-            this.pCodigo.Controls.Add(this.alertaCodigoIncorrecto);
-            this.pCodigo.Controls.Add(this.btnCancelarIngresarCodigo);
-            this.pCodigo.Controls.Add(this.label10);
-            this.pCodigo.Controls.Add(this.btnConfirmarCodigo);
-            this.pCodigo.Controls.Add(this.label11);
-            this.pCodigo.Location = new System.Drawing.Point(0, 200);
-            this.pCodigo.Name = "pCodigo";
-            this.pCodigo.Size = new System.Drawing.Size(534, 263);
-            this.pCodigo.TabIndex = 78;
+            this.pIngresarCodigo.BackColor = System.Drawing.Color.GhostWhite;
+            this.pIngresarCodigo.Controls.Add(this.txt1);
+            this.pIngresarCodigo.Controls.Add(this.txt2);
+            this.pIngresarCodigo.Controls.Add(this.txt3);
+            this.pIngresarCodigo.Controls.Add(this.txt4);
+            this.pIngresarCodigo.Controls.Add(this.alertaCodigoIncorrecto);
+            this.pIngresarCodigo.Controls.Add(this.btnCancelarIngresarCodigo);
+            this.pIngresarCodigo.Controls.Add(this.label10);
+            this.pIngresarCodigo.Controls.Add(this.btnConfirmarCodigo);
+            this.pIngresarCodigo.Controls.Add(this.label11);
+            this.pIngresarCodigo.Location = new System.Drawing.Point(0, 200);
+            this.pIngresarCodigo.Name = "pIngresarCodigo";
+            this.pIngresarCodigo.Size = new System.Drawing.Size(534, 263);
+            this.pIngresarCodigo.TabIndex = 78;
             // 
             // txt1
             // 
@@ -1214,6 +1491,15 @@
             this.bunifuElipse1.ElipseRadius = 10;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // alertaCambiarContrasenia
+            // 
+            this.alertaCambiarContrasenia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
+            this.alertaCambiarContrasenia.Location = new System.Drawing.Point(50, 225);
+            this.alertaCambiarContrasenia.Name = "alertaCambiarContrasenia";
+            this.alertaCambiarContrasenia.Size = new System.Drawing.Size(449, 35);
+            this.alertaCambiarContrasenia.TabIndex = 73;
+            this.alertaCambiarContrasenia.Visible = false;
+            // 
             // alertaLogin
             // 
             this.alertaLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
@@ -1255,12 +1541,14 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pCambiarContrasenia.ResumeLayout(false);
+            this.pCambiarContrasenia.PerformLayout();
             this.pLogin.ResumeLayout(false);
             this.pLogin.PerformLayout();
             this.pEnviarCodigo.ResumeLayout(false);
             this.pEnviarCodigo.PerformLayout();
-            this.pCodigo.ResumeLayout(false);
-            this.pCodigo.PerformLayout();
+            this.pIngresarCodigo.ResumeLayout(false);
+            this.pIngresarCodigo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -1295,7 +1583,7 @@
         private System.Windows.Forms.Label label9;
         public Bunifu.Framework.UI.BunifuCircleProgressbar pbCargando;
         public View.Login.Alerta alertaNoInternet;
-        public System.Windows.Forms.Panel pCodigo;
+        public System.Windows.Forms.Panel pIngresarCodigo;
         public View.Login.Alerta alertaCodigoIncorrecto;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancelarIngresarCodigo;
         private System.Windows.Forms.Label label10;
@@ -1306,5 +1594,13 @@
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt1;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt2;
         public View.Login.Alerta alertaLogin;
+        public System.Windows.Forms.Panel pCambiarContrasenia;
+        public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtNuevaContrasenia;
+        public View.Login.Alerta alertaCambiarContrasenia;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCambiarContrasenia;
+        private System.Windows.Forms.Label label12;
+        public System.Windows.Forms.CheckBox cbMostrarContrasenias;
+        private System.Windows.Forms.Label label13;
+        public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtRepetirContrasenia;
     }
 }

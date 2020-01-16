@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Enfermeria.Model {
     public class ConexionUsuarios {
@@ -60,5 +56,25 @@ namespace Enfermeria.Model {
             return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][1]);
         }
 
+        public void CambiarContrasenia(string password, string usuario) {
+            string salt = Seguridad.GetSalt();
+            byte[] newPassword = Seguridad.EncryptPassword(salt, password);
+
+            string update = "update usuarios set sal = @salt, contrasenia = @password where usuario = @usuario";
+
+            try {
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(update, sqlConnection);
+                command.Parameters.AddWithValue("@salt", salt);
+                command.Parameters.AddWithValue("@password", password);
+                command.Parameters.AddWithValue("@usuario", usuario);
+                command.ExecuteNonQuery();
+                sqlConnection.Close();
+            }
+            catch (SQLiteException e) {
+                Debug.WriteLine(e.ToString());
+                throw;
+            }
+        }
     }
 }

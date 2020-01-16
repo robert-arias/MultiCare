@@ -40,10 +40,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.label1.Location = new System.Drawing.Point(49, 8);
+            this.label1.Location = new System.Drawing.Point(38, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 0;
@@ -51,10 +52,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.label2.Location = new System.Drawing.Point(99, 8);
+            this.label2.Location = new System.Drawing.Point(88, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 19);
             this.label2.TabIndex = 1;
@@ -62,8 +64,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -73,11 +76,13 @@
             // lkCerrar
             // 
             this.lkCerrar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.lkCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lkCerrar.AutoSize = true;
             this.lkCerrar.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lkCerrar.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lkCerrar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(121)))), ((int)(((byte)(127)))));
-            this.lkCerrar.Location = new System.Drawing.Point(396, -1);
+            this.lkCerrar.Location = new System.Drawing.Point(404, -1);
             this.lkCerrar.Name = "lkCerrar";
             this.lkCerrar.Size = new System.Drawing.Size(32, 32);
             this.lkCerrar.TabIndex = 3;

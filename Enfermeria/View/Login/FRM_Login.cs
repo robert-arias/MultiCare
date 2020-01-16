@@ -15,6 +15,7 @@ namespace Enfermeria {
             controlador = new LoginController(this);
             pbCargando.BackColor = Color.GhostWhite;
             alertaLogin.CambiarImagenWarning();
+            alertaCambiarContrasenia.CambiarImagenWarning();
         }
 
         public void ErrorUsuario() {
@@ -31,7 +32,7 @@ namespace Enfermeria {
             txtContrasenia.BorderColorActive = Color.Red;
         }
 
-        public bool VerificarCampos() {
+        public bool VerificarCamposLogin() {
             return string.IsNullOrEmpty(txtUsuario.Text) && string.IsNullOrEmpty(txtContrasenia.Text);
         }
 
@@ -55,7 +56,7 @@ namespace Enfermeria {
             return Seguridad.CheckPassword(contrasenaIngresada, (byte[])usuario.Rows[0][5]);
         }
 
-        public void EstadoInicial() {
+        public void EstadoInicialLogin() {
             txtUsuario.Text = "";
             txtContrasenia.Text = "";
             cbMostrarContrasenia.Checked = false;
@@ -71,6 +72,21 @@ namespace Enfermeria {
             DialogResult boton = MessageBox.Show(message, "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             
             return boton == DialogResult.Yes;
+        }
+
+        public bool VerificarCamposCambiarContrasenia() {
+            return string.IsNullOrEmpty(txtNuevaContrasenia.Text) && string.IsNullOrEmpty(txtRepetirContrasenia.Text);
+        }
+
+        public void MostrarContrasenias() {
+            if (cbMostrarContrasenias.Checked) {
+                txtNuevaContrasenia.PasswordChar = '\0';
+                txtRepetirContrasenia.PasswordChar = '\0';
+            }
+            else {
+                txtNuevaContrasenia.PasswordChar = '●';
+                txtRepetirContrasenia.PasswordChar = '●';
+            }
         }
     }
 }
