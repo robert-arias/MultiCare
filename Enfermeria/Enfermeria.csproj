@@ -40,6 +40,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
       <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
@@ -124,6 +127,12 @@
     <Compile Include="View\Medicamentos\FRM_AgregarMedicamento.Designer.cs">
       <DependentUpon>FRM_AgregarMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Medicamentos\FRM_ConsultarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ConsultarMedicamento.Designer.cs">
+      <DependentUpon>FRM_ConsultarMedicamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Medicamentos\FRM_ModificarMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +150,12 @@
     </Compile>
     <Compile Include="View\Pacientes\FRM_AgregarPaciente.Designer.cs">
       <DependentUpon>FRM_AgregarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ConsultaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ConsultaPaciente.Designer.cs">
+      <DependentUpon>FRM_ConsultaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Pacientes\FRM_ModificarPaciente.cs">
       <SubType>Form</SubType>
@@ -162,6 +177,9 @@
     <EmbeddedResource Include="View\Medicamentos\FRM_AgregarMedicamento.resx">
       <DependentUpon>FRM_AgregarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\FRM_ConsultarMedicamento.resx">
+      <DependentUpon>FRM_ConsultarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Medicamentos\FRM_ModificarMedicamento.resx">
       <DependentUpon>FRM_ModificarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Pacientes\FRM_AgregarPaciente.resx">
       <DependentUpon>FRM_AgregarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\FRM_ConsultaPaciente.resx">
+      <DependentUpon>FRM_ConsultaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Pacientes\FRM_ModificarPaciente.resx">
       <DependentUpon>FRM_ModificarPaciente.cs</DependentUpon>
