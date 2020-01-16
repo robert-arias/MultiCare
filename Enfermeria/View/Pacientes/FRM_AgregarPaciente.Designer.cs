@@ -191,7 +191,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(424, 461);
+            this.btnCancelar.Location = new System.Drawing.Point(429, 461);
             this.btnCancelar.Name = "btnCancelar";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.BorderRadius = 3;
