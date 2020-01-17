@@ -86,22 +86,7 @@ namespace Enfermeria.Controller.Login {
         }
 
         private void CancelarMostrarLogin(object sender, EventArgs e) {
-            frm_Login.alertaLogin.Visible = false;
-            MostrarConAnimacion(frm_Login.pLogin, Animation.HorizSlide);
-            frm_Login.pEnviarCodigo.Visible = true;
-            frm_Login.btnCancelarEnviarCodigo.Enabled = true;
-            frm_Login.pbCargando.Visible = false;
-            frm_Login.pbCargando.animated = false;
-            frm_Login.txtUsuarioRecuperar.Text = "";
-            frm_Login.txt1.Text = "";
-            frm_Login.txt2.Text = "";
-            frm_Login.txt3.Text = "";
-            frm_Login.txt4.Text = "";
-            frm_Login.pIngresarCodigo.SendToBack();
-            frm_Login.alertaCambiarContrasenia.Visible = false;
-            frm_Login.alertaCodigoIncorrecto.Visible = false;
-            username = null;
-            codigo_recuperacion = null;
+            EstadoInicial();
         }
 
         private void EnviarCodigoBoton(object sender, EventArgs e) {
@@ -282,10 +267,9 @@ namespace Enfermeria.Controller.Login {
                         if (frm_Login.txtNuevaContrasenia.Text.Length >= 8) {
                             frm_Login.alertaCambiarContrasenia.Visible = false;
                             if (frm_Login.txtNuevaContrasenia.Text.Equals(frm_Login.txtRepetirContrasenia.Text)) {
-                                //db.CambiarContrasenia(frm_Login.txtNuevaContrasenia.Text, username);
+                                db.CambiarContrasenia(frm_Login.txtNuevaContrasenia.Text, username);
                                 frm_Login.MostrarMensaje("La contraseña ha sido actualizada con éxito");
-                                /*username = null;
-                                codigo_recuperacion = null;*/
+                                EstadoInicial();
                             }
                             else {
                                 frm_Login.alertaCambiarContrasenia.CambiarMensaje("Las contraseñas no coinciden");
@@ -311,6 +295,13 @@ namespace Enfermeria.Controller.Login {
                 frm_Login.alertaCambiarContrasenia.CambiarMensaje("Los campos se encuentran vacíos");
                 MostrarConAnimacion(frm_Login.alertaCambiarContrasenia, Animation.VertSlide);
             }
+        }
+
+        private void EstadoInicial() {
+            MostrarConAnimacion(frm_Login.pLogin, Animation.HorizSlide);
+            frm_Login.EstadoInicial();
+            username = null;
+            codigo_recuperacion = null;
         }
 
     }

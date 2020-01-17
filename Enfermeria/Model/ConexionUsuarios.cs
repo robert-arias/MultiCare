@@ -66,7 +66,7 @@ namespace Enfermeria.Model {
                 sqlConnection.Open();
                 SQLiteCommand command = new SQLiteCommand(update, sqlConnection);
                 command.Parameters.AddWithValue("@salt", salt);
-                command.Parameters.AddWithValue("@password", password);
+                command.Parameters.AddWithValue("@password", newPassword);
                 command.Parameters.AddWithValue("@usuario", usuario);
                 command.ExecuteNonQuery();
                 sqlConnection.Close();

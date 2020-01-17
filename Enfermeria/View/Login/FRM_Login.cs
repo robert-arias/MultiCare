@@ -88,5 +88,32 @@ namespace Enfermeria {
                 txtRepetirContrasenia.PasswordChar = '●';
             }
         }
+
+        public void EstadoInicial() {
+            pEnviarCodigo.Visible = true;
+            pIngresarCodigo.Visible = true;
+            pEnviarCodigo.SendToBack();
+            pIngresarCodigo.SendToBack();
+            pCambiarContrasenia.SendToBack();
+
+            alertaCambiarContrasenia.Visible = false;
+            alertaCodigoIncorrecto.Visible = false;
+            alertaLogin.Visible = false;
+            alertaNoInternet.Visible = false;
+
+            txtUsuarioRecuperar.Text = "";
+            txt1.Text = "";
+            txt2.Text = "";
+            txt3.Text = "";
+            txt4.Text = "";
+            txtNuevaContrasenia.Text = "";
+            txtRepetirContrasenia.Text = "";
+
+            btnEnviarCodigo.Enabled = true;
+            btnCancelarEnviarCodigo.Enabled = true;
+            pbCargando.Visible = false;
+            pbCargando.animated = false;
+        }
+
     }
 }
