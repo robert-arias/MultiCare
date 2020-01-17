@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Enfermeria.Controller;
 using Enfermeria.Model;
-using Enfermeria.Controller.Pacientes;
-using Enfermeria.Controller;
+using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
-namespace Enfermeria.View.Pacientes
-{
+namespace Enfermeria.View.Pacientes {
     public partial class FRM_AgregarPaciente : Form
     {
         PacienteController pacienteController;
         public FRM_AgregarPaciente()
         {
             InitializeComponent();
-            cbSexo.SelectedItem("Seleccionar") ;
             pacienteController = new PacienteController(this);
+            cbSexo.Items.AddRange(new object[] {
+            "Seleccionar",
+            "Femenino",
+            "Masculino",
+            "Otro"});
+            cbSexo.Text = "Seleccionar";
         }
 
         public void EstadoInicial()
@@ -35,7 +33,7 @@ namespace Enfermeria.View.Pacientes
             txtEdad.Text = "";
             txtFecha.Value =  DateTime.Now;
             txtNombre.Text = "";
-            cbSexo.SelectedItem("Seleccionar");
+            cbSexo.Text = "Seleccionar";
 
             txtCedula.Enabled = true;
             txtApellidos.Enabled = false;
@@ -72,7 +70,7 @@ namespace Enfermeria.View.Pacientes
         {
             bool vacio = false;
 
-            if (string.IsNullOrEmpty(txtCedula.Text))
+            /*if (string.IsNullOrEmpty(txtCedula.Text))
             {
                 lbCedula.Visible = true;
                 vacio = true;
@@ -80,7 +78,7 @@ namespace Enfermeria.View.Pacientes
             else
             {
                 lbCedula.Visible = false;
-            }
+            }*/
 
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
@@ -114,7 +112,7 @@ namespace Enfermeria.View.Pacientes
                 lbFecha.Visible = false;
             }
 
-            if (cbSexo.selectedIndex == 0 )
+            if (cbSexo.SelectedIndex == 0 )
             {
                 lbSexo.Visible = true;
                 vacio = true;
@@ -152,7 +150,8 @@ namespace Enfermeria.View.Pacientes
 
         public Paciente GetPaciente()
         {          
-            return new Paciente(txtCedula.Text,txtNombre.Text,txtApellidos.Text,txtFecha.Value.ToString(),int.Parse(txtEdad.Text),Convert.ToString(cbSexo.selectedValue),"Habilitado");
+            return new Paciente(txtCedula.Text,txtNombre.Text,txtApellidos.Text,txtFecha.Value.ToString(),int.Parse(txtEdad.Text),
+                cbSexo.GetItemText(cbSexo.SelectedItem), "Habilitado");
         }
 
 
