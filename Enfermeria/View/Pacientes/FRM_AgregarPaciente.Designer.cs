@@ -57,7 +57,6 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.txtEdad = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtFecha = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -68,12 +67,7 @@
             this.btnVerificar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lbSexo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbFecha = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbApellidos = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbNombre = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbDeshabilitado = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel8 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.rbDeshabilitado = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.rbHabilitado = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.bunifuLabel7 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -84,51 +78,22 @@
             this.txtNombre = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnCancelar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.groupBox1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rbHabilitado = new System.Windows.Forms.RadioButton();
+            this.rbDeshabilitado = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbSexo);
-            this.groupBox1.Controls.Add(this.txtEdad);
-            this.groupBox1.Controls.Add(this.txtFecha);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtApellidos);
-            this.groupBox1.Controls.Add(this.txtCedula);
-            this.groupBox1.Controls.Add(this.btnLimpiar);
-            this.groupBox1.Controls.Add(this.btnVerificar);
-            this.groupBox1.Controls.Add(this.lbSexo);
-            this.groupBox1.Controls.Add(this.lbFecha);
-            this.groupBox1.Controls.Add(this.lbApellidos);
-            this.groupBox1.Controls.Add(this.lbNombre);
-            this.groupBox1.Controls.Add(this.lbDeshabilitado);
-            this.groupBox1.Controls.Add(this.bunifuLabel8);
-            this.groupBox1.Controls.Add(this.rbDeshabilitado);
-            this.groupBox1.Controls.Add(this.rbHabilitado);
-            this.groupBox1.Controls.Add(this.bunifuLabel7);
-            this.groupBox1.Controls.Add(this.bunifuLabel6);
-            this.groupBox1.Controls.Add(this.bunifuLabel5);
-            this.groupBox1.Controls.Add(this.bunifuLabel4);
-            this.groupBox1.Controls.Add(this.bunifuLabel3);
-            this.groupBox1.Controls.Add(this.bunifuLabel2);
-            this.groupBox1.Controls.Add(this.bunifuLabel1);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(780, 454);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información personal";
             // 
             // cbSexo
             // 
             this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSexo.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Location = new System.Drawing.Point(13, 378);
+            this.cbSexo.Items.AddRange(new object[] {
+            "Seleccionar",
+            "Femenino",
+            "Masculino",
+            "Otro"});
+            this.cbSexo.Location = new System.Drawing.Point(32, 395);
             this.cbSexo.MinimumSize = new System.Drawing.Size(133, 0);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(364, 33);
@@ -161,7 +126,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(399, 271);
+            this.txtEdad.Location = new System.Drawing.Point(418, 288);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEdad.MaxLength = 32767;
             this.txtEdad.MinimumSize = new System.Drawing.Size(133, 43);
@@ -174,9 +139,9 @@
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtEdad.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.FillColor = System.Drawing.Color.Silver;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtEdad.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
@@ -190,7 +155,7 @@
             this.txtEdad.OnIdleState = stateProperties4;
             this.txtEdad.PasswordChar = '\0';
             this.txtEdad.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtEdad.PlaceholderText = "Edad de paciente";
+            this.txtEdad.PlaceholderText = "18";
             this.txtEdad.ReadOnly = false;
             this.txtEdad.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtEdad.SelectedText = "";
@@ -204,7 +169,7 @@
             this.txtEdad.TextMarginBottom = 0;
             this.txtEdad.TextMarginLeft = 8;
             this.txtEdad.TextMarginTop = 0;
-            this.txtEdad.TextPlaceholder = "Edad de paciente";
+            this.txtEdad.TextPlaceholder = "18";
             this.txtEdad.UseSystemPasswordChar = false;
             this.txtEdad.WordWrap = true;
             // 
@@ -225,7 +190,7 @@
             this.txtFecha.Icon = ((System.Drawing.Image)(resources.GetObject("txtFecha.Icon")));
             this.txtFecha.IconColor = System.Drawing.Color.Black;
             this.txtFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.txtFecha.Location = new System.Drawing.Point(13, 272);
+            this.txtFecha.Location = new System.Drawing.Point(32, 289);
             this.txtFecha.MinimumSize = new System.Drawing.Size(364, 42);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(364, 42);
@@ -236,7 +201,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(14, 115);
+            this.label1.Location = new System.Drawing.Point(33, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 89;
@@ -269,7 +234,7 @@
             this.txtApellidos.IconRight = null;
             this.txtApellidos.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidos.Lines = new string[0];
-            this.txtApellidos.Location = new System.Drawing.Point(399, 175);
+            this.txtApellidos.Location = new System.Drawing.Point(418, 192);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.MaxLength = 32767;
             this.txtApellidos.MinimumSize = new System.Drawing.Size(133, 43);
@@ -282,9 +247,9 @@
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtApellidos.OnActiveState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.Empty;
-            stateProperties6.FillColor = System.Drawing.Color.White;
+            stateProperties6.FillColor = System.Drawing.Color.Silver;
             stateProperties6.ForeColor = System.Drawing.Color.Empty;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtApellidos.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.FillColor = System.Drawing.Color.Empty;
@@ -298,7 +263,7 @@
             this.txtApellidos.OnIdleState = stateProperties8;
             this.txtApellidos.PasswordChar = '\0';
             this.txtApellidos.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtApellidos.PlaceholderText = "Apellidos de paciente";
+            this.txtApellidos.PlaceholderText = "Ávila Guzmán";
             this.txtApellidos.ReadOnly = false;
             this.txtApellidos.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtApellidos.SelectedText = "";
@@ -312,7 +277,7 @@
             this.txtApellidos.TextMarginBottom = 0;
             this.txtApellidos.TextMarginLeft = 8;
             this.txtApellidos.TextMarginTop = 0;
-            this.txtApellidos.TextPlaceholder = "Apellidos de paciente";
+            this.txtApellidos.TextPlaceholder = "Ávila Guzmán";
             this.txtApellidos.UseSystemPasswordChar = false;
             this.txtApellidos.WordWrap = true;
             // 
@@ -343,7 +308,7 @@
             this.txtCedula.IconRight = null;
             this.txtCedula.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedula.Lines = new string[0];
-            this.txtCedula.Location = new System.Drawing.Point(13, 73);
+            this.txtCedula.Location = new System.Drawing.Point(32, 90);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.MaxLength = 32767;
             this.txtCedula.MinimumSize = new System.Drawing.Size(133, 43);
@@ -356,9 +321,9 @@
             stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtCedula.OnActiveState = stateProperties9;
             stateProperties10.BorderColor = System.Drawing.Color.Empty;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.Empty;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Silver;
+            stateProperties10.FillColor = System.Drawing.Color.Silver;
+            stateProperties10.ForeColor = System.Drawing.Color.Black;
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtCedula.OnDisabledState = stateProperties10;
             stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties11.FillColor = System.Drawing.Color.Empty;
@@ -372,7 +337,7 @@
             this.txtCedula.OnIdleState = stateProperties12;
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtCedula.PlaceholderText = "Número de cédula";
+            this.txtCedula.PlaceholderText = "123456789";
             this.txtCedula.ReadOnly = false;
             this.txtCedula.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtCedula.SelectedText = "";
@@ -386,7 +351,7 @@
             this.txtCedula.TextMarginBottom = 0;
             this.txtCedula.TextMarginLeft = 8;
             this.txtCedula.TextMarginTop = 0;
-            this.txtCedula.TextPlaceholder = "Número de cédula";
+            this.txtCedula.TextPlaceholder = "123456789";
             this.txtCedula.UseSystemPasswordChar = false;
             this.txtCedula.WordWrap = true;
             // 
@@ -427,7 +392,7 @@
             this.btnLimpiar.IdleIconLeftImage = null;
             this.btnLimpiar.IdleIconRightImage = null;
             this.btnLimpiar.IndicateFocus = false;
-            this.btnLimpiar.Location = new System.Drawing.Point(581, 72);
+            this.btnLimpiar.Location = new System.Drawing.Point(600, 88);
             this.btnLimpiar.Name = "btnLimpiar";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(89)))));
             stateProperties13.BorderRadius = 45;
@@ -490,7 +455,7 @@
             this.btnVerificar.IdleIconLeftImage = null;
             this.btnVerificar.IdleIconRightImage = null;
             this.btnVerificar.IndicateFocus = false;
-            this.btnVerificar.Location = new System.Drawing.Point(399, 72);
+            this.btnVerificar.Location = new System.Drawing.Point(418, 89);
             this.btnVerificar.Name = "btnVerificar";
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
             stateProperties15.BorderRadius = 45;
@@ -522,7 +487,7 @@
             this.lbSexo.CursorType = null;
             this.lbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbSexo.ForeColor = System.Drawing.Color.Red;
-            this.lbSexo.Location = new System.Drawing.Point(380, 384);
+            this.lbSexo.Location = new System.Drawing.Point(399, 401);
             this.lbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.lbSexo.Name = "lbSexo";
             this.lbSexo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -539,7 +504,7 @@
             this.lbFecha.CursorType = null;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbFecha.ForeColor = System.Drawing.Color.Red;
-            this.lbFecha.Location = new System.Drawing.Point(380, 284);
+            this.lbFecha.Location = new System.Drawing.Point(399, 301);
             this.lbFecha.Margin = new System.Windows.Forms.Padding(4);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -550,30 +515,13 @@
             this.lbFecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbFecha.Visible = false;
             // 
-            // lbApellidos
-            // 
-            this.lbApellidos.AutoEllipsis = false;
-            this.lbApellidos.CursorType = null;
-            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbApellidos.ForeColor = System.Drawing.Color.Red;
-            this.lbApellidos.Location = new System.Drawing.Point(764, 184);
-            this.lbApellidos.Margin = new System.Windows.Forms.Padding(4);
-            this.lbApellidos.Name = "lbApellidos";
-            this.lbApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbApellidos.Size = new System.Drawing.Size(11, 27);
-            this.lbApellidos.TabIndex = 81;
-            this.lbApellidos.Text = "*";
-            this.lbApellidos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbApellidos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lbApellidos.Visible = false;
-            // 
             // lbNombre
             // 
             this.lbNombre.AutoEllipsis = false;
             this.lbNombre.CursorType = null;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbNombre.ForeColor = System.Drawing.Color.Red;
-            this.lbNombre.Location = new System.Drawing.Point(380, 187);
+            this.lbNombre.Location = new System.Drawing.Point(399, 204);
             this.lbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -584,68 +532,12 @@
             this.lbNombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             this.lbNombre.Visible = false;
             // 
-            // lbDeshabilitado
-            // 
-            this.lbDeshabilitado.AutoEllipsis = false;
-            this.lbDeshabilitado.CursorType = null;
-            this.lbDeshabilitado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDeshabilitado.Location = new System.Drawing.Point(639, 377);
-            this.lbDeshabilitado.Margin = new System.Windows.Forms.Padding(4);
-            this.lbDeshabilitado.Name = "lbDeshabilitado";
-            this.lbDeshabilitado.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbDeshabilitado.Size = new System.Drawing.Size(124, 30);
-            this.lbDeshabilitado.TabIndex = 77;
-            this.lbDeshabilitado.Text = "Deshabilitado";
-            this.lbDeshabilitado.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbDeshabilitado.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel8
-            // 
-            this.bunifuLabel8.AutoEllipsis = false;
-            this.bunifuLabel8.CursorType = null;
-            this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel8.Location = new System.Drawing.Point(433, 377);
-            this.bunifuLabel8.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel8.Name = "bunifuLabel8";
-            this.bunifuLabel8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel8.Size = new System.Drawing.Size(95, 30);
-            this.bunifuLabel8.TabIndex = 76;
-            this.bunifuLabel8.Text = "Habilitado";
-            this.bunifuLabel8.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel8.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // rbDeshabilitado
-            // 
-            this.rbDeshabilitado.Checked = false;
-            this.rbDeshabilitado.Enabled = false;
-            this.rbDeshabilitado.Location = new System.Drawing.Point(606, 382);
-            this.rbDeshabilitado.Margin = new System.Windows.Forms.Padding(4);
-            this.rbDeshabilitado.Name = "rbDeshabilitado";
-            this.rbDeshabilitado.OutlineColor = System.Drawing.Color.Purple;
-            this.rbDeshabilitado.RadioColor = System.Drawing.Color.Purple;
-            this.rbDeshabilitado.Size = new System.Drawing.Size(25, 25);
-            this.rbDeshabilitado.TabIndex = 75;
-            this.rbDeshabilitado.Text = null;
-            // 
-            // rbHabilitado
-            // 
-            this.rbHabilitado.Checked = true;
-            this.rbHabilitado.Enabled = false;
-            this.rbHabilitado.Location = new System.Drawing.Point(400, 382);
-            this.rbHabilitado.Margin = new System.Windows.Forms.Padding(4);
-            this.rbHabilitado.Name = "rbHabilitado";
-            this.rbHabilitado.OutlineColor = System.Drawing.Color.Purple;
-            this.rbHabilitado.RadioColor = System.Drawing.Color.Purple;
-            this.rbHabilitado.Size = new System.Drawing.Size(25, 25);
-            this.rbHabilitado.TabIndex = 74;
-            this.rbHabilitado.Text = null;
-            // 
             // bunifuLabel7
             // 
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(395, 341);
+            this.bunifuLabel7.Location = new System.Drawing.Point(418, 358);
             this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -660,7 +552,7 @@
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.Location = new System.Drawing.Point(13, 341);
+            this.bunifuLabel6.Location = new System.Drawing.Point(32, 358);
             this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -675,7 +567,7 @@
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.Location = new System.Drawing.Point(399, 239);
+            this.bunifuLabel5.Location = new System.Drawing.Point(418, 256);
             this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -690,7 +582,7 @@
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(13, 239);
+            this.bunifuLabel4.Location = new System.Drawing.Point(32, 256);
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -705,7 +597,7 @@
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(399, 137);
+            this.bunifuLabel3.Location = new System.Drawing.Point(418, 154);
             this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -720,7 +612,7 @@
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(16, 137);
+            this.bunifuLabel2.Location = new System.Drawing.Point(35, 154);
             this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -735,7 +627,7 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(16, 39);
+            this.bunifuLabel1.Location = new System.Drawing.Point(35, 56);
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -772,7 +664,7 @@
             this.txtNombre.IconRight = null;
             this.txtNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(13, 175);
+            this.txtNombre.Location = new System.Drawing.Point(32, 192);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MinimumSize = new System.Drawing.Size(133, 43);
@@ -785,9 +677,9 @@
             stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNombre.OnActiveState = stateProperties17;
             stateProperties18.BorderColor = System.Drawing.Color.Empty;
-            stateProperties18.FillColor = System.Drawing.Color.White;
+            stateProperties18.FillColor = System.Drawing.Color.Silver;
             stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtNombre.OnDisabledState = stateProperties18;
             stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties19.FillColor = System.Drawing.Color.Empty;
@@ -801,7 +693,7 @@
             this.txtNombre.OnIdleState = stateProperties20;
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNombre.PlaceholderText = "Nombre de paciente";
+            this.txtNombre.PlaceholderText = "María";
             this.txtNombre.ReadOnly = false;
             this.txtNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNombre.SelectedText = "";
@@ -815,7 +707,7 @@
             this.txtNombre.TextMarginBottom = 0;
             this.txtNombre.TextMarginLeft = 8;
             this.txtNombre.TextMarginTop = 0;
-            this.txtNombre.TextPlaceholder = "Nombre de paciente";
+            this.txtNombre.TextPlaceholder = "María";
             this.txtNombre.UseSystemPasswordChar = false;
             this.txtNombre.WordWrap = true;
             // 
@@ -856,7 +748,7 @@
             this.btnAgregar.IdleIconLeftImage = null;
             this.btnAgregar.IdleIconRightImage = null;
             this.btnAgregar.IndicateFocus = false;
-            this.btnAgregar.Location = new System.Drawing.Point(196, 484);
+            this.btnAgregar.Location = new System.Drawing.Point(196, 465);
             this.btnAgregar.Name = "btnAgregar";
             stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
             stateProperties21.BorderRadius = 45;
@@ -919,7 +811,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(437, 483);
+            this.btnCancelar.Location = new System.Drawing.Point(437, 464);
             this.btnCancelar.Name = "btnCancelar";
             stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(89)))));
             stateProperties23.BorderRadius = 45;
@@ -945,34 +837,87 @@
             this.btnCancelar.TextMarginLeft = 0;
             this.btnCancelar.UseDefaultRadiusAndThickness = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(28, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(298, 38);
+            this.label2.TabIndex = 94;
+            this.label2.Text = "Información personal";
+            // 
+            // rbHabilitado
+            // 
+            this.rbHabilitado.AutoCheck = false;
+            this.rbHabilitado.AutoSize = true;
+            this.rbHabilitado.Checked = true;
+            this.rbHabilitado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
+            this.rbHabilitado.Location = new System.Drawing.Point(424, 395);
+            this.rbHabilitado.Name = "rbHabilitado";
+            this.rbHabilitado.Size = new System.Drawing.Size(125, 32);
+            this.rbHabilitado.TabIndex = 95;
+            this.rbHabilitado.TabStop = true;
+            this.rbHabilitado.Text = "Habilitado";
+            this.rbHabilitado.UseVisualStyleBackColor = true;
+            // 
+            // rbDeshabilitado
+            // 
+            this.rbDeshabilitado.AutoCheck = false;
+            this.rbDeshabilitado.AutoSize = true;
+            this.rbDeshabilitado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
+            this.rbDeshabilitado.Location = new System.Drawing.Point(600, 393);
+            this.rbDeshabilitado.Name = "rbDeshabilitado";
+            this.rbDeshabilitado.Size = new System.Drawing.Size(154, 32);
+            this.rbDeshabilitado.TabIndex = 96;
+            this.rbDeshabilitado.Text = "Deshabilitado";
+            this.rbDeshabilitado.UseVisualStyleBackColor = true;
+            // 
             // FRM_AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(814, 542);
+            this.ClientSize = new System.Drawing.Size(814, 531);
+            this.Controls.Add(this.rbDeshabilitado);
+            this.Controls.Add(this.rbHabilitado);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.bunifuLabel2);
+            this.Controls.Add(this.btnVerificar);
+            this.Controls.Add(this.bunifuLabel3);
+            this.Controls.Add(this.lbSexo);
+            this.Controls.Add(this.bunifuLabel4);
+            this.Controls.Add(this.lbFecha);
+            this.Controls.Add(this.bunifuLabel5);
+            this.Controls.Add(this.bunifuLabel6);
+            this.Controls.Add(this.lbNombre);
+            this.Controls.Add(this.bunifuLabel7);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRM_AgregarPaciente";
-            this.Text = "FRM_AgregarPaciente";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar paciente";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.UI.WinForms.BunifuLabel lbSexo;
         private Bunifu.UI.WinForms.BunifuLabel lbFecha;
-        private Bunifu.UI.WinForms.BunifuLabel lbApellidos;
         private Bunifu.UI.WinForms.BunifuLabel lbNombre;
-        public Bunifu.UI.WinForms.BunifuLabel lbDeshabilitado;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel8;
-        public Bunifu.UI.WinForms.BunifuRadioButton rbDeshabilitado;
-        public Bunifu.UI.WinForms.BunifuRadioButton rbHabilitado;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel7;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel6;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
@@ -991,5 +936,8 @@
         private System.Windows.Forms.ComboBox cbSexo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCancelar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rbHabilitado;
+        private System.Windows.Forms.RadioButton rbDeshabilitado;
     }
 }

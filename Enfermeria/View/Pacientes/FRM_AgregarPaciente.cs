@@ -13,11 +13,6 @@ namespace Enfermeria.View.Pacientes {
         {
             InitializeComponent();
             pacienteController = new PacienteController(this);
-            cbSexo.Items.AddRange(new object[] {
-            "Seleccionar",
-            "Femenino",
-            "Masculino",
-            "Otro"});
             cbSexo.Text = "Seleccionar";
         }
 
@@ -38,10 +33,21 @@ namespace Enfermeria.View.Pacientes {
             txtCedula.Enabled = true;
             txtApellidos.Enabled = false;
             txtEdad.Enabled = false;
-            txtFecha.Enabled=false;
+            DesactivarFecha(false);
             txtNombre.Enabled = false;
             cbSexo.Enabled = false;
             
+        }
+
+        private void DesactivarFecha(bool desactivar) {
+            if (!desactivar) {
+                txtFecha.BackColor = Color.Silver;
+                txtFecha.Enabled = false;
+            }
+            else {
+                txtFecha.BackColor = Color.White;
+                txtFecha.Enabled = true;
+            }
         }
 
         public void ActivarCampos()
@@ -55,7 +61,7 @@ namespace Enfermeria.View.Pacientes {
             txtCedula.Enabled = false;
             txtApellidos.Enabled = true;
             txtEdad.Enabled = true;
-            txtFecha.Enabled = true;
+            DesactivarFecha(true);
             txtNombre.Enabled = true;
             cbSexo.Enabled = true;
 
@@ -93,12 +99,12 @@ namespace Enfermeria.View.Pacientes {
 
             if (string.IsNullOrEmpty(txtApellidos.Text))
             {
-                lbApellidos.Visible = true;
+                //lbApellidos.Visible = true;
                 vacio = true;
             }
             else
             {
-                lbApellidos.Visible = false;
+                //lbApellidos.Visible = false;
 
             }
 
@@ -196,7 +202,5 @@ namespace Enfermeria.View.Pacientes {
                 MessageBox.Show("Solo se admiten letras.");
             }
         }
-
-
     }
 }
