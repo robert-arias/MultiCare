@@ -12,11 +12,12 @@ namespace Enfermeria.Controller.Medicamentos
     class ModificarMedicamentoController
     {
         FRM_ModificarMedicamento frm_ModificarMedicamento;
-        Conexion conexion;
+        ConexionMedicamentos conexion;
+
         public ModificarMedicamentoController(FRM_ModificarMedicamento frm_ModificarMedicamento)
         {
             this.frm_ModificarMedicamento = frm_ModificarMedicamento;
-            conexion = new Conexion();
+            conexion = new ConexionMedicamentos();
             AgregarEventosMedicamentos();
         }
 

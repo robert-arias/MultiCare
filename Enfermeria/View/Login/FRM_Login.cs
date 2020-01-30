@@ -18,20 +18,6 @@ namespace Enfermeria {
             alertaCambiarContrasenia.CambiarImagenWarning();
         }
 
-        public void ErrorUsuario() {
-            txtUsuario.Reset();
-            txtUsuario.BorderColorIdle = Color.Red;
-            txtUsuario.BorderColorHover = Color.Red;
-            txtUsuario.BorderColorActive = Color.Red;
-        }
-
-        public void ErrorContrasenia() {
-            txtContrasenia.ResetColors();
-            txtContrasenia.BorderColorIdle = Color.Red;
-            txtContrasenia.BorderColorHover = Color.Red;
-            txtContrasenia.BorderColorActive = Color.Red;
-        }
-
         public bool VerificarCamposLogin() {
             return string.IsNullOrEmpty(txtUsuario.Text) && string.IsNullOrEmpty(txtContrasenia.Text);
         }

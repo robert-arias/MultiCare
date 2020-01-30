@@ -4,14 +4,13 @@ using System.Data.SQLite;
 using System.Diagnostics;
 
 namespace Enfermeria.Model {
-    public class ConexionUsuarios {
-
-        private Conexion conexion;
+    public class ConexionUsuarios : Conexion {
+        
         private SQLiteConnection sqlConnection;
 
         public ConexionUsuarios() {
-            conexion = new Conexion();
-            sqlConnection = conexion.GetConexion();
+            Conectar();
+            sqlConnection = GetConexion();
         }
 
         public DataTable GetUsuario(string usuario) {

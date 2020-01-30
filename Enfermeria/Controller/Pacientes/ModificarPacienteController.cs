@@ -12,11 +12,12 @@ namespace Enfermeria.Controller.Pacientes
     class ModificarPacienteController
     {
         FRM_ModificarPaciente frm_ModificarPaciente;
-        Conexion conexion;
+        ConexionPacientes conexion;
+
         public ModificarPacienteController(FRM_ModificarPaciente frm_ModificarPaciente)
         {
             this.frm_ModificarPaciente = frm_ModificarPaciente;
-            conexion = new Conexion();
+            conexion = new ConexionPacientes();
             AgregarEventosPaciente();
         }
 

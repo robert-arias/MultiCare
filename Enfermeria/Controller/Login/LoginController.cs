@@ -41,7 +41,7 @@ namespace Enfermeria.Controller.Login {
             frm_Login.txt2.KeyPress += new KeyPressEventHandler(IngresandoCodigo2);
             frm_Login.txt3.KeyPress += new KeyPressEventHandler(IngresandoCodigo3);
             frm_Login.txt4.KeyPress += new KeyPressEventHandler(IngresandoCodigo4);
-            frm_Login.btnConfirmarCodigo.Click += new EventHandler(VerificarCodigoActivacion);
+            frm_Login.btnConfirmarCodigo.Click += new EventHandler(VerificarCodigo);
             frm_Login.btnCambiarContrasenia.Click += new EventHandler(CambiarContraseniaBoton);
             frm_Login.txtNuevaContrasenia.KeyDown += new KeyEventHandler(CambiarContraseniaEnter);
             frm_Login.txtRepetirContrasenia.KeyDown += new KeyEventHandler(CambiarContraseniaEnter);
@@ -72,7 +72,11 @@ namespace Enfermeria.Controller.Login {
             }
         }
 
-        private void VerificarCodigoActivacion(object sender, EventArgs e) {
+        private void VerificarCodigo(object sender, EventArgs e) {
+            VerificarCodigoVerificacion();
+        }
+
+        private void VerificarCodigoVerificacion() {
             string codigoIngresado = frm_Login.txt1.Text + frm_Login.txt2.Text + frm_Login.txt3.Text +
                 frm_Login.txt4.Text;
             if (codigoIngresado.Equals(codigo_recuperacion)) {
@@ -213,6 +217,7 @@ namespace Enfermeria.Controller.Login {
         }
 
         private void IngresandoCodigo4(object sender, KeyPressEventArgs e) {
+            VerificarCodigoVerificacion();
             if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
                 frm_Login.txt3.Focus();
             }

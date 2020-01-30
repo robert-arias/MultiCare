@@ -14,6 +14,7 @@ namespace Enfermeria.View.Pacientes {
             InitializeComponent();
             pacienteController = new PacienteController(this);
             cbSexo.Text = "Seleccionar";
+            alerta.CambiarImagenWarning();
         }
 
         public void EstadoInicial()
@@ -87,12 +88,12 @@ namespace Enfermeria.View.Pacientes {
 
             if (string.IsNullOrEmpty(txtApellidos.Text))
             {
-                //lbApellidos.Visible = true;
+                lbApellidos.Visible = true;
                 vacio = true;
             }
             else
             {
-                //lbApellidos.Visible = false;
+                lbApellidos.Visible = false;
 
             }
 
@@ -128,7 +129,7 @@ namespace Enfermeria.View.Pacientes {
 
         public bool ShowConfirmation()
         {
-            string message = $"¿Desea agregar al paciente { txtNombre.Text }, cédula: { txtCedula.Text} ?";
+            string message = $"¿Desea agregar al paciente { txtNombre.Text }, cédula: { txtCedula.Text}?";
             DialogResult boton = MessageBox.Show(message, "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
 
             return boton == DialogResult.OK;
@@ -138,30 +139,6 @@ namespace Enfermeria.View.Pacientes {
         {          
             return new Paciente(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtFecha.Value.ToString(),  int.Parse(txtEdad.Text),
                 cbSexo.GetItemText(cbSexo.SelectedItem), "Habilitado");
-        }
-
-        public void SoloLetras(KeyPressEventArgs v)
-        {
-            if (Char.IsLetter(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsSeparator(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsControl(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else
-            {
-                v.Handled = true;
-                MessageBox.Show("Solo se admiten letras.");
-            }
-
-            if (!(char.IsLetter(v.KeyChar) || char.IsSeparator(v.KeyChar) || char.IsControl(v.KeyChar)))
-                v.Handled = true;
         }
     }
 }

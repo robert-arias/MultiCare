@@ -101,7 +101,9 @@
     <Compile Include="Controller\Menu\MenuController.cs" />
     <Compile Include="Controller\Pacientes\AgregarPacienteController.cs" />
     <Compile Include="Controller\Pacientes\ModificarPacienteController.cs" />
+    <Compile Include="Model\ConexionMedicamentos.cs" />
     <Compile Include="Model\Conexion.cs" />
+    <Compile Include="Model\ConexionPacientes.cs" />
     <Compile Include="Model\ConexionUsuarios.cs" />
     <Compile Include="Model\Medicamento.cs" />
     <Compile Include="Model\Paciente.cs" />

@@ -1,4 +1,5 @@
-﻿using Enfermeria.Model;
+﻿using BunifuAnimatorNS;
+using Enfermeria.Model;
 using Enfermeria.View.Pacientes;
 using System;
 using System.Windows.Forms;
@@ -7,11 +8,12 @@ namespace Enfermeria.Controller {
     public class PacienteController
     {
         FRM_AgregarPaciente frm_AgregarPaciente;
-        Conexion conexion;
+        ConexionPacientes conexion;
+
         public PacienteController(FRM_AgregarPaciente frm_AgregarPaciente)
         {
             this.frm_AgregarPaciente = frm_AgregarPaciente;
-            conexion = new Conexion();
+            conexion = new ConexionPacientes();
             AgregarEventosPaciente();
 
         }
@@ -29,11 +31,15 @@ namespace Enfermeria.Controller {
 
         public void ValidarCedula(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsControl(e.KeyChar)))
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsControl(e.KeyChar))) {
                 e.Handled = true;
+                frm_AgregarPaciente.alerta.CambiarMensaje("En el campo cédula solo se permiten dígitos numéricos");
+                MostrarConAnimacion(frm_AgregarPaciente.alerta);
+            }
+            else if (frm_AgregarPaciente.alerta.Visible)
+                frm_AgregarPaciente.alerta.Visible = false;
         }
-
-
+        
         public void ValidarNombre(object sender, KeyPressEventArgs e)
         {
             SoloLetras(e);
@@ -45,8 +51,13 @@ namespace Enfermeria.Controller {
         }
 
         private void SoloLetras(KeyPressEventArgs e) {
-            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar)))
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) {
                 e.Handled = true;
+                frm_AgregarPaciente.alerta.CambiarMensaje("En el campo cédula solo se permiten dígitos alfabéticos");
+                MostrarConAnimacion(frm_AgregarPaciente.alerta);
+            }
+            else if (frm_AgregarPaciente.alerta.Visible)
+                frm_AgregarPaciente.alerta.Visible = false;
         }
 
         private void VerificarEnter(object sender, KeyEventArgs e)
@@ -143,8 +154,12 @@ namespace Enfermeria.Controller {
                 frm_AgregarPaciente.MensajeError("Algunos campos se encuentran vacíos." +
                     "\nLos campos con el asterisco (*) rojo son aquellos que deben ser modificados.");
             }
-
         }
-        
+
+        private void MostrarConAnimacion(Control control) {
+            BunifuTransition transition = new BunifuTransition();
+            transition.ShowSync(control, false, Animation.VertSlide);
+        }
+
     }
 }

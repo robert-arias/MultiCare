@@ -12,10 +12,10 @@ namespace Enfermeria.Controller.Medicamentos
     class AgregarMedicamentoController
     {
         FRM_AgregarMedicamento frm_AgregarMedicamento;
-        Conexion conexion;
+        ConexionMedicamentos conexion;
         public AgregarMedicamentoController(FRM_AgregarMedicamento frm_AgregarMedicamento)
         {
-            conexion = new Conexion();
+            conexion = new ConexionMedicamentos();
             this.frm_AgregarMedicamento = frm_AgregarMedicamento;
             AgregarEventosMedicamentos();
         }

@@ -81,6 +81,10 @@
             this.rbHabilitado = new System.Windows.Forms.RadioButton();
             this.rbDeshabilitado = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbApellidos = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbEdad = new Bunifu.UI.WinForms.BunifuLabel();
+            this.alerta = new Enfermeria.View.Login.Alerta();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // cbSexo
@@ -97,7 +101,7 @@
             this.cbSexo.MinimumSize = new System.Drawing.Size(133, 0);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(364, 33);
-            this.cbSexo.TabIndex = 92;
+            this.cbSexo.TabIndex = 7;
             // 
             // txtEdad
             // 
@@ -164,7 +168,7 @@
             this.txtEdad.ShortcutsEnabled = true;
             this.txtEdad.Size = new System.Drawing.Size(364, 43);
             this.txtEdad.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtEdad.TabIndex = 91;
+            this.txtEdad.TabIndex = 6;
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEdad.TextMarginBottom = 0;
             this.txtEdad.TextMarginLeft = 2;
@@ -194,7 +198,7 @@
             this.txtFecha.MinimumSize = new System.Drawing.Size(364, 42);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(364, 42);
-            this.txtFecha.TabIndex = 90;
+            this.txtFecha.TabIndex = 5;
             // 
             // txtApellidos
             // 
@@ -261,7 +265,7 @@
             this.txtApellidos.ShortcutsEnabled = true;
             this.txtApellidos.Size = new System.Drawing.Size(364, 43);
             this.txtApellidos.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtApellidos.TabIndex = 88;
+            this.txtApellidos.TabIndex = 4;
             this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtApellidos.TextMarginBottom = 0;
             this.txtApellidos.TextMarginLeft = 2;
@@ -335,7 +339,7 @@
             this.txtCedula.ShortcutsEnabled = true;
             this.txtCedula.Size = new System.Drawing.Size(364, 43);
             this.txtCedula.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtCedula.TabIndex = 87;
+            this.txtCedula.TabIndex = 1;
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCedula.TextMarginBottom = 0;
             this.txtCedula.TextMarginLeft = 2;
@@ -465,7 +469,7 @@
             stateProperties16.IconRightImage = null;
             this.btnVerificar.OnPressedState = stateProperties16;
             this.btnVerificar.Size = new System.Drawing.Size(182, 43);
-            this.btnVerificar.TabIndex = 85;
+            this.btnVerificar.TabIndex = 2;
             this.btnVerificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerificar.TextMarginLeft = 0;
             this.btnVerificar.UseDefaultRadiusAndThickness = true;
@@ -475,7 +479,7 @@
             this.lbSexo.AutoEllipsis = false;
             this.lbSexo.CursorType = null;
             this.lbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbSexo.ForeColor = System.Drawing.Color.Black;
+            this.lbSexo.ForeColor = System.Drawing.Color.Red;
             this.lbSexo.Location = new System.Drawing.Point(399, 401);
             this.lbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.lbSexo.Name = "lbSexo";
@@ -492,7 +496,7 @@
             this.lbFecha.AutoEllipsis = false;
             this.lbFecha.CursorType = null;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbFecha.ForeColor = System.Drawing.Color.Black;
+            this.lbFecha.ForeColor = System.Drawing.Color.Red;
             this.lbFecha.Location = new System.Drawing.Point(399, 301);
             this.lbFecha.Margin = new System.Windows.Forms.Padding(4);
             this.lbFecha.Name = "lbFecha";
@@ -509,7 +513,7 @@
             this.lbNombre.AutoEllipsis = false;
             this.lbNombre.CursorType = null;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbNombre.ForeColor = System.Drawing.Color.Black;
+            this.lbNombre.ForeColor = System.Drawing.Color.Red;
             this.lbNombre.Location = new System.Drawing.Point(399, 204);
             this.lbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.lbNombre.Name = "lbNombre";
@@ -691,7 +695,7 @@
             this.txtNombre.ShortcutsEnabled = true;
             this.txtNombre.Size = new System.Drawing.Size(364, 43);
             this.txtNombre.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtNombre.TabIndex = 59;
+            this.txtNombre.TabIndex = 3;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.TextMarginBottom = 0;
             this.txtNombre.TextMarginLeft = 2;
@@ -737,7 +741,7 @@
             this.btnAgregar.IdleIconLeftImage = null;
             this.btnAgregar.IdleIconRightImage = null;
             this.btnAgregar.IndicateFocus = false;
-            this.btnAgregar.Location = new System.Drawing.Point(196, 465);
+            this.btnAgregar.Location = new System.Drawing.Point(196, 476);
             this.btnAgregar.Name = "btnAgregar";
             stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
             stateProperties21.BorderRadius = 45;
@@ -758,7 +762,7 @@
             stateProperties22.IconRightImage = null;
             this.btnAgregar.OnPressedState = stateProperties22;
             this.btnAgregar.Size = new System.Drawing.Size(182, 43);
-            this.btnAgregar.TabIndex = 86;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar.TextMarginLeft = 0;
             this.btnAgregar.UseDefaultRadiusAndThickness = true;
@@ -800,7 +804,7 @@
             this.btnCancelar.IdleIconLeftImage = null;
             this.btnCancelar.IdleIconRightImage = null;
             this.btnCancelar.IndicateFocus = false;
-            this.btnCancelar.Location = new System.Drawing.Point(437, 464);
+            this.btnCancelar.Location = new System.Drawing.Point(437, 475);
             this.btnCancelar.Name = "btnCancelar";
             stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(89)))));
             stateProperties23.BorderRadius = 45;
@@ -875,12 +879,67 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "No utilice guiones.";
             // 
+            // lbApellidos
+            // 
+            this.lbApellidos.AutoEllipsis = false;
+            this.lbApellidos.CursorType = null;
+            this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbApellidos.ForeColor = System.Drawing.Color.Red;
+            this.lbApellidos.Location = new System.Drawing.Point(784, 204);
+            this.lbApellidos.Margin = new System.Windows.Forms.Padding(4);
+            this.lbApellidos.Name = "lbApellidos";
+            this.lbApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbApellidos.Size = new System.Drawing.Size(11, 27);
+            this.lbApellidos.TabIndex = 97;
+            this.lbApellidos.Text = "*";
+            this.lbApellidos.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbApellidos.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbApellidos.Visible = false;
+            // 
+            // lbEdad
+            // 
+            this.lbEdad.AutoEllipsis = false;
+            this.lbEdad.CursorType = null;
+            this.lbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbEdad.ForeColor = System.Drawing.Color.Red;
+            this.lbEdad.Location = new System.Drawing.Point(784, 301);
+            this.lbEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.lbEdad.Name = "lbEdad";
+            this.lbEdad.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbEdad.Size = new System.Drawing.Size(11, 27);
+            this.lbEdad.TabIndex = 98;
+            this.lbEdad.Text = "*";
+            this.lbEdad.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbEdad.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lbEdad.Visible = false;
+            // 
+            // alerta
+            // 
+            this.alerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
+            this.alerta.Location = new System.Drawing.Point(32, 435);
+            this.alerta.Name = "alerta";
+            this.alerta.Size = new System.Drawing.Size(750, 35);
+            this.alerta.TabIndex = 99;
+            this.alerta.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(35, 50);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 2);
+            this.panel3.TabIndex = 100;
+            // 
             // FRM_AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(814, 531);
+            this.ClientSize = new System.Drawing.Size(814, 532);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.alerta);
+            this.Controls.Add(this.lbEdad);
+            this.Controls.Add(this.lbApellidos);
             this.Controls.Add(this.rbDeshabilitado);
             this.Controls.Add(this.rbHabilitado);
             this.Controls.Add(this.label2);
@@ -939,5 +998,9 @@
         private System.Windows.Forms.RadioButton rbHabilitado;
         private System.Windows.Forms.RadioButton rbDeshabilitado;
         private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuLabel lbApellidos;
+        private Bunifu.UI.WinForms.BunifuLabel lbEdad;
+        public Login.Alerta alerta;
+        private System.Windows.Forms.Panel panel3;
     }
 }
