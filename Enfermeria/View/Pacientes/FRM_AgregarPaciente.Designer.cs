@@ -60,7 +60,6 @@
             this.cbSexo = new System.Windows.Forms.ComboBox();
             this.txtEdad = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtFecha = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtApellidos = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtCedula = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btnLimpiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -81,6 +80,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.rbHabilitado = new System.Windows.Forms.RadioButton();
             this.rbDeshabilitado = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbSexo
@@ -120,7 +120,7 @@
             this.txtEdad.DefaultText = "";
             this.txtEdad.FillColor = System.Drawing.Color.White;
             this.txtEdad.HideSelection = true;
-            this.txtEdad.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtEdad.IconLeft")));
+            this.txtEdad.IconLeft = null;
             this.txtEdad.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.IconPadding = 10;
             this.txtEdad.IconRight = null;
@@ -167,7 +167,7 @@
             this.txtEdad.TabIndex = 91;
             this.txtEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEdad.TextMarginBottom = 0;
-            this.txtEdad.TextMarginLeft = 8;
+            this.txtEdad.TextMarginLeft = 2;
             this.txtEdad.TextMarginTop = 0;
             this.txtEdad.TextPlaceholder = "18";
             this.txtEdad.UseSystemPasswordChar = false;
@@ -196,17 +196,6 @@
             this.txtFecha.Size = new System.Drawing.Size(364, 42);
             this.txtFecha.TabIndex = 90;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(33, 132);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "No utilice guiones.";
-            // 
             // txtApellidos
             // 
             this.txtApellidos.AcceptsReturn = false;
@@ -228,7 +217,7 @@
             this.txtApellidos.DefaultText = "";
             this.txtApellidos.FillColor = System.Drawing.Color.White;
             this.txtApellidos.HideSelection = true;
-            this.txtApellidos.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtApellidos.IconLeft")));
+            this.txtApellidos.IconLeft = null;
             this.txtApellidos.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidos.IconPadding = 10;
             this.txtApellidos.IconRight = null;
@@ -275,7 +264,7 @@
             this.txtApellidos.TabIndex = 88;
             this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtApellidos.TextMarginBottom = 0;
-            this.txtApellidos.TextMarginLeft = 8;
+            this.txtApellidos.TextMarginLeft = 2;
             this.txtApellidos.TextMarginTop = 0;
             this.txtApellidos.TextPlaceholder = "Ávila Guzmán";
             this.txtApellidos.UseSystemPasswordChar = false;
@@ -302,7 +291,7 @@
             this.txtCedula.DefaultText = "";
             this.txtCedula.FillColor = System.Drawing.Color.White;
             this.txtCedula.HideSelection = true;
-            this.txtCedula.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtCedula.IconLeft")));
+            this.txtCedula.IconLeft = null;
             this.txtCedula.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedula.IconPadding = 10;
             this.txtCedula.IconRight = null;
@@ -349,7 +338,7 @@
             this.txtCedula.TabIndex = 87;
             this.txtCedula.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCedula.TextMarginBottom = 0;
-            this.txtCedula.TextMarginLeft = 8;
+            this.txtCedula.TextMarginLeft = 2;
             this.txtCedula.TextMarginTop = 0;
             this.txtCedula.TextPlaceholder = "123456789";
             this.txtCedula.UseSystemPasswordChar = false;
@@ -486,7 +475,7 @@
             this.lbSexo.AutoEllipsis = false;
             this.lbSexo.CursorType = null;
             this.lbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbSexo.ForeColor = System.Drawing.Color.Red;
+            this.lbSexo.ForeColor = System.Drawing.Color.Black;
             this.lbSexo.Location = new System.Drawing.Point(399, 401);
             this.lbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.lbSexo.Name = "lbSexo";
@@ -503,7 +492,7 @@
             this.lbFecha.AutoEllipsis = false;
             this.lbFecha.CursorType = null;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbFecha.ForeColor = System.Drawing.Color.Red;
+            this.lbFecha.ForeColor = System.Drawing.Color.Black;
             this.lbFecha.Location = new System.Drawing.Point(399, 301);
             this.lbFecha.Margin = new System.Windows.Forms.Padding(4);
             this.lbFecha.Name = "lbFecha";
@@ -520,7 +509,7 @@
             this.lbNombre.AutoEllipsis = false;
             this.lbNombre.CursorType = null;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lbNombre.ForeColor = System.Drawing.Color.Red;
+            this.lbNombre.ForeColor = System.Drawing.Color.Black;
             this.lbNombre.Location = new System.Drawing.Point(399, 204);
             this.lbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.lbNombre.Name = "lbNombre";
@@ -658,7 +647,7 @@
             this.txtNombre.DefaultText = "";
             this.txtNombre.FillColor = System.Drawing.Color.White;
             this.txtNombre.HideSelection = true;
-            this.txtNombre.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtNombre.IconLeft")));
+            this.txtNombre.IconLeft = null;
             this.txtNombre.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.IconPadding = 9;
             this.txtNombre.IconRight = null;
@@ -705,7 +694,7 @@
             this.txtNombre.TabIndex = 59;
             this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombre.TextMarginBottom = 0;
-            this.txtNombre.TextMarginLeft = 8;
+            this.txtNombre.TextMarginLeft = 2;
             this.txtNombre.TextMarginTop = 0;
             this.txtNombre.TextPlaceholder = "María";
             this.txtNombre.UseSystemPasswordChar = false;
@@ -875,6 +864,17 @@
             this.rbDeshabilitado.Text = "Deshabilitado";
             this.rbDeshabilitado.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(33, 132);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "No utilice guiones.";
+            // 
             // FRM_AgregarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -929,7 +929,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnVerificar;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLimpiar;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtCedula;
-        private System.Windows.Forms.Label label1;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtApellidos;
         private Bunifu.UI.WinForms.BunifuDatePicker txtFecha;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtEdad;
@@ -939,5 +938,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rbHabilitado;
         private System.Windows.Forms.RadioButton rbDeshabilitado;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -76,25 +76,13 @@ namespace Enfermeria.View.Pacientes {
         {
             bool vacio = false;
 
-            /*if (string.IsNullOrEmpty(txtCedula.Text))
-            {
-                lbCedula.Visible = true;
-                vacio = true;
-            }
-            else
-            {
-                lbCedula.Visible = false;
-            }*/
-
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 lbNombre.Visible = true;
                 vacio = true;
             }
             else
-            {
                 lbNombre.Visible = false;
-            }
 
 
             if (string.IsNullOrEmpty(txtApellidos.Text))
@@ -114,9 +102,7 @@ namespace Enfermeria.View.Pacientes {
                 vacio = true;
             }
             else
-            {
                 lbFecha.Visible = false;
-            }
 
             if (cbSexo.SelectedIndex == 0 )
             {
@@ -124,9 +110,7 @@ namespace Enfermeria.View.Pacientes {
                 vacio = true;
             }
             else
-            {
                 lbSexo.Visible = false;
-            }
 
 
             return vacio;
@@ -144,42 +128,16 @@ namespace Enfermeria.View.Pacientes {
 
         public bool ShowConfirmation()
         {
-            string message = "¿Desea agregar al paciente cédula: " + txtCedula.Text + "  " + " nombre:  " + txtNombre.Text + " ?";
+            string message = $"¿Desea agregar al paciente { txtNombre.Text }, cédula: { txtCedula.Text} ?";
             DialogResult boton = MessageBox.Show(message, "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (boton == DialogResult.OK)
-            {
-                return true;
-            }
 
-            return false;
+            return boton == DialogResult.OK;
         }
 
         public Paciente GetPaciente()
         {          
-            return new Paciente(txtCedula.Text,txtNombre.Text,txtApellidos.Text,txtFecha.Value.ToString(),int.Parse(txtEdad.Text),
+            return new Paciente(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtFecha.Value.ToString(),  int.Parse(txtEdad.Text),
                 cbSexo.GetItemText(cbSexo.SelectedItem), "Habilitado");
-        }
-
-
-        public void SoloNumeros(KeyPressEventArgs v)
-        {
-            if (Char.IsDigit(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsSeparator(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsControl(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else
-            {
-                v.Handled = true;
-                MessageBox.Show("Solo se admiten números.");
-            }
         }
 
         public void SoloLetras(KeyPressEventArgs v)
@@ -201,6 +159,9 @@ namespace Enfermeria.View.Pacientes {
                 v.Handled = true;
                 MessageBox.Show("Solo se admiten letras.");
             }
+
+            if (!(char.IsLetter(v.KeyChar) || char.IsSeparator(v.KeyChar) || char.IsControl(v.KeyChar)))
+                v.Handled = true;
         }
     }
 }

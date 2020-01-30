@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Enfermeria.Model;
 using Enfermeria.View.Pacientes;
-using Enfermeria.Model;
+using System;
 using System.Windows.Forms;
 
-namespace Enfermeria.Controller
-{
-  public class PacienteController
+namespace Enfermeria.Controller {
+    public class PacienteController
     {
         FRM_AgregarPaciente frm_AgregarPaciente;
         Conexion conexion;
@@ -30,28 +25,29 @@ namespace Enfermeria.Controller
             frm_AgregarPaciente.txtCedula.KeyPress += new KeyPressEventHandler(ValidarCedula);
             frm_AgregarPaciente.txtNombre.KeyPress += new KeyPressEventHandler(ValidarNombre);
             frm_AgregarPaciente.txtApellidos.KeyPress += new KeyPressEventHandler(ValidarApellidos);
-
-
         }
 
         public void ValidarCedula(object sender, KeyPressEventArgs e)
         {
-            frm_AgregarPaciente.SoloNumeros(e);
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsControl(e.KeyChar)))
+                e.Handled = true;
         }
 
 
         public void ValidarNombre(object sender, KeyPressEventArgs e)
         {
-            frm_AgregarPaciente.SoloLetras(e);
+            SoloLetras(e);
         }
 
         public void ValidarApellidos(object sender, KeyPressEventArgs e)
         {
-            frm_AgregarPaciente.SoloLetras(e);
+            SoloLetras(e);
         }
 
-
-
+        private void SoloLetras(KeyPressEventArgs e) {
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar)))
+                e.Handled = true;
+        }
 
         private void VerificarEnter(object sender, KeyEventArgs e)
         {
@@ -69,7 +65,6 @@ namespace Enfermeria.Controller
                         {
                             frm_AgregarPaciente.MensajeError("La cédula de identidad ingresada se encuentra en los registros.");
                         }
-
                     }
                     else
                     {
@@ -82,9 +77,7 @@ namespace Enfermeria.Controller
 
                     frm_AgregarPaciente.MensajeError("El campo \"número de cédula\" se encuentra vacío.");
 
-
                 e.SuppressKeyPress = true; //remove ding windows sound.
-
             }
         }
 
