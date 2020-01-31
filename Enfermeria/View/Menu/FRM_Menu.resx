@@ -200,108 +200,6 @@
         5Hnd8AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnBuscarPacientes.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAA1hJREFUaEPt
-        mkmPTUEYQJsYgoXZAj+BnWlvz0bYWJAIlmJBTEss7Ix/gIRggd9BQiSEhRgTMcSQmINzpF/ypXKb97qr
-        7r393JOcpHP7vaqv+t5b9dVXPdLR0dHR8R8xFdfhQbyKd/EtfhvVn712BQ/gWvQ7k47leByf4q8B9TvH
-        cBm2noV4Fr9i1WAG8QuewQXYSrbgK6wKfiLa5mZsDdPQu1oVrL7D87gDV+NinD6qP3vN313A91jVhp5G
-        +2qUWXgDqwK8h9vQz/SLn92O97Gqzes4SHtZ8a9dNdhPuAcncjf87l60rbT9a9jInT6HaTDPcBXmwsf9
-        Oab9nMJacYJKg7iFSzE3tmnbaX+bsBZcetLZ2DtbYrA9nNweYOzzJc7H4qQzsu9Zzsd4LFZg+k6fxKKY
-        QZkQxE6doOriEMa+P2PJJ+tPuhg7dOmpc8acg+kkdhSLYFKf5saus3WzC2MMj7HIhsNdT+zIDKqJJGA2
-        fsAYi8tXdty+xU5MF5viIsZY9mN23M/GTsx/m2InxlguY3bcqMdOijxGfWKhIMZyB7PzBmMni7AplmCM
-        xUQoO+mmfgY2xUyMsZgbZKfNAza27LT5kTa27KST1hpsijQnuI3ZafOyZGzZSRMPa1BNcQljLPswO+na
-        Z8GtidTSDcRHjLEUyQmqNg8W3OpmN8YYnuAULIInArEzq4t1bw9fYIzBY5xiePyRFgCsLtbFEYx9u2ua
-        h0Xx+CN2atmljrx6JaYlnhNYnKoinlWI0kW8hxj7dOM/F2vBs57YuVpKNbDc2OZNjH39xPVYK571xCDU
-        UqrVxVz4GKd3VoskGv/C2dmznjQY3zOri86o48XvHsb0ne35HT0MqB0TD896qoLyvbbgZg2qX/ys62y6
-        9FTZ2KC90571VAWlLh3WoMx/zdZ8J91aqrser/mHMV1MM6ievrM+xg4yXm9s0OJZj8cfMaAcOhv3JigH
-        16pBe9bj8UeanIxHnwzX2XTpad2gxTXZEwHvTgysH82N3Zn9LYNq5aDFDYdZmHVjS6lWF61OWJLx35Ze
-        o5t330+3eH62341AawddEueNdNA/cCsOLd2gR+0GPYyMNZFtxKGlatAudUNNOmhz86HHx/gRenc3eKGj
-        o6OjY3IxMvIbpAAKf4TX2xQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnAgregarPacientes.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABCtJREFUeF7t
-        mk3LVVUUgN8GVmIiSn/AD6zQNJUMnSimBRU5KKgfYOUfkNR/YBo18GPgTCnEbOZHETooJTR1XJoVOtNq
-        kAZppj0PKCw2B7zn3HXuPS/veeCBy/veu866H2fvtfbeEz09PT09Pa3zDH6A+/Ak/ox/4p0H+ti/+b+9
-        6HMX4qRmCX6M1/B+Q6/iLjTWpOAxfB3PYNUbGsbT+Bp6jU6yAs9iVfKZfo/LsTM8iZ/iXaxKWP/CY/gh
-        voGOCbNx2gN97N/8n885jjexKpZ6rU/wCRwrC/AiViV5D4/iW9gkUT/Yt9EPzlhV17iA83EsrMI/sEzK
-        ZA/hYszieTyM5bX0d3wJR8oreAvLZH7EtdgW6/AnLK9rLhtwJKzEqjd/AJ/CtpmO+7G8/t+4GlvFe778
-        2fuT34KjZiuWY8MNnIet4KBUDngmsAnHxXtYfgg/YCuzg1NdvJCO45svcdos87J6TMUip5znP8eu4PgT
-        czPXZZiCpWdZ4Tnaz8Cu4OB7CWOOls4pWNvHwOp01DXWYDkevIpDUzY2Fjld5QuMuX6LQ2E1FwP6CWdV
-        eDGuZrAI/8MY1yqyMfbzMZi1fRYxrmZhIxXjfoSNKRczbE6yiHE1i3cwxv0NG2F7GgPZ0mYWGDG2ZmGp
-        XJbqVrC12YwxiG1pJjG2ZvIVxtjvY21cnIxBrLgyibE1k20YY+/G2pzCGMR6IJMYWzN5E2Psb7A2v2IM
-        kr1MHWNrJs9ijH0Fa1O2vXOwDvG1GdbhaYyvtU2uzW2MQR7HOsTXZlgHZ6v42n+wNlP+A5jyt8AvGINM
-        5kHQfcfalNOgmxaZxNiayUaMsRtNg1O+EHKLOgaxy8okxtZMvsYY28XT2njPxyDu1bkynEWMrVnYDLlH
-        EGM3aobE/fkYaEq1w+Lycgw2GRZETmCMuwMbU7UkNtQSUyDG1QyWYrkwOnS+Li/HgO7SdpUvMeY69KKo
-        eCwlBtUuLouvxzJPd7GHxo0Rj6XEwG5Rj2IneFBm4mWMOX6HaXgmp9wa69L+wEGMuZnrC5iKZ3LiRdQt
-        6nGzHcu8dmI6tpjnMV7IEbfRgmMSVqvlqH8O67buA+OBJM/kxAuaQHafMAh+8+Wbv45zsVVexKojbEdw
-        FraNA95nWF7f8teDWyPBA0lV54Tcon4Z28LrlqO9+oU4DY4Uj6a50lImo+7SZp7vtcIri5yH+rP34NZY
-        8ECSZ3KqEvP+tIW2ObFDq4uveRet7ct7/aEOeK3f84/C2cGm6V+sSlK9XdyucqHCTYvn0DVGR2v1sX9z
-        Jcfn2M+XLW3UaznVtTbaN8HCo+wb2tAKz1uis3gsxSakKvlhNGZKbT8qbKU9nOCCRNUbGkRfaz+fee54
-        LLgk5brcHnSF1qnMfQc3X9THTqH+z+d4+LLxMlZPT09PT88gTEz8Dwc45eHCMlmWAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnBuscarMedicamentos.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAA1hJREFUaEPt
-        mkmPTUEYQJsYgoXZAj+BnWlvz0bYWJAIlmJBTEss7Ix/gIRggd9BQiSEhRgTMcSQmINzpF/ypXKb97qr
-        7r393JOcpHP7vaqv+t5b9dVXPdLR0dHR8R8xFdfhQbyKd/EtfhvVn712BQ/gWvQ7k47leByf4q8B9TvH
-        cBm2noV4Fr9i1WAG8QuewQXYSrbgK6wKfiLa5mZsDdPQu1oVrL7D87gDV+NinD6qP3vN313A91jVhp5G
-        +2qUWXgDqwK8h9vQz/SLn92O97Gqzes4SHtZ8a9dNdhPuAcncjf87l60rbT9a9jInT6HaTDPcBXmwsf9
-        Oab9nMJacYJKg7iFSzE3tmnbaX+bsBZcetLZ2DtbYrA9nNweYOzzJc7H4qQzsu9Zzsd4LFZg+k6fxKKY
-        QZkQxE6doOriEMa+P2PJJ+tPuhg7dOmpc8acg+kkdhSLYFKf5saus3WzC2MMj7HIhsNdT+zIDKqJJGA2
-        fsAYi8tXdty+xU5MF5viIsZY9mN23M/GTsx/m2InxlguY3bcqMdOijxGfWKhIMZyB7PzBmMni7AplmCM
-        xUQoO+mmfgY2xUyMsZgbZKfNAza27LT5kTa27KST1hpsijQnuI3ZafOyZGzZSRMPa1BNcQljLPswO+na
-        Z8GtidTSDcRHjLEUyQmqNg8W3OpmN8YYnuAULIInArEzq4t1bw9fYIzBY5xiePyRFgCsLtbFEYx9u2ua
-        h0Xx+CN2atmljrx6JaYlnhNYnKoinlWI0kW8hxj7dOM/F2vBs57YuVpKNbDc2OZNjH39xPVYK571xCDU
-        UqrVxVz4GKd3VoskGv/C2dmznjQY3zOri86o48XvHsb0ne35HT0MqB0TD896qoLyvbbgZg2qX/ys62y6
-        9FTZ2KC90571VAWlLh3WoMx/zdZ8J91aqrser/mHMV1MM6ievrM+xg4yXm9s0OJZj8cfMaAcOhv3JigH
-        16pBe9bj8UeanIxHnwzX2XTpad2gxTXZEwHvTgysH82N3Zn9LYNq5aDFDYdZmHVjS6lWF61OWJLx35Ze
-        o5t330+3eH62341AawddEueNdNA/cCsOLd2gR+0GPYyMNZFtxKGlatAudUNNOmhz86HHx/gRenc3eKGj
-        o6OjY3IxMvIbpAAKf4TX2xQAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnModificarMedicamentos.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAnNJREFUeF7t
-        mrtqVUEUho/aWGsfxSKNjUiCYhGfQRMEm7yMJqQIhDyA+AaKCl4abRTzAkKCT+ANsTGgov4fMrBYzJxz
-        tmlm7awPPghzJsP8c9s7OTNJkiRJkiQqp+XJfz8eD07Im/KB/CL/yF/yvdyVi3K0nJN7ktAtf8oteUqO
-        isvyg6yFrvlQjmYQCF+Wu/VQsiIOTJmVlRCeVvh78owsXJX70tZhO4Q+E1rh78oaZ6UfBA7GkLTCP5LT
-        uCJtfZ4O4WiFR5b1mpzGO2nrhzoMp4UvzhqEN9LW52UpBK3wTyShbVlrEDgYeTqUerQXglb4HQmEnWcQ
-        7ktbh/eB7pkVvjBrEHg62M+Q1+aumTd8oTUIPB1sGb6V/O3QLZfkZ+k73gpfWJU/pP89K+1ekN3yv+EL
-        0wbhq1yW3TJ02bd4LH0btEv73XLUmS/wh45vo/uZz/DSdzzDDyDDOzO87JYML33HM/wAMrwzw8tuyfDS
-        dzzDDyDDOzO87JZjHb71n5yXcggMlm+j+//kwAvpO158Ls/LWYQND5+k77yVrbEiW4Rc9gWup9iOcy/n
-        tyvD7/Ka9ISeeeAbFtv5V5KZY//bcvwo7XYIHx42pA2wLYErapvSrwbOBL6VGUV4eCZtiNvSwiDYz7G2
-        OkKGB5a1DeLv3rAS2Ba2jjdseH8AfpO125lLsnYwYpjTvsYNacMw08AeZyWwHTgTKOfpYOti2Jkv3JE2
-        EDexCMtKsOU1w4cHfwDOa+hlbxlyRRV5I+S1OfzMAy80tZBFZvm15ELiurwou76VMZRbsoRlJTyVnAkc
-        jAty9FyXDAKPwiRJkiRJxsRk8hdwdUnxa2ckhAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAgregarMedicamentos.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABCtJREFUeF7t
-        mk3LVVUUgN8GVmIiSn/AD6zQNJUMnSimBRU5KKgfYOUfkNR/YBo18GPgTCnEbOZHETooJTR1XJoVOtNq
-        kAZppj0PKCw2B7zn3HXuPS/veeCBy/veu866H2fvtfbeEz09PT09Pa3zDH6A+/Ak/ox/4p0H+ti/+b+9
-        6HMX4qRmCX6M1/B+Q6/iLjTWpOAxfB3PYNUbGsbT+Bp6jU6yAs9iVfKZfo/LsTM8iZ/iXaxKWP/CY/gh
-        voGOCbNx2gN97N/8n885jjexKpZ6rU/wCRwrC/AiViV5D4/iW9gkUT/Yt9EPzlhV17iA83EsrMI/sEzK
-        ZA/hYszieTyM5bX0d3wJR8oreAvLZH7EtdgW6/AnLK9rLhtwJKzEqjd/AJ/CtpmO+7G8/t+4GlvFe778
-        2fuT34KjZiuWY8MNnIet4KBUDngmsAnHxXtYfgg/YCuzg1NdvJCO45svcdos87J6TMUip5znP8eu4PgT
-        czPXZZiCpWdZ4Tnaz8Cu4OB7CWOOls4pWNvHwOp01DXWYDkevIpDUzY2Fjld5QuMuX6LQ2E1FwP6CWdV
-        eDGuZrAI/8MY1yqyMfbzMZi1fRYxrmZhIxXjfoSNKRczbE6yiHE1i3cwxv0NG2F7GgPZ0mYWGDG2ZmGp
-        XJbqVrC12YwxiG1pJjG2ZvIVxtjvY21cnIxBrLgyibE1k20YY+/G2pzCGMR6IJMYWzN5E2Psb7A2v2IM
-        kr1MHWNrJs9ijH0Fa1O2vXOwDvG1GdbhaYyvtU2uzW2MQR7HOsTXZlgHZ6v42n+wNlP+A5jyt8AvGINM
-        5kHQfcfalNOgmxaZxNiayUaMsRtNg1O+EHKLOgaxy8okxtZMvsYY28XT2njPxyDu1bkynEWMrVnYDLlH
-        EGM3aobE/fkYaEq1w+Lycgw2GRZETmCMuwMbU7UkNtQSUyDG1QyWYrkwOnS+Li/HgO7SdpUvMeY69KKo
-        eCwlBtUuLouvxzJPd7GHxo0Rj6XEwG5Rj2IneFBm4mWMOX6HaXgmp9wa69L+wEGMuZnrC5iKZ3LiRdQt
-        6nGzHcu8dmI6tpjnMV7IEbfRgmMSVqvlqH8O67buA+OBJM/kxAuaQHafMAh+8+Wbv45zsVVexKojbEdw
-        FraNA95nWF7f8teDWyPBA0lV54Tcon4Z28LrlqO9+oU4DY4Uj6a50lImo+7SZp7vtcIri5yH+rP34NZY
-        8ECSZ3KqEvP+tIW2ObFDq4uveRet7ct7/aEOeK3f84/C2cGm6V+sSlK9XdyucqHCTYvn0DVGR2v1sX9z
-        Jcfn2M+XLW3UaznVtTbaN8HCo+wb2tAKz1uis3gsxSakKvlhNGZKbT8qbKU9nOCCRNUbGkRfaz+fee54
-        LLgk5brcHnSF1qnMfQc3X9THTqH+z+d4+LLxMlZPT09PT88gTEz8Dwc45eHCMlmWAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="btnBuscarPrescripcion.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAA1hJREFUaEPt
@@ -359,22 +257,6 @@
         8ECSZ3KqEvP+tIW2ObFDq4uveRet7ct7/aEOeK3f84/C2cGm6V+sSlK9XdyucqHCTYvn0DVGR2v1sX9z
         Jcfn2M+XLW3UaznVtTbaN8HCo+wb2tAKz1uis3gsxSakKvlhNGZKbT8qbKU9nOCCRNUbGkRfaz+fee54
         LLgk5brcHnSF1qnMfQc3X9THTqH+z+d4+LLxMlZPT09PT88gTEz8Dwc45eHCMlmWAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnModificarPacientes.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAnNJREFUeF7t
-        mrtqVUEUho/aWGsfxSKNjUiCYhGfQRMEm7yMJqQIhDyA+AaKCl4abRTzAkKCT+ANsTGgov4fMrBYzJxz
-        tmlm7awPPghzJsP8c9s7OTNJkiRJkiQqp+XJfz8eD07Im/KB/CL/yF/yvdyVi3K0nJN7ktAtf8oteUqO
-        isvyg6yFrvlQjmYQCF+Wu/VQsiIOTJmVlRCeVvh78owsXJX70tZhO4Q+E1rh78oaZ6UfBA7GkLTCP5LT
-        uCJtfZ4O4WiFR5b1mpzGO2nrhzoMp4UvzhqEN9LW52UpBK3wTyShbVlrEDgYeTqUerQXglb4HQmEnWcQ
-        7ktbh/eB7pkVvjBrEHg62M+Q1+aumTd8oTUIPB1sGb6V/O3QLZfkZ+k73gpfWJU/pP89K+1ekN3yv+EL
-        0wbhq1yW3TJ02bd4LH0btEv73XLUmS/wh45vo/uZz/DSdzzDDyDDOzO87JYML33HM/wAMrwzw8tuyfDS
-        dzzDDyDDOzO87JZjHb71n5yXcggMlm+j+//kwAvpO158Ls/LWYQND5+k77yVrbEiW4Rc9gWup9iOcy/n
-        tyvD7/Ka9ISeeeAbFtv5V5KZY//bcvwo7XYIHx42pA2wLYErapvSrwbOBL6VGUV4eCZtiNvSwiDYz7G2
-        OkKGB5a1DeLv3rAS2Ba2jjdseH8AfpO125lLsnYwYpjTvsYNacMw08AeZyWwHTgTKOfpYOti2Jkv3JE2
-        EDexCMtKsOU1w4cHfwDOa+hlbxlyRRV5I+S1OfzMAy80tZBFZvm15ELiurwou76VMZRbsoRlJTyVnAkc
-        jAty9FyXDAKPwiRJkiRJxsRk8hdwdUnxa2ckhAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -218,12 +218,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="assets\" />
     <Folder Include="Controller\Prescripciones\" />
     <Folder Include="View\Prescripciones\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\buscar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
