@@ -97,7 +97,7 @@
             "Femenino",
             "Masculino",
             "Otro"});
-            this.cbSexo.Location = new System.Drawing.Point(32, 395);
+            this.cbSexo.Location = new System.Drawing.Point(28, 395);
             this.cbSexo.MinimumSize = new System.Drawing.Size(133, 0);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(364, 33);
@@ -130,7 +130,7 @@
             this.txtEdad.IconRight = null;
             this.txtEdad.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEdad.Lines = new string[0];
-            this.txtEdad.Location = new System.Drawing.Point(418, 288);
+            this.txtEdad.Location = new System.Drawing.Point(414, 288);
             this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEdad.MaxLength = 32767;
             this.txtEdad.MinimumSize = new System.Drawing.Size(133, 43);
@@ -194,7 +194,7 @@
             this.txtFecha.Icon = ((System.Drawing.Image)(resources.GetObject("txtFecha.Icon")));
             this.txtFecha.IconColor = System.Drawing.Color.Black;
             this.txtFecha.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.txtFecha.Location = new System.Drawing.Point(32, 289);
+            this.txtFecha.Location = new System.Drawing.Point(28, 289);
             this.txtFecha.MinimumSize = new System.Drawing.Size(364, 42);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(364, 42);
@@ -227,7 +227,7 @@
             this.txtApellidos.IconRight = null;
             this.txtApellidos.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtApellidos.Lines = new string[0];
-            this.txtApellidos.Location = new System.Drawing.Point(418, 192);
+            this.txtApellidos.Location = new System.Drawing.Point(414, 192);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos.MaxLength = 32767;
             this.txtApellidos.MinimumSize = new System.Drawing.Size(133, 43);
@@ -301,7 +301,7 @@
             this.txtCedula.IconRight = null;
             this.txtCedula.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCedula.Lines = new string[0];
-            this.txtCedula.Location = new System.Drawing.Point(32, 90);
+            this.txtCedula.Location = new System.Drawing.Point(28, 90);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula.MaxLength = 32767;
             this.txtCedula.MinimumSize = new System.Drawing.Size(133, 43);
@@ -385,7 +385,7 @@
             this.btnLimpiar.IdleIconLeftImage = null;
             this.btnLimpiar.IdleIconRightImage = null;
             this.btnLimpiar.IndicateFocus = false;
-            this.btnLimpiar.Location = new System.Drawing.Point(600, 88);
+            this.btnLimpiar.Location = new System.Drawing.Point(596, 88);
             this.btnLimpiar.Name = "btnLimpiar";
             stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(89)))));
             stateProperties13.BorderRadius = 45;
@@ -448,7 +448,7 @@
             this.btnVerificar.IdleIconLeftImage = null;
             this.btnVerificar.IdleIconRightImage = null;
             this.btnVerificar.IndicateFocus = false;
-            this.btnVerificar.Location = new System.Drawing.Point(418, 89);
+            this.btnVerificar.Location = new System.Drawing.Point(414, 89);
             this.btnVerificar.Name = "btnVerificar";
             stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(79)))), ((int)(((byte)(225)))));
             stateProperties15.BorderRadius = 45;
@@ -480,7 +480,7 @@
             this.lbSexo.CursorType = null;
             this.lbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbSexo.ForeColor = System.Drawing.Color.Red;
-            this.lbSexo.Location = new System.Drawing.Point(399, 401);
+            this.lbSexo.Location = new System.Drawing.Point(395, 401);
             this.lbSexo.Margin = new System.Windows.Forms.Padding(4);
             this.lbSexo.Name = "lbSexo";
             this.lbSexo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -497,7 +497,7 @@
             this.lbFecha.CursorType = null;
             this.lbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbFecha.ForeColor = System.Drawing.Color.Red;
-            this.lbFecha.Location = new System.Drawing.Point(399, 301);
+            this.lbFecha.Location = new System.Drawing.Point(395, 301);
             this.lbFecha.Margin = new System.Windows.Forms.Padding(4);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -514,7 +514,7 @@
             this.lbNombre.CursorType = null;
             this.lbNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbNombre.ForeColor = System.Drawing.Color.Red;
-            this.lbNombre.Location = new System.Drawing.Point(399, 204);
+            this.lbNombre.Location = new System.Drawing.Point(395, 204);
             this.lbNombre.Margin = new System.Windows.Forms.Padding(4);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -530,7 +530,7 @@
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel7.Location = new System.Drawing.Point(418, 358);
+            this.bunifuLabel7.Location = new System.Drawing.Point(414, 358);
             this.bunifuLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel7.Name = "bunifuLabel7";
             this.bunifuLabel7.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -545,7 +545,7 @@
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel6.Location = new System.Drawing.Point(32, 358);
+            this.bunifuLabel6.Location = new System.Drawing.Point(31, 358);
             this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -560,7 +560,7 @@
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel5.Location = new System.Drawing.Point(418, 256);
+            this.bunifuLabel5.Location = new System.Drawing.Point(414, 256);
             this.bunifuLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -575,7 +575,7 @@
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel4.Location = new System.Drawing.Point(32, 256);
+            this.bunifuLabel4.Location = new System.Drawing.Point(31, 256);
             this.bunifuLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -590,7 +590,7 @@
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(418, 154);
+            this.bunifuLabel3.Location = new System.Drawing.Point(414, 154);
             this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -605,7 +605,7 @@
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(35, 154);
+            this.bunifuLabel2.Location = new System.Drawing.Point(31, 154);
             this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -620,7 +620,7 @@
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(35, 56);
+            this.bunifuLabel1.Location = new System.Drawing.Point(31, 56);
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -657,7 +657,7 @@
             this.txtNombre.IconRight = null;
             this.txtNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.Lines = new string[0];
-            this.txtNombre.Location = new System.Drawing.Point(32, 192);
+            this.txtNombre.Location = new System.Drawing.Point(28, 192);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 32767;
             this.txtNombre.MinimumSize = new System.Drawing.Size(133, 43);
@@ -834,7 +834,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 9);
+            this.label2.Location = new System.Drawing.Point(24, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(298, 38);
             this.label2.TabIndex = 94;
@@ -847,7 +847,7 @@
             this.rbHabilitado.Checked = true;
             this.rbHabilitado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbHabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbHabilitado.Location = new System.Drawing.Point(424, 395);
+            this.rbHabilitado.Location = new System.Drawing.Point(416, 395);
             this.rbHabilitado.Name = "rbHabilitado";
             this.rbHabilitado.Size = new System.Drawing.Size(125, 32);
             this.rbHabilitado.TabIndex = 95;
@@ -861,7 +861,7 @@
             this.rbDeshabilitado.AutoSize = true;
             this.rbDeshabilitado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDeshabilitado.ForeColor = System.Drawing.Color.Black;
-            this.rbDeshabilitado.Location = new System.Drawing.Point(600, 393);
+            this.rbDeshabilitado.Location = new System.Drawing.Point(596, 393);
             this.rbDeshabilitado.Name = "rbDeshabilitado";
             this.rbDeshabilitado.Size = new System.Drawing.Size(154, 32);
             this.rbDeshabilitado.TabIndex = 96;
@@ -873,7 +873,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(33, 132);
+            this.label1.Location = new System.Drawing.Point(29, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 17);
             this.label1.TabIndex = 89;
@@ -885,7 +885,7 @@
             this.lbApellidos.CursorType = null;
             this.lbApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbApellidos.ForeColor = System.Drawing.Color.Red;
-            this.lbApellidos.Location = new System.Drawing.Point(784, 204);
+            this.lbApellidos.Location = new System.Drawing.Point(780, 204);
             this.lbApellidos.Margin = new System.Windows.Forms.Padding(4);
             this.lbApellidos.Name = "lbApellidos";
             this.lbApellidos.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -902,7 +902,7 @@
             this.lbEdad.CursorType = null;
             this.lbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lbEdad.ForeColor = System.Drawing.Color.Red;
-            this.lbEdad.Location = new System.Drawing.Point(784, 301);
+            this.lbEdad.Location = new System.Drawing.Point(780, 301);
             this.lbEdad.Margin = new System.Windows.Forms.Padding(4);
             this.lbEdad.Name = "lbEdad";
             this.lbEdad.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -916,7 +916,7 @@
             // alerta
             // 
             this.alerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(215)))), ((int)(((byte)(218)))));
-            this.alerta.Location = new System.Drawing.Point(32, 435);
+            this.alerta.Location = new System.Drawing.Point(28, 435);
             this.alerta.Name = "alerta";
             this.alerta.Size = new System.Drawing.Size(750, 35);
             this.alerta.TabIndex = 99;
@@ -925,7 +925,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(35, 50);
+            this.panel3.Location = new System.Drawing.Point(31, 50);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(100, 2);
             this.panel3.TabIndex = 100;
@@ -934,7 +934,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(814, 532);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.alerta);

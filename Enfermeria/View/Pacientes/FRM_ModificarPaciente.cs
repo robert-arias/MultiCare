@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Enfermeria.Controller.Pacientes;
+using Enfermeria.Model;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Enfermeria.Controller.Pacientes;
-using Enfermeria.Model;
 
 
-namespace Enfermeria.View.Pacientes
-{
+namespace Enfermeria.View.Pacientes {
     public partial class FRM_ModificarPaciente : Form
     {
         private ModificarPacienteController modificarPacienteController;
@@ -20,7 +14,8 @@ namespace Enfermeria.View.Pacientes
         {
             InitializeComponent();
             modificarPacienteController = new ModificarPacienteController(this);
-            cbSexo.SelectedItem("Seleccionar");
+            cbSexo.Text = "Seleccionar";
+            alerta.CambiarImagenWarning();
         }
 
         public void EstadoInicial()
@@ -35,12 +30,12 @@ namespace Enfermeria.View.Pacientes
             txtEdad.Text = "";
             txtFecha.Value = DateTime.Today;
             txtNombre.Text = "";
-            cbSexo.SelectedItem("Seleccionar");
+            cbSexo.Text = "Seleccionar";
 
             txtCedula.Enabled = true;
             txtApellidos.Enabled = false;
             txtEdad.Enabled = false;
-            txtFecha.Enabled = false;
+            DesactivarFecha(false);
             txtNombre.Enabled = false;
             cbSexo.Enabled = false;
 
@@ -49,9 +44,17 @@ namespace Enfermeria.View.Pacientes
 
             rbDeshabilitado.Checked = false;
             rbHabilitado.Checked = false;
+        }
 
-
-
+        private void DesactivarFecha(bool desactivar) {
+            if (!desactivar) {
+                txtFecha.BackColor = Color.Silver;
+                txtFecha.Enabled = false;
+            }
+            else {
+                txtFecha.BackColor = Color.White;
+                txtFecha.Enabled = true;
+            }
         }
 
         public void ActivarCampos()
@@ -65,12 +68,11 @@ namespace Enfermeria.View.Pacientes
             txtCedula.Enabled = false;
             txtApellidos.Enabled = true;
             txtEdad.Enabled = true;
-            txtFecha.Enabled = true;
+            DesactivarFecha(true);
             txtNombre.Enabled = true;
             cbSexo.Enabled = true;
             rbDeshabilitado.Enabled = true;
             rbHabilitado.Enabled = true;
-
         }
 
         public string GetCedula()
@@ -81,16 +83,6 @@ namespace Enfermeria.View.Pacientes
         public bool VerificarCampos()
         {
             bool vacio = false;
-
-            if (string.IsNullOrEmpty(txtCedula.Text))
-            {
-                lbCedula.Visible = true;
-                vacio = true;
-            }
-            else
-            {
-                lbCedula.Visible = false;
-            }
 
             if (string.IsNullOrEmpty(txtNombre.Text))
             {
@@ -124,7 +116,7 @@ namespace Enfermeria.View.Pacientes
                 lbFecha.Visible = false;
             }
 
-            if (cbSexo.selectedIndex == 0)
+            if (cbSexo.SelectedIndex == 0)
             {
                 lbSexo.Visible = true;
                 vacio = true;
@@ -152,74 +144,20 @@ namespace Enfermeria.View.Pacientes
         {
             string message = "¿Desea modificar al paciente cédula: " + txtCedula.Text + "  " + " nombre:  " + txtNombre.Text + " ?";
             DialogResult boton = MessageBox.Show(message, "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (boton == DialogResult.OK)
-            {
-                return true;
-            }
 
-            return false;
+            return boton == DialogResult.OK;
         }
 
         public string Estado()
         {
-            string estado = "";
-
-            if (rbHabilitado.Checked == true)            
-                estado= "Habilitado";           
-            else if (rbDeshabilitado.Checked==true)
-                estado = "Deshabilitado";
-
-
-            return estado;
+            return rbHabilitado.Checked ? "Habilitado" : "Deshabilitado";
         }
 
         public Paciente GetPaciente()
         {
             Console.WriteLine(txtFecha.Value.ToString());
-            return new Paciente(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtFecha.Value.ToString(), int.Parse(txtEdad.Text), Convert.ToString(cbSexo.selectedValue), Estado());
-        }
-
-
-        public void SoloNumeros(KeyPressEventArgs v)
-        {
-            if (Char.IsDigit(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsSeparator(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsControl(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else
-            {
-                v.Handled = true;
-                MessageBox.Show("Solo se admiten números.");
-            }
-        }
-
-        public void SoloLetras(KeyPressEventArgs v)
-        {
-            if (Char.IsLetter(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsSeparator(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsControl(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else
-            {
-                v.Handled = true;
-                MessageBox.Show("Solo se admiten letras.");
-            }
+            return new Paciente(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtFecha.Value.ToString(),
+                int.Parse(txtEdad.Text), cbSexo.GetItemText(cbSexo.SelectedItem), Estado());
         }
 
 
@@ -229,17 +167,12 @@ namespace Enfermeria.View.Pacientes
             txtApellidos.Text = data.Tables[0].Rows[0][2].ToString();
             txtFecha.Value = Convert.ToDateTime(data.Tables[0].Rows[0][3].ToString());
             txtEdad.Text = data.Tables[0].Rows[0][4].ToString();
-            cbSexo.SelectedItem(data.Tables[0].Rows[0][5].ToString());
+            cbSexo.Text = data.Tables[0].Rows[0][5].ToString();
 
-            if (data.Tables[0].Rows[0][6].ToString() == "Habilitado")
-            {
+            if (data.Tables[0].Rows[0][6].ToString().Equals("Habilitado"))
                 rbHabilitado.Checked = true;
-
-            }
             else
-            {
                 rbDeshabilitado.Checked = true;
-            }
         }
     }
 }

@@ -9,6 +9,7 @@ namespace Enfermeria.View.Pacientes {
     public partial class FRM_AgregarPaciente : Form
     {
         PacienteController pacienteController;
+
         public FRM_AgregarPaciente()
         {
             InitializeComponent();

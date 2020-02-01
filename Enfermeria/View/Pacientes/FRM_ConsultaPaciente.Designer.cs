@@ -278,7 +278,6 @@
             this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnReporte.TextMarginLeft = 0;
             this.btnReporte.UseDefaultRadiusAndThickness = true;
-            this.btnReporte.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
             // btnBuscar
             // 

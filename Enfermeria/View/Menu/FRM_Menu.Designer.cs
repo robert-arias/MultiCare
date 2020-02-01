@@ -64,7 +64,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 621);
+            this.panel1.Size = new System.Drawing.Size(264, 648);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -72,10 +72,11 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Location = new System.Drawing.Point(504, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(573, 621);
+            this.panel2.Size = new System.Drawing.Size(570, 648);
             this.panel2.TabIndex = 2;
             // 
             // subMenu
@@ -92,18 +93,18 @@
             this.subMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subMenu.Name = "subMenu";
             this.subMenu.SelectedIndex = 0;
-            this.subMenu.Size = new System.Drawing.Size(251, 653);
+            this.subMenu.Size = new System.Drawing.Size(248, 680);
             this.subMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.subMenu.TabIndex = 1;
             // 
             // tbMenu
             // 
-            this.tbMenu.BackColor = System.Drawing.Color.GhostWhite;
+            this.tbMenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbMenu.Location = new System.Drawing.Point(4, 24);
             this.tbMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMenu.Name = "tbMenu";
             this.tbMenu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMenu.Size = new System.Drawing.Size(243, 625);
+            this.tbMenu.Size = new System.Drawing.Size(240, 652);
             this.tbMenu.TabIndex = 0;
             this.tbMenu.Text = "Menú";
             // 
@@ -117,7 +118,7 @@
             this.tbPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPacientes.Name = "tbPacientes";
             this.tbPacientes.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPacientes.Size = new System.Drawing.Size(514, 730);
+            this.tbPacientes.Size = new System.Drawing.Size(240, 652);
             this.tbPacientes.TabIndex = 1;
             this.tbPacientes.Text = "Pacientes";
             // 
@@ -131,7 +132,7 @@
             this.tbMedicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbMedicamentos.Name = "tbMedicamentos";
             this.tbMedicamentos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMedicamentos.Size = new System.Drawing.Size(514, 730);
+            this.tbMedicamentos.Size = new System.Drawing.Size(532, 697);
             this.tbMedicamentos.TabIndex = 2;
             this.tbMedicamentos.Text = "Medicamentos";
             // 
@@ -145,7 +146,7 @@
             this.tbPrescripciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPrescripciones.Name = "tbPrescripciones";
             this.tbPrescripciones.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPrescripciones.Size = new System.Drawing.Size(514, 730);
+            this.tbPrescripciones.Size = new System.Drawing.Size(532, 697);
             this.tbPrescripciones.TabIndex = 3;
             this.tbPrescripciones.Text = "Prescripciones";
             // 
@@ -672,7 +673,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.ClientSize = new System.Drawing.Size(1077, 621);
+            this.ClientSize = new System.Drawing.Size(1074, 648);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.subMenu);

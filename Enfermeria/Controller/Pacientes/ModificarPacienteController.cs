@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Enfermeria.View.Pacientes;
 using Enfermeria.Model;
 using System.Windows.Forms;
+using BunifuAnimatorNS;
 
 namespace Enfermeria.Controller.Pacientes
 {
@@ -37,18 +38,34 @@ namespace Enfermeria.Controller.Pacientes
 
         public void ValidarCedula(object sender, KeyPressEventArgs e)
         {
-            frm_ModificarPaciente.SoloNumeros(e);
+            if (!(Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsControl(e.KeyChar))) {
+                e.Handled = true;
+                frm_ModificarPaciente.alerta.CambiarMensaje("En el campo cédula solo se permiten dígitos numéricos");
+                MostrarConAnimacion(frm_ModificarPaciente.alerta);
+            }
+            else if (frm_ModificarPaciente.alerta.Visible)
+                frm_ModificarPaciente.alerta.Visible = false;
         }
 
 
         public void ValidarNombre(object sender, KeyPressEventArgs e)
         {
-            frm_ModificarPaciente.SoloLetras(e);
+            SoloLetras(e);
         }
 
         public void ValidarApellidos(object sender, KeyPressEventArgs e)
         {
-            frm_ModificarPaciente.SoloLetras(e);
+            SoloLetras(e);
+        }
+
+        private void SoloLetras(KeyPressEventArgs e) {
+            if (!(char.IsLetter(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) {
+                e.Handled = true;
+                frm_ModificarPaciente.alerta.CambiarMensaje("En el campo cédula solo se permiten dígitos alfabéticos");
+                MostrarConAnimacion(frm_ModificarPaciente.alerta);
+            }
+            else if (frm_ModificarPaciente.alerta.Visible)
+                frm_ModificarPaciente.alerta.Visible = false;
         }
 
         public void LlenarCampos()
@@ -171,6 +188,10 @@ namespace Enfermeria.Controller.Pacientes
 
         }
 
-       
+        private void MostrarConAnimacion(Control control) {
+            BunifuTransition transition = new BunifuTransition();
+            transition.ShowSync(control, false, Animation.VertSlide);
+        }
+
     }
 }

@@ -11,7 +11,7 @@ namespace Enfermeria.View.Login {
 
         public void BackToDefault() {
             ComponentResourceManager resources = new ComponentResourceManager(typeof(Alerta));
-            pictureBox1.Image = ((Image)(resources.GetObject("pictureBox1.Image")));
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             label1.Text = "Alerta";
             label2.Text = "no hay conexión a internet";
         }

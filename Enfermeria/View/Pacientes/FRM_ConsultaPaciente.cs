@@ -16,10 +16,5 @@ namespace Enfermeria.View.Pacientes
         {
             InitializeComponent();
         }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
