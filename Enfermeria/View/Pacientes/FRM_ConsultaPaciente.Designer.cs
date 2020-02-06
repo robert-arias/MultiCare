@@ -494,7 +494,7 @@
             this.dgvBusqueda.ReadOnly = true;
             this.dgvBusqueda.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBusqueda.RowTemplate.Height = 24;
-            this.dgvBusqueda.Size = new System.Drawing.Size(981, 256);
+            this.dgvBusqueda.Size = new System.Drawing.Size(981, 277);
             this.dgvBusqueda.TabIndex = 131;
             // 
             // Cedula
