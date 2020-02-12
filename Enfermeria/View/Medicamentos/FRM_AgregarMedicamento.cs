@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Enfermeria.Controller.Medicamentos;
 using Enfermeria.Model;
-using Enfermeria.Controller.Medicamentos;
+using System;
+using System.Windows.Forms;
 
-namespace Enfermeria.View.Medicamentos
-{
+namespace Enfermeria.View.Medicamentos {
     public partial class FRM_AgregarMedicamento : Form
     {
         AgregarMedicamentoController agregarMedicamentoController;
@@ -19,13 +11,16 @@ namespace Enfermeria.View.Medicamentos
         {
             InitializeComponent();
             agregarMedicamentoController = new AgregarMedicamentoController(this);
+            cbCategoria.Text = "Seleccionar";
+            cbUnidadMedida.Text = "Seleccionar";
+            alerta.CambiarImagenWarning();
         }
 
         public Medicamento GetMedicamento()
         {
-            Console.WriteLine(txtCodigo.Text, txtNombre.Text, txtUnidadMedida.Text + "  " + cbUnidadMedida.selectedValue, cbCategoria.selectedValue, Convert.ToInt32(txtCantidad.Text));
-            return new Medicamento(txtCodigo.Text, txtNombre.Text, txtUnidadMedida.Text + "  " + cbUnidadMedida.selectedValue, cbCategoria.selectedValue,Convert.ToInt32(txtCantidad.Text));
-
+            string unidad = txtUnidadMedida.Text + "  " + cbUnidadMedida.GetItemText(cbUnidadMedida.SelectedItem);
+            return new Medicamento(txtCodigo.Text, txtNombre.Text, 
+                unidad, cbCategoria.GetItemText(cbCategoria.SelectedItem));
         }
 
         public string GetCodigo()
@@ -39,7 +34,6 @@ namespace Enfermeria.View.Medicamentos
             txtNombre.Enabled = true;
             txtUnidadMedida.Enabled = true;
             cbCategoria.Enabled = true;
-            txtCantidad.Enabled = true;
             cbUnidadMedida.Enabled = true;
 
             btnAgregar.Enabled = true;
@@ -55,15 +49,13 @@ namespace Enfermeria.View.Medicamentos
             txtNombre.Enabled = false;
             txtUnidadMedida.Enabled = false;
             cbCategoria.Enabled = false;
-            txtCantidad.Enabled = false;
             cbUnidadMedida.Enabled = false;
                              
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtUnidadMedida.Text = "";
-            cbCategoria.SelectedItem("Seleccionar");
-            cbUnidadMedida.SelectedItem("Seleccionar");
-            txtCantidad.Text = "";
+            cbCategoria.Text = "Seleccionar";
+            cbUnidadMedida.Text = "Seleccionar";
 
 
             btnAgregar.Enabled = false;
@@ -101,7 +93,7 @@ namespace Enfermeria.View.Medicamentos
             }
 
 
-            if (cbCategoria.selectedIndex==0)
+            if (cbCategoria.SelectedIndex==0)
             {
                 lbCategoria.Visible = true;
 
@@ -113,8 +105,8 @@ namespace Enfermeria.View.Medicamentos
 
             }
 
-            if (string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex == 0 || !string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex == 0 ||
-                string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex != 0)
+            if (string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex == 0 || !string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex == 0 ||
+                string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex != 0)
             {
                 lbUnidadMedida.Visible = true;
 
@@ -123,20 +115,6 @@ namespace Enfermeria.View.Medicamentos
             else
             {
                 lbUnidadMedida.Visible = false;
-
-            }
-
-            if (string.IsNullOrEmpty(txtCantidad.Text))
-            {
-
-                lbCantidad.Visible = true;
-
-                vacio = true;
-
-            }
-            else
-            {
-                lbCantidad.Visible = false;
 
             }
 

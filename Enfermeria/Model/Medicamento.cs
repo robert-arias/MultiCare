@@ -12,16 +12,13 @@ namespace Enfermeria.Model
         public string nombreMedicamento { get; set; }
         public string unidadMedida { get; set; }
         public string categoria { get; set; }
-        public int catidadDisponible { get; set; }
           
-        public Medicamento(string codigoMedicamento, string nombreMedicamento, string unidadMedida, string categoria, int cantidadDisponible)
+        public Medicamento(string codigoMedicamento, string nombreMedicamento, string unidadMedida, string categoria)
         {
             this.codigoMedicamento = codigoMedicamento;
             this.nombreMedicamento = nombreMedicamento;
             this.unidadMedida = unidadMedida;
             this.categoria = categoria;
-            this.catidadDisponible = cantidadDisponible;
-
         }
     }
 

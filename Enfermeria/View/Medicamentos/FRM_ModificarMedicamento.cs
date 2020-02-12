@@ -19,26 +19,28 @@ namespace Enfermeria.View.Medicamentos
         {
             InitializeComponent();
             modificarMedicamentoController = new ModificarMedicamentoController(this);
+            cbCategoria.Text = "Seleccionar";
+            cbUnidadMedida.Text = "Seleccionar";
+            alerta.CambiarImagenWarning();
         }
 
         public void LlenarCampos(DataSet data)
         {           
             string texto = data.Tables[0].Rows[0][2].ToString();
             char[] delimiterChars = { ' ', ' ' };
-            string[] partes = texto.Split(delimiterChars, System.StringSplitOptions.RemoveEmptyEntries);
+            string[] partes = texto.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
 
             txtUnidadMedida.Text = partes[0].ToString();         
-            cbUnidadMedida.SelectedItem(partes[1].ToString());
+            cbUnidadMedida.Text = partes[1].ToString();
             txtNombre.Text = data.Tables[0].Rows[0][1].ToString();
-            cbCategoria.SelectedItem(data.Tables[0].Rows[0][3].ToString());
-            txtCantidad.Text = data.Tables[0].Rows[0][4].ToString();
+            cbCategoria.Text = data.Tables[0].Rows[0][3].ToString();
         }
 
         public Medicamento GetMedicamento()
         {
-            Console.WriteLine(txtCodigo.Text, txtNombre.Text, txtUnidadMedida.Text + "  " + cbUnidadMedida.selectedValue, cbCategoria.selectedValue, Convert.ToInt32(txtCantidad.Text));
-            return new Medicamento(txtCodigo.Text, txtNombre.Text, txtUnidadMedida.Text + "  " + cbUnidadMedida.selectedValue, cbCategoria.selectedValue, Convert.ToInt32(txtCantidad.Text));
-
+            string unidad = txtUnidadMedida.Text + "  " + cbUnidadMedida.GetItemText(cbUnidadMedida.SelectedItem);
+            return new Medicamento(txtCodigo.Text, txtNombre.Text,
+                unidad, cbCategoria.GetItemText(cbCategoria.SelectedItem));
         }
 
         public string GetCodigo()
@@ -52,7 +54,6 @@ namespace Enfermeria.View.Medicamentos
             txtNombre.Enabled = true;
             txtUnidadMedida.Enabled = true;
             cbCategoria.Enabled = true;
-            txtCantidad.Enabled = true;
             cbUnidadMedida.Enabled = true;
 
             btnModificar.Enabled = true;
@@ -68,22 +69,19 @@ namespace Enfermeria.View.Medicamentos
             txtNombre.Enabled = false;
             txtUnidadMedida.Enabled = false;
             cbCategoria.Enabled = false;
-            txtCantidad.Enabled = false;
             cbUnidadMedida.Enabled = false;
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtUnidadMedida.Text = "";
-            cbCategoria.SelectedItem("Seleccionar");
-            cbUnidadMedida.SelectedItem("Seleccionar");
-            txtCantidad.Text = "";
+            cbCategoria.Text = "Seleccionar";
+            cbUnidadMedida.Text = "Seleccionar";
 
 
             btnModificar.Enabled = false;
             btnVerificar.Enabled = true;
             btnCancelar.Enabled = false;
             btnLimpiar.Enabled = true;
-
         }
 
         public bool VerificarCampos()
@@ -114,7 +112,7 @@ namespace Enfermeria.View.Medicamentos
             }
 
 
-            if (cbCategoria.selectedIndex == 0)
+            if (cbCategoria.SelectedIndex == 0)
             {
                 lbCategoria.Visible = true;
 
@@ -126,8 +124,8 @@ namespace Enfermeria.View.Medicamentos
 
             }
 
-            if (string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex == 0 || !string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex == 0 ||
-                string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.selectedIndex != 0)
+            if (string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex == 0 || !string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex == 0 ||
+                string.IsNullOrEmpty(txtUnidadMedida.Text) && cbUnidadMedida.SelectedIndex != 0)
             {
                 lbUnidadMedida.Visible = true;
 
@@ -136,20 +134,6 @@ namespace Enfermeria.View.Medicamentos
             else
             {
                 lbUnidadMedida.Visible = false;
-
-            }
-
-            if (string.IsNullOrEmpty(txtCantidad.Text))
-            {
-
-                lbCantidad.Visible = true;
-
-                vacio = true;
-
-            }
-            else
-            {
-                lbCantidad.Visible = false;
 
             }
 

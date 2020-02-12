@@ -326,6 +326,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(42, 208);
             this.radioButton1.Name = "radioButton1";
@@ -343,7 +344,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(106, 32);
             this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Nombre";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -355,7 +355,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(115, 32);
             this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Apellidos";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -367,7 +366,6 @@
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(77, 32);
             this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Edad";
             this.radioButton4.UseVisualStyleBackColor = true;
             // 
@@ -379,7 +377,6 @@
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(92, 32);
             this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Estado";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
@@ -391,7 +388,6 @@
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(75, 32);
             this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
             this.radioButton6.Text = "Sexo";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
@@ -404,9 +400,9 @@
             this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(99, 30);
+            this.bunifuLabel2.Size = new System.Drawing.Size(91, 30);
             this.bunifuLabel2.TabIndex = 120;
-            this.bunifuLabel2.Text = "Buscar por";
+            this.bunifuLabel2.Text = "Filtrar por";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
