@@ -25,23 +25,23 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_Menu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.subMenu = new System.Windows.Forms.TabControl();
-            this.tbMenu = new System.Windows.Forms.TabPage();
-            this.tbPacientes = new System.Windows.Forms.TabPage();
-            this.tbMedicamentos = new System.Windows.Forms.TabPage();
-            this.tbPrescripciones = new System.Windows.Forms.TabPage();
             this.btnCerrarSesion = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrescripciones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMenu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.subMenu = new System.Windows.Forms.TabControl();
+            this.tbMenu = new System.Windows.Forms.TabPage();
+            this.tbPacientes = new System.Windows.Forms.TabPage();
             this.btnBuscarPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificarPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarPacientes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tbMedicamentos = new System.Windows.Forms.TabPage();
             this.btnBuscarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarMedicamentos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.tbPrescripciones = new System.Windows.Forms.TabPage();
             this.btnBuscarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregarPrescripcion = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -67,89 +67,6 @@
             this.panel1.Size = new System.Drawing.Size(264, 648);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(504, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(570, 648);
-            this.panel2.TabIndex = 2;
-            // 
-            // subMenu
-            // 
-            this.subMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.subMenu.Controls.Add(this.tbMenu);
-            this.subMenu.Controls.Add(this.tbPacientes);
-            this.subMenu.Controls.Add(this.tbMedicamentos);
-            this.subMenu.Controls.Add(this.tbPrescripciones);
-            this.subMenu.ItemSize = new System.Drawing.Size(50, 20);
-            this.subMenu.Location = new System.Drawing.Point(260, -25);
-            this.subMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.subMenu.Name = "subMenu";
-            this.subMenu.SelectedIndex = 0;
-            this.subMenu.Size = new System.Drawing.Size(248, 680);
-            this.subMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.subMenu.TabIndex = 1;
-            // 
-            // tbMenu
-            // 
-            this.tbMenu.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbMenu.Location = new System.Drawing.Point(4, 24);
-            this.tbMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMenu.Name = "tbMenu";
-            this.tbMenu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMenu.Size = new System.Drawing.Size(240, 652);
-            this.tbMenu.TabIndex = 0;
-            this.tbMenu.Text = "Menú";
-            // 
-            // tbPacientes
-            // 
-            this.tbPacientes.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbPacientes.Controls.Add(this.btnBuscarPacientes);
-            this.tbPacientes.Controls.Add(this.btnModificarPacientes);
-            this.tbPacientes.Controls.Add(this.btnAgregarPacientes);
-            this.tbPacientes.Location = new System.Drawing.Point(4, 24);
-            this.tbPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPacientes.Name = "tbPacientes";
-            this.tbPacientes.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPacientes.Size = new System.Drawing.Size(240, 652);
-            this.tbPacientes.TabIndex = 1;
-            this.tbPacientes.Text = "Pacientes";
-            // 
-            // tbMedicamentos
-            // 
-            this.tbMedicamentos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbMedicamentos.Controls.Add(this.btnBuscarMedicamentos);
-            this.tbMedicamentos.Controls.Add(this.btnModificarMedicamentos);
-            this.tbMedicamentos.Controls.Add(this.btnAgregarMedicamentos);
-            this.tbMedicamentos.Location = new System.Drawing.Point(4, 24);
-            this.tbMedicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMedicamentos.Name = "tbMedicamentos";
-            this.tbMedicamentos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbMedicamentos.Size = new System.Drawing.Size(532, 697);
-            this.tbMedicamentos.TabIndex = 2;
-            this.tbMedicamentos.Text = "Medicamentos";
-            // 
-            // tbPrescripciones
-            // 
-            this.tbPrescripciones.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbPrescripciones.Controls.Add(this.btnBuscarPrescripcion);
-            this.tbPrescripciones.Controls.Add(this.btnModificarPrescripcion);
-            this.tbPrescripciones.Controls.Add(this.btnAgregarPrescripcion);
-            this.tbPrescripciones.Location = new System.Drawing.Point(4, 24);
-            this.tbPrescripciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPrescripciones.Name = "tbPrescripciones";
-            this.tbPrescripciones.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbPrescripciones.Size = new System.Drawing.Size(532, 697);
-            this.tbPrescripciones.TabIndex = 3;
-            this.tbPrescripciones.Text = "Prescripciones";
-            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Active = false;
@@ -157,7 +74,7 @@
             this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(185)))));
             this.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCerrarSesion.BorderRadius = 0;
-            this.btnCerrarSesion.ButtonText = "   Cerrar sesión";
+            this.btnCerrarSesion.ButtonText = "   Perfil";
             this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrarSesion.DisabledColor = System.Drawing.Color.Gray;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,7 +99,7 @@
             this.btnCerrarSesion.selected = false;
             this.btnCerrarSesion.Size = new System.Drawing.Size(264, 86);
             this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "   Cerrar sesión";
+            this.btnCerrarSesion.Text = "   Perfil";
             this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Textcolor = System.Drawing.Color.White;
             this.btnCerrarSesion.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,6 +252,61 @@
             this.btnPacientes.Textcolor = System.Drawing.Color.White;
             this.btnPacientes.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(504, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(570, 648);
+            this.panel2.TabIndex = 2;
+            // 
+            // subMenu
+            // 
+            this.subMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subMenu.Controls.Add(this.tbMenu);
+            this.subMenu.Controls.Add(this.tbPacientes);
+            this.subMenu.Controls.Add(this.tbMedicamentos);
+            this.subMenu.Controls.Add(this.tbPrescripciones);
+            this.subMenu.ItemSize = new System.Drawing.Size(50, 20);
+            this.subMenu.Location = new System.Drawing.Point(260, -25);
+            this.subMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.subMenu.Name = "subMenu";
+            this.subMenu.SelectedIndex = 0;
+            this.subMenu.Size = new System.Drawing.Size(248, 680);
+            this.subMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.subMenu.TabIndex = 1;
+            // 
+            // tbMenu
+            // 
+            this.tbMenu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbMenu.Location = new System.Drawing.Point(4, 24);
+            this.tbMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMenu.Name = "tbMenu";
+            this.tbMenu.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMenu.Size = new System.Drawing.Size(240, 652);
+            this.tbMenu.TabIndex = 0;
+            this.tbMenu.Text = "Menú";
+            // 
+            // tbPacientes
+            // 
+            this.tbPacientes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbPacientes.Controls.Add(this.btnBuscarPacientes);
+            this.tbPacientes.Controls.Add(this.btnModificarPacientes);
+            this.tbPacientes.Controls.Add(this.btnAgregarPacientes);
+            this.tbPacientes.Location = new System.Drawing.Point(4, 24);
+            this.tbPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPacientes.Name = "tbPacientes";
+            this.tbPacientes.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPacientes.Size = new System.Drawing.Size(240, 652);
+            this.tbPacientes.TabIndex = 1;
+            this.tbPacientes.Text = "Pacientes";
+            // 
             // btnBuscarPacientes
             // 
             this.btnBuscarPacientes.Active = false;
@@ -446,6 +418,20 @@
             this.btnAgregarPacientes.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAgregarPacientes.TextFont = new System.Drawing.Font("Segoe UI", 10.2F);
             // 
+            // tbMedicamentos
+            // 
+            this.tbMedicamentos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbMedicamentos.Controls.Add(this.btnBuscarMedicamentos);
+            this.tbMedicamentos.Controls.Add(this.btnModificarMedicamentos);
+            this.tbMedicamentos.Controls.Add(this.btnAgregarMedicamentos);
+            this.tbMedicamentos.Location = new System.Drawing.Point(4, 24);
+            this.tbMedicamentos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMedicamentos.Name = "tbMedicamentos";
+            this.tbMedicamentos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbMedicamentos.Size = new System.Drawing.Size(240, 652);
+            this.tbMedicamentos.TabIndex = 2;
+            this.tbMedicamentos.Text = "Medicamentos";
+            // 
             // btnBuscarMedicamentos
             // 
             this.btnBuscarMedicamentos.Active = false;
@@ -556,6 +542,20 @@
             this.btnAgregarMedicamentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarMedicamentos.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAgregarMedicamentos.TextFont = new System.Drawing.Font("Segoe UI", 10.2F);
+            // 
+            // tbPrescripciones
+            // 
+            this.tbPrescripciones.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbPrescripciones.Controls.Add(this.btnBuscarPrescripcion);
+            this.tbPrescripciones.Controls.Add(this.btnModificarPrescripcion);
+            this.tbPrescripciones.Controls.Add(this.btnAgregarPrescripcion);
+            this.tbPrescripciones.Location = new System.Drawing.Point(4, 24);
+            this.tbPrescripciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPrescripciones.Name = "tbPrescripciones";
+            this.tbPrescripciones.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPrescripciones.Size = new System.Drawing.Size(240, 652);
+            this.tbPrescripciones.TabIndex = 3;
+            this.tbPrescripciones.Text = "Prescripciones";
             // 
             // btnBuscarPrescripcion
             // 

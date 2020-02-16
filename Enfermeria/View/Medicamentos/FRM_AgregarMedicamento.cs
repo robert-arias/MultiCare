@@ -124,14 +124,10 @@ namespace Enfermeria.View.Medicamentos {
 
         public bool ShowConfirmation()
         {
-            string message = "¿Desea agregar el medicamento código: " + txtCodigo.Text + "  " + " nombre:  " + txtNombre.Text + " ?";
+            string message = "¿Desea agregar el medicamento código: " + txtCodigo.Text + ", " + " nombre: " + txtNombre.Text + "?";
             DialogResult boton = MessageBox.Show(message, "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-            if (boton == DialogResult.OK)
-            {
-                return true;
-            }
 
-            return false;
+            return boton == DialogResult.OK;
         }
         public void MensajeInformativo(string message)
         {
@@ -141,27 +137,6 @@ namespace Enfermeria.View.Medicamentos {
         public void MensajeError(string mensaje)
         {
             MessageBox.Show(mensaje, " Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        public void SoloNumeros(KeyPressEventArgs v)
-        {
-            if (Char.IsDigit(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsSeparator(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else if (Char.IsControl(v.KeyChar))
-            {
-                v.Handled = false;
-            }
-            else
-            {
-                v.Handled = true;
-                MessageBox.Show("Solo se admiten números.");
-            }
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Enfermeria.View.Medicamentos;
 using Enfermeria.Model;
 using System.Windows.Forms;
+using BunifuAnimatorNS;
 
 namespace Enfermeria.Controller.Medicamentos
 {
@@ -26,18 +27,17 @@ namespace Enfermeria.Controller.Medicamentos
             frm_AgregarMedicamento.btnVerificar.Click += new EventHandler(Verificar);
             frm_AgregarMedicamento.txtCodigo.KeyDown += new KeyEventHandler(VerificarEnter);
             frm_AgregarMedicamento.btnLimpiar.Click += new EventHandler(Limpiar);
-            frm_AgregarMedicamento.txtCantidad.KeyPress += new KeyPressEventHandler(ValidarCantidadDisponible);
             frm_AgregarMedicamento.txtUnidadMedida.KeyPress += new KeyPressEventHandler(ValidarMedida);
-        }
-
-        public void ValidarCantidadDisponible(object sender, KeyPressEventArgs e)
-        {
-            frm_AgregarMedicamento.SoloNumeros(e);
         }
 
         public void ValidarMedida(object sender, KeyPressEventArgs e)
         {
-            frm_AgregarMedicamento.SoloNumeros(e);
+            if (!(char.IsDigit(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) {
+                e.Handled = true;
+                MostrarConAnimacion(frm_AgregarMedicamento.alerta);
+            }
+            else
+                frm_AgregarMedicamento.alerta.Visible = false;
         }
 
         private void Verificar(object sender, EventArgs e)
@@ -125,5 +125,11 @@ namespace Enfermeria.Controller.Medicamentos
                     "\nLos campos con el asterisco (*) rojo son aquellos que deben ser modificados.");
             }
         }
+
+        private void MostrarConAnimacion(Control control) {
+            BunifuTransition transition = new BunifuTransition();
+            transition.ShowSync(control, false, Animation.VertSlide);
+        }
+
     }
 }

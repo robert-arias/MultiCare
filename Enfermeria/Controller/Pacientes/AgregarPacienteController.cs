@@ -31,7 +31,7 @@ namespace Enfermeria.Controller {
 
         public void ValidarCedula(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar) || Char.IsSeparator(e.KeyChar) || Char.IsControl(e.KeyChar))) {
+            if (!(char.IsDigit(e.KeyChar) || char.IsSeparator(e.KeyChar) || char.IsControl(e.KeyChar))) {
                 e.Handled = true;
                 frm_AgregarPaciente.alerta.CambiarMensaje("En el campo cédula solo se permiten dígitos numéricos");
                 MostrarConAnimacion(frm_AgregarPaciente.alerta);
