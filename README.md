@@ -27,5 +27,4 @@ Las personas que se encargaron de la creación del sistema son:
 * [**Robert Arias**](https://github.com/robert-arias)
 * [**Yuvania Castillo**](https://github.com/yuvania)
 * [**Yanily Jiménez**](https://github.com/yanily)
-* [**Brandon Barrantes**](https://github.com/Brandon3003)
 
