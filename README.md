@@ -19,7 +19,7 @@ El sistema es enfocado para que su uso sea en el sistema operativo Windows, por 
 #### Base de datos
 Como el Hogar de Ancianos no posee una red cableada, se hace uso de la base de datos local SQLite.
 
-#### Framework
+#### UI Framework
 Para el diseño de la interfaz de la aplicación se utiliza el framework [Bunifu](https://bunifuframework.com/products/bunifu-ui-winforms/).
 
 ### Participantes del proyecto
