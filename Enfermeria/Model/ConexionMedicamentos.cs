@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SQLite;
 
 namespace Enfermeria.Model {
@@ -69,6 +70,50 @@ namespace Enfermeria.Model {
             }
         }
 
+        public DataSet GetAllMedicamento()
+        {
+            try
+            {
+                string query = "select * from Medicamentos";
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(query, sqlConnection);              
+                SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter(command);
+                DataSet data = new DataSet();
+                sqlDataAdapter.Fill(data);
+                sqlConnection.Close();
+
+                return data;
+            }
+            catch (SQLiteException e)
+            {
+                sqlConnection.Close();
+                return null;
+            }
+        }
+
+
+        public DataSet GetBusquedaMedicamentos(string query)
+        {
+            Console.WriteLine("El query"+query);
+            try
+            {
+              
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(query, sqlConnection);
+                SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter(command);
+                DataSet data = new DataSet();
+                sqlDataAdapter.Fill(data);
+                sqlConnection.Close();
+
+                return data;
+            }
+            catch (System.Exception)
+            {
+                sqlConnection.Close();
+                return null;
+                
+            }
+        }
         public bool AgregarMedicamento(Medicamento medicamento) {
             try {
                 string insert = "insert into Medicamentos values (@codigo, @nombre, @unidad, @categoria)";

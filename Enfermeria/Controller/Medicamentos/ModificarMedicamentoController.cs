@@ -40,7 +40,7 @@ namespace Enfermeria.Controller.Medicamentos
             frm_ModificarMedicamento.btnVerificar.Click += new EventHandler(Verificar);
             frm_ModificarMedicamento.txtCodigo.KeyDown += new KeyEventHandler(VerificarEnter);
             frm_ModificarMedicamento.btnLimpiar.Click += new EventHandler(Limpiar);
-            frm_ModificarMedicamento.txtCantidad.KeyPress += new KeyPressEventHandler(ValidarCantidadDisponible);
+          
             frm_ModificarMedicamento.txtUnidadMedida.KeyPress += new KeyPressEventHandler(ValidarMedida);
 
 

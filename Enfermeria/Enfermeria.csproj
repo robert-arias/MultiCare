@@ -38,37 +38,38 @@
   <ItemGroup>
     <Reference Include="Bunifu.Core, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
     <Reference Include="Bunifu.UI.WinForms.BunifuButton">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\..\..\Documents\Visual Studio 2017\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Documents\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Desktop\Bunifu UI WinForms 1.11.5.1\Bunifu UI WinForms 1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -84,6 +85,8 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,9 +100,11 @@
   <ItemGroup>
     <Compile Include="Controller\Login\LoginController.cs" />
     <Compile Include="Controller\Medicamentos\AgregarMedicamentoController.cs" />
+    <Compile Include="Controller\Medicamentos\ConsultarMedicamentoController.cs" />
     <Compile Include="Controller\Medicamentos\ModificarMedicamentoController.cs" />
     <Compile Include="Controller\Menu\MenuController.cs" />
     <Compile Include="Controller\Pacientes\AgregarPacienteController.cs" />
+    <Compile Include="Controller\Pacientes\ConsultarPacienteController.cs" />
     <Compile Include="Controller\Pacientes\ModificarPacienteController.cs" />
     <Compile Include="Model\ConexionMedicamentos.cs" />
     <Compile Include="Model\Conexion.cs" />
@@ -129,6 +134,20 @@
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Medicamentos\CrystalReportMedicamentos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportMedicamentos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\DataSetMedicamento.cs">
+      <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Medicamentos\DataSetMedicamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\Medicamentos\FRM_AgregarMedicamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,11 +166,28 @@
     <Compile Include="View\Medicamentos\FRM_ModificarMedicamento.Designer.cs">
       <DependentUpon>FRM_ModificarMedicamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Medicamentos\FRM_ReporteMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Medicamentos\FRM_ReporteMedicamentos.Designer.cs">
+      <DependentUpon>FRM_ReporteMedicamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Menu\FRM_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Menu\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pacientes\CrystalReportPacientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPacientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\DataSetPacientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
     </Compile>
     <Compile Include="View\Pacientes\FRM_AgregarPaciente.cs">
       <SubType>Form</SubType>
@@ -171,6 +207,12 @@
     <Compile Include="View\Pacientes\FRM_ModificarPaciente.Designer.cs">
       <DependentUpon>FRM_ModificarPaciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Pacientes\FRM_ReportePacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Pacientes\FRM_ReportePacientes.Designer.cs">
+      <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuarios\FRM_AgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +230,10 @@
     <EmbeddedResource Include="View\Login\FRM_Login.resx">
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\CrystalReportMedicamentos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportMedicamentos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Medicamentos\FRM_AgregarMedicamento.resx">
       <DependentUpon>FRM_AgregarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,8 +243,15 @@
     <EmbeddedResource Include="View\Medicamentos\FRM_ModificarMedicamento.resx">
       <DependentUpon>FRM_ModificarMedicamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Medicamentos\FRM_ReporteMedicamentos.resx">
+      <DependentUpon>FRM_ReporteMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Menu\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\CrystalReportPacientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPacientes.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Pacientes\FRM_AgregarPaciente.resx">
       <DependentUpon>FRM_AgregarPaciente.cs</DependentUpon>
@@ -208,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Pacientes\FRM_ModificarPaciente.resx">
       <DependentUpon>FRM_ModificarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Pacientes\FRM_ReportePacientes.resx">
+      <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuarios\FRM_AgregarUsuario.resx">
       <DependentUpon>FRM_AgregarUsuario.cs</DependentUpon>
@@ -222,6 +278,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="View\Medicamentos\DataSetMedicamento.xsc">
+      <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
+    </None>
+    <None Include="View\Medicamentos\DataSetMedicamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetMedicamento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Medicamentos\DataSetMedicamento.xss">
+      <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
+    </None>
+    <None Include="View\Pacientes\DataSetPacientes.xsc">
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
+    </None>
+    <None Include="View\Pacientes\DataSetPacientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPacientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="View\Pacientes\DataSetPacientes.xss">
+      <DependentUpon>DataSetPacientes.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -241,6 +319,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

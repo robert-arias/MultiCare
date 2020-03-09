@@ -10,6 +10,26 @@ namespace Enfermeria.Model {
             sqlConnection = GetConexion();
         }
 
+        public DataSet GetBusquedaPacientes(string query)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(query, sqlConnection);
+                SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter(command);
+                DataSet data = new DataSet();
+                sqlDataAdapter.Fill(data);
+                sqlConnection.Close();
+
+                return data;
+            }
+            catch (System.Exception)
+            {
+                sqlConnection.Close();
+                return null;
+
+            }
+        }
         public bool ExisteCedulaPaciente(string cedula) {
             try {
                 string query = "select * from Pacientes where cedula = @cedula";
@@ -65,6 +85,27 @@ namespace Enfermeria.Model {
                 return data;
             }
             catch (SQLiteException e) {
+                sqlConnection.Close();
+                return null;
+            }
+        }
+
+        public DataSet GetAll()
+        {
+            try
+            {
+                string query = "select * from Pacientes";
+                sqlConnection.Open();
+                SQLiteCommand command = new SQLiteCommand(query, sqlConnection);               
+                SQLiteDataAdapter sqlDataAdapter = new SQLiteDataAdapter(command);
+                DataSet data = new DataSet();
+                sqlDataAdapter.Fill(data);
+                sqlConnection.Close();
+
+                return data;
+            }
+            catch (SQLiteException e)
+            {
                 sqlConnection.Close();
                 return null;
             }
