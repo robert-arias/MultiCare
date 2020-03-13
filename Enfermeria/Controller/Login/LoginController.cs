@@ -37,10 +37,10 @@ namespace Enfermeria.Controller.Login {
             frm_Login.txtUsuarioRecuperar.KeyDown += new KeyEventHandler(EnviarCodigoEnter);
             frm_Login.btnCancelarEnviarCodigo.Click += new EventHandler(CancelarMostrarLogin);
             frm_Login.btnCancelarIngresarCodigo.Click += new EventHandler(CancelarMostrarLogin);
-            frm_Login.txt1.KeyPress += new KeyPressEventHandler(IngresandoCodigo1);
-            frm_Login.txt2.KeyPress += new KeyPressEventHandler(IngresandoCodigo2);
-            frm_Login.txt3.KeyPress += new KeyPressEventHandler(IngresandoCodigo3);
-            frm_Login.txt4.KeyPress += new KeyPressEventHandler(IngresandoCodigo4);
+            frm_Login.txt1.KeyDown += new KeyEventHandler(IngresandoCodigo1);
+            frm_Login.txt2.KeyDown += new KeyEventHandler(IngresandoCodigo2);
+            frm_Login.txt3.KeyDown += new KeyEventHandler(IngresandoCodigo3);
+            frm_Login.txt4.KeyDown += new KeyEventHandler(IngresandoCodigo4);
             frm_Login.btnConfirmarCodigo.Click += new EventHandler(VerificarCodigo);
             frm_Login.btnCambiarContrasenia.Click += new EventHandler(CambiarContraseniaBoton);
             frm_Login.txtNuevaContrasenia.KeyDown += new KeyEventHandler(CambiarContraseniaEnter);
@@ -181,47 +181,59 @@ namespace Enfermeria.Controller.Login {
             }
         }
 
-        private void IngresandoCodigo1(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
+        private void IngresandoCodigo1(object sender, KeyEventArgs e) {
+            if (char.IsLetterOrDigit((char)e.KeyCode)) {
                 frm_Login.txt2.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt1.Text))
-                    frm_Login.txt2.Text = e.KeyChar.ToString();
+                if (frm_Login.txt1.Text.Length > 0) {
+                    e.SuppressKeyPress = true;
+                    frm_Login.txt2.Text = e.KeyCode.ToString();
+                }
             }
-            e.Handled = e.KeyChar == (char)Keys.Space;
+            else
+                e.SuppressKeyPress = e.KeyCode == Keys.Space;
         }
 
-        private void IngresandoCodigo2(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
+        private void IngresandoCodigo2(object sender, KeyEventArgs e) {
+            if (char.IsLetterOrDigit((char)e.KeyCode)) {
                 frm_Login.txt3.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt2.Text))
-                    frm_Login.txt3.Text = e.KeyChar.ToString();
+                if (frm_Login.txt2.Text.Length > 0) {
+                    e.SuppressKeyPress = true;
+                    frm_Login.txt3.Text = e.KeyCode.ToString();
+                }
             }
-
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+            else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) {
                 frm_Login.txt1.Focus();
             }
-            e.Handled = e.KeyChar == (char)Keys.Space;
+            else
+                e.Handled = e.KeyCode == Keys.Space;
         }
 
-        private void IngresandoCodigo3(object sender, KeyPressEventArgs e) {
-            if (char.IsLetterOrDigit(e.KeyChar)) {
+        private void IngresandoCodigo3(object sender, KeyEventArgs e) {
+            if (char.IsLetterOrDigit((char)e.KeyCode)) {
                 frm_Login.txt4.Focus();
-                if (!string.IsNullOrEmpty(frm_Login.txt3.Text))
-                    frm_Login.txt4.Text = e.KeyChar.ToString();
+                if (frm_Login.txt3.Text.Length > 0) {
+                    e.SuppressKeyPress = true;
+                    frm_Login.txt4.Text = e.KeyCode.ToString();
+                }
             }
-
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
+            else if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) {
                 frm_Login.txt2.Focus();
             }
-            e.Handled = e.KeyChar == (char)Keys.Space;
+            else
+                e.Handled = e.KeyCode == Keys.Space;
         }
 
-        private void IngresandoCodigo4(object sender, KeyPressEventArgs e) {
-            VerificarCodigoVerificacion();
-            if (e.KeyChar == (char)Keys.Back || e.KeyChar == (char)Keys.Delete) {
-                frm_Login.txt3.Focus();
+        private void IngresandoCodigo4(object sender, KeyEventArgs e) {
+            if (frm_Login.txt4.Text.Length > 0)
+                e.SuppressKeyPress = true;
+            else {
+                VerificarCodigoVerificacion();
+                if (e.KeyCode == Keys.Back || e.KeyCode == Keys.Delete) {
+                    frm_Login.txt3.Focus();
+                }
+                else
+                    e.Handled = e.KeyCode == Keys.Space;
             }
-            e.Handled = e.KeyChar == (char)Keys.Space;
         }
 
         private void MostrarConAnimacion(Control control, Animation tipo) {

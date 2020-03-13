@@ -134,16 +134,16 @@
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Medicamentos\CrystalReportMedicamentos.cs">
+    <Compile Include="View\Medicamentos\Reporte\CrystalReportMedicamentos.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportMedicamentos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Medicamentos\DataSetMedicamento.cs">
+    <Compile Include="View\Medicamentos\Reporte\DataSetMedicamento.cs">
       <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
     </Compile>
-    <Compile Include="View\Medicamentos\DataSetMedicamento.Designer.cs">
+    <Compile Include="View\Medicamentos\Reporte\DataSetMedicamento.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
@@ -178,13 +178,13 @@
     <Compile Include="View\Menu\FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Pacientes\CrystalReportPacientes.cs">
+    <Compile Include="View\Pacientes\Reporte\CrystalReportPacientes.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReportPacientes.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Pacientes\DataSetPacientes.Designer.cs">
+    <Compile Include="View\Pacientes\Reporte\DataSetPacientes.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPacientes.xsd</DependentUpon>
@@ -230,7 +230,7 @@
     <EmbeddedResource Include="View\Login\FRM_Login.resx">
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Medicamentos\CrystalReportMedicamentos.rpt">
+    <EmbeddedResource Include="View\Medicamentos\Reporte\CrystalReportMedicamentos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportMedicamentos.cs</LastGenOutput>
     </EmbeddedResource>
@@ -249,7 +249,7 @@
     <EmbeddedResource Include="View\Menu\FRM_Menu.resx">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Pacientes\CrystalReportPacientes.rpt">
+    <EmbeddedResource Include="View\Pacientes\Reporte\CrystalReportPacientes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportPacientes.cs</LastGenOutput>
     </EmbeddedResource>
@@ -278,26 +278,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="View\Medicamentos\DataSetMedicamento.xsc">
+    <None Include="View\Medicamentos\Reporte\DataSetMedicamento.xsc">
       <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
     </None>
-    <None Include="View\Medicamentos\DataSetMedicamento.xsd">
+    <None Include="View\Medicamentos\Reporte\DataSetMedicamento.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetMedicamento.Designer.cs</LastGenOutput>
     </None>
-    <None Include="View\Medicamentos\DataSetMedicamento.xss">
+    <None Include="View\Medicamentos\Reporte\DataSetMedicamento.xss">
       <DependentUpon>DataSetMedicamento.xsd</DependentUpon>
     </None>
-    <None Include="View\Pacientes\DataSetPacientes.xsc">
+    <None Include="View\Pacientes\Reporte\DataSetPacientes.xsc">
       <DependentUpon>DataSetPacientes.xsd</DependentUpon>
     </None>
-    <None Include="View\Pacientes\DataSetPacientes.xsd">
+    <None Include="View\Pacientes\Reporte\DataSetPacientes.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetPacientes.Designer.cs</LastGenOutput>
     </None>
-    <None Include="View\Pacientes\DataSetPacientes.xss">
+    <None Include="View\Pacientes\Reporte\DataSetPacientes.xss">
       <DependentUpon>DataSetPacientes.xsd</DependentUpon>
     </None>
   </ItemGroup>

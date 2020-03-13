@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Enfermeria.Controller.Pacientes;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Enfermeria.Controller.Pacientes;
 
-namespace Enfermeria.View.Pacientes
-{
+namespace Enfermeria.View.Pacientes {
     public partial class FRM_ConsultaPaciente : Form
     {
         ConsultarPacienteController consultarPacienteController;

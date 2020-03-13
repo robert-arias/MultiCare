@@ -6,10 +6,6 @@ namespace Enfermeria.Model {
 
         private SQLiteConnection connection;
 
-        /*public Conexion() {
-            Conectar();
-        }*/
-
         protected void Conectar() {
             if (!Directory.Exists("./Data")) {
                 Directory.CreateDirectory("./Data");

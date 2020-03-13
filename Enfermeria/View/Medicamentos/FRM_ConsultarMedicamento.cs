@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using CrystalDecisions.CrystalReports.Engine;
+﻿using CrystalDecisions.CrystalReports.Engine;
 using Enfermeria.Controller.Medicamentos;
+using Enfermeria.View.Medicamentos.Reporte;
+using System.Data;
+using System.IO;
+using System.Windows.Forms;
 
-namespace Enfermeria.View.Medicamentos
-{
+namespace Enfermeria.View.Medicamentos {
     public partial class FRM_ConsultarMedicamento : Form
     {
         ConsultarMedicamentoController consultarMedicamentoController;

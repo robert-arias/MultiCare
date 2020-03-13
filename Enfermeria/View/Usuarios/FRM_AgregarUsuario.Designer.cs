@@ -684,6 +684,7 @@
             this.bunifuLabel6.Text = "Contraseña";
             this.bunifuLabel6.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel6.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel6.Click += new System.EventHandler(this.bunifuLabel6_Click);
             // 
             // lbNombre
             // 
