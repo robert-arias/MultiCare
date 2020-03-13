@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Enfermeria.View.Prescripciones;
 
 namespace Enfermeria.Controller.Menu {
     public class MenuController {
@@ -17,6 +18,7 @@ namespace Enfermeria.Controller.Menu {
         private FRM_AgregarMedicamento frm_AgregarMedicamento;
         private FRM_ModificarMedicamento frm_ModificarMedicamento;
         private FRM_ConsultarMedicamento frm_ConsultarMedicamento;
+        private FRM_NuevaPrescripcion frm_NuevaPrescripcion;
         
 
         public MenuController(FRM_Menu frm_Menu) {
@@ -26,7 +28,8 @@ namespace Enfermeria.Controller.Menu {
             frm_ConsultarPaciente = new FRM_ConsultaPaciente();
             frm_AgregarMedicamento = new FRM_AgregarMedicamento();
             frm_ModificarMedicamento = new FRM_ModificarMedicamento();
-           frm_ConsultarMedicamento = new FRM_ConsultarMedicamento();
+            frm_ConsultarMedicamento = new FRM_ConsultarMedicamento();
+            frm_NuevaPrescripcion = new FRM_NuevaPrescripcion();
          
             AgregarEventos();
         }

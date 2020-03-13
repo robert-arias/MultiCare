@@ -132,6 +132,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(39, 50);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -141,6 +142,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 9);
@@ -151,6 +153,7 @@
             // 
             // bunifuLabel6
             // 
+            this.bunifuLabel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel6.AutoEllipsis = false;
             this.bunifuLabel6.CursorType = null;
             this.bunifuLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,6 +169,7 @@
             // 
             // bunifuLabel1
             // 
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel1.AutoEllipsis = false;
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +185,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.label1.ForeColor = System.Drawing.Color.Gray;
@@ -192,6 +197,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(39, 104);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -201,6 +207,7 @@
             // 
             // bunifuLabel2
             // 
+            this.bunifuLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,6 +225,7 @@
             // 
             this.txtCedula.AcceptsReturn = false;
             this.txtCedula.AcceptsTab = false;
+            this.txtCedula.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCedula.AnimationSpeed = 200;
             this.txtCedula.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtCedula.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -290,6 +298,7 @@
             // 
             // bunifuLabel3
             // 
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,6 +315,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.AllowToggling = false;
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLimpiar.AnimationSpeed = 200;
             this.btnLimpiar.AutoGenerateColors = false;
             this.btnLimpiar.BackColor = System.Drawing.Color.Transparent;
@@ -369,6 +379,7 @@
             // btnVerificar
             // 
             this.btnVerificar.AllowToggling = false;
+            this.btnVerificar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVerificar.AnimationSpeed = 200;
             this.btnVerificar.AutoGenerateColors = false;
             this.btnVerificar.BackColor = System.Drawing.Color.Transparent;
@@ -431,6 +442,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.label3.ForeColor = System.Drawing.Color.Gray;
@@ -443,6 +455,7 @@
             // bunifuButton1
             // 
             this.bunifuButton1.AllowToggling = false;
+            this.bunifuButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton1.AnimationSpeed = 200;
             this.bunifuButton1.AutoGenerateColors = false;
             this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
@@ -507,6 +520,7 @@
             // 
             this.txtNombre.AcceptsReturn = false;
             this.txtNombre.AcceptsTab = false;
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNombre.AnimationSpeed = 200;
             this.txtNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -579,6 +593,7 @@
             // 
             // bunifuLabel4
             // 
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -596,6 +611,7 @@
             // 
             this.txtApellidos.AcceptsReturn = false;
             this.txtApellidos.AcceptsTab = false;
+            this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtApellidos.AnimationSpeed = 200;
             this.txtApellidos.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtApellidos.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -668,6 +684,7 @@
             // 
             // bunifuLabel5
             // 
+            this.bunifuLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -683,6 +700,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(39, 350);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -692,6 +710,7 @@
             // 
             // bunifuLabel7
             // 
+            this.bunifuLabel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel7.AutoEllipsis = false;
             this.bunifuLabel7.CursorType = null;
             this.bunifuLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -709,6 +728,7 @@
             // 
             this.bunifuTextBox1.AcceptsReturn = false;
             this.bunifuTextBox1.AcceptsTab = false;
+            this.bunifuTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBox1.AnimationSpeed = 200;
             this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -781,6 +801,7 @@
             // 
             // bunifuLabel8
             // 
+            this.bunifuLabel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel8.AutoEllipsis = false;
             this.bunifuLabel8.CursorType = null;
             this.bunifuLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -797,6 +818,7 @@
             // bunifuButton2
             // 
             this.bunifuButton2.AllowToggling = false;
+            this.bunifuButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton2.AnimationSpeed = 200;
             this.bunifuButton2.AutoGenerateColors = false;
             this.bunifuButton2.BackColor = System.Drawing.Color.Transparent;
@@ -860,6 +882,7 @@
             // bunifuButton3
             // 
             this.bunifuButton3.AllowToggling = false;
+            this.bunifuButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton3.AnimationSpeed = 200;
             this.bunifuButton3.AutoGenerateColors = false;
             this.bunifuButton3.BackColor = System.Drawing.Color.Transparent;
@@ -923,6 +946,7 @@
             // bunifuButton4
             // 
             this.bunifuButton4.AllowToggling = false;
+            this.bunifuButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton4.AnimationSpeed = 200;
             this.bunifuButton4.AutoGenerateColors = false;
             this.bunifuButton4.BackColor = System.Drawing.Color.Transparent;
@@ -987,6 +1011,7 @@
             // 
             this.bunifuTextBox2.AcceptsReturn = false;
             this.bunifuTextBox2.AcceptsTab = false;
+            this.bunifuTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBox2.AnimationSpeed = 200;
             this.bunifuTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1059,6 +1084,7 @@
             // 
             // bunifuLabel9
             // 
+            this.bunifuLabel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel9.AutoEllipsis = false;
             this.bunifuLabel9.CursorType = null;
             this.bunifuLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1074,6 +1100,7 @@
             // 
             // bunifuLabel10
             // 
+            this.bunifuLabel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel10.AutoEllipsis = false;
             this.bunifuLabel10.CursorType = null;
             this.bunifuLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1091,6 +1118,7 @@
             // 
             this.bunifuTextBox3.AcceptsReturn = false;
             this.bunifuTextBox3.AcceptsTab = false;
+            this.bunifuTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBox3.AnimationSpeed = 200;
             this.bunifuTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1165,6 +1193,7 @@
             // 
             this.bunifuTextBox4.AcceptsReturn = false;
             this.bunifuTextBox4.AcceptsTab = false;
+            this.bunifuTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuTextBox4.AnimationSpeed = 200;
             this.bunifuTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.bunifuTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -1237,6 +1266,7 @@
             // 
             // bunifuLabel11
             // 
+            this.bunifuLabel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel11.AutoEllipsis = false;
             this.bunifuLabel11.CursorType = null;
             this.bunifuLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1252,6 +1282,7 @@
             // 
             // bunifuLabel12
             // 
+            this.bunifuLabel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel12.AutoEllipsis = false;
             this.bunifuLabel12.CursorType = null;
             this.bunifuLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1267,6 +1298,7 @@
             // 
             // txtFecha
             // 
+            this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFecha.BorderRadius = 5;
             this.txtFecha.Color = System.Drawing.Color.Silver;
             this.txtFecha.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
@@ -1291,6 +1323,7 @@
             // bunifuButton5
             // 
             this.bunifuButton5.AllowToggling = false;
+            this.bunifuButton5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton5.AnimationSpeed = 200;
             this.bunifuButton5.AutoGenerateColors = false;
             this.bunifuButton5.BackColor = System.Drawing.Color.Transparent;
@@ -1354,6 +1387,7 @@
             // bunifuButton6
             // 
             this.bunifuButton6.AllowToggling = false;
+            this.bunifuButton6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton6.AnimationSpeed = 200;
             this.bunifuButton6.AutoGenerateColors = false;
             this.bunifuButton6.BackColor = System.Drawing.Color.Transparent;
@@ -1420,6 +1454,7 @@
             this.dgvBusqueda.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvBusqueda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvBusqueda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBusqueda.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1483,6 +1518,7 @@
             // btnCancelar
             // 
             this.btnCancelar.AllowToggling = false;
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCancelar.AnimationSpeed = 200;
             this.btnCancelar.AutoGenerateColors = false;
             this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
@@ -1546,6 +1582,7 @@
             // btnAgregar
             // 
             this.btnAgregar.AllowToggling = false;
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregar.AnimationSpeed = 200;
             this.btnAgregar.AutoGenerateColors = false;
             this.btnAgregar.BackColor = System.Drawing.Color.Transparent;
@@ -1655,6 +1692,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
             this.Name = "FRM_NuevaPrescripcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nueva prescripción";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
