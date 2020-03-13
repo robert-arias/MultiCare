@@ -213,6 +213,12 @@
     <Compile Include="View\Pacientes\FRM_ReportePacientes.Designer.cs">
       <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Prescripciones\FRM_NuevaPrescripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Prescripciones\FRM_NuevaPrescripcion.Designer.cs">
+      <DependentUpon>FRM_NuevaPrescripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuarios\FRM_AgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     <EmbeddedResource Include="View\Pacientes\FRM_ReportePacientes.resx">
       <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Prescripciones\FRM_NuevaPrescripcion.resx">
+      <DependentUpon>FRM_NuevaPrescripcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Usuarios\FRM_AgregarUsuario.resx">
       <DependentUpon>FRM_AgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,7 +315,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\Prescripciones\" />
-    <Folder Include="View\Prescripciones\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
