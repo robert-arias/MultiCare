@@ -6,10 +6,12 @@ using System.Windows.Forms;
 namespace Enfermeria.View.Prescripciones.ConsultarPacientes {
     public partial class FRM_ConsultarPacientesPrescripcion : Form {
 
+        private FRM_NuevaPrescripcion frm_NuevaPrescripcion;
         private ConsultarPacientesPrescripcionController controller;
 
-        public FRM_ConsultarPacientesPrescripcion() {
+        public FRM_ConsultarPacientesPrescripcion(FRM_NuevaPrescripcion frm_NuevaPrescripcion) {
             InitializeComponent();
+            this.frm_NuevaPrescripcion = frm_NuevaPrescripcion;
             controller = new ConsultarPacientesPrescripcionController(this);
         }
 
@@ -27,6 +29,24 @@ namespace Enfermeria.View.Prescripciones.ConsultarPacientes {
                     }
                 }
             }
+        }
+
+        public void PacienteSeleccionado(int index) {
+            if (index > -1) {
+                DataGridViewRow row = dgvBusqueda.Rows[index];
+                string cedula = row.Cells["cedula"].Value.ToString();
+                string nombreCompleto = row.Cells["nombre"].Value.ToString() + " " + 
+                    row.Cells["apellidos"].Value.ToString();
+                string edad = row.Cells["edad"].Value.ToString();
+                frm_NuevaPrescripcion.SetPacienteSeleccionado(cedula, nombreCompleto, edad);
+                Hide();
+                LimpiarTodo();
+            }
+        }
+
+        private void LimpiarTodo() {
+            LimpiarBusquedas();
+            txtBuscar.Text = "";
         }
 
         public void LimpiarBusquedas() {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Enfermeria.View.Prescripciones;
+using System.Windows.Forms;
 
 namespace Enfermeria.Controller.Menu {
     public class MenuController {
@@ -62,7 +63,20 @@ namespace Enfermeria.Controller.Menu {
             frm_ModificarMedicamento.FormClosed += CerrarModificarMedicamento;
 
             frm_Menu.btnPrescripciones.Click += new EventHandler(CambiarSubMenu);
+            frm_Menu.btnAgregarPrescripcion.Click += new EventHandler(OpenNuevaPrescripcion);
+            frm_NuevaPrescripcion.FormClosed += CerrarNuevaPrescripcion;
+
             frm_Menu.btnMenu.Click += new EventHandler(CambiarSubMenu);
+        }
+
+        private void CerrarNuevaPrescripcion(object sender, FormClosedEventArgs e) {
+            frm_NuevaPrescripcion.Hide();
+            frm_Menu.Show();
+        }
+
+        private void OpenNuevaPrescripcion(object sender, EventArgs e) {
+            frm_Menu.Hide();
+            frm_NuevaPrescripcion.Show();
         }
 
         private void CambiarSubMenu(object sender, EventArgs e) {
@@ -73,8 +87,7 @@ namespace Enfermeria.Controller.Menu {
         private void OpenAgregarPaciente(object sender, EventArgs e)
         {
             frm_Menu.Hide();
-            //frm_AgregarPaciente.Show();
-            frm_NuevaPrescripcion.Show();
+            frm_AgregarPaciente.Show();
             frm_AgregarPaciente.EstadoInicial();
         }
 

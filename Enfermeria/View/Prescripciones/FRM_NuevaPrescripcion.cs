@@ -12,11 +12,17 @@ namespace Enfermeria.View.Prescripciones {
         public FRM_NuevaPrescripcion() {
             InitializeComponent();
             controller = new NuevaPrescripcionController(this);
-            frm_ConsultarPacientes = new FRM_ConsultarPacientesPrescripcion();
+            frm_ConsultarPacientes = new FRM_ConsultarPacientesPrescripcion(this);
         }
 
         public void AbrirConsultarPacientes() {
             frm_ConsultarPacientes.ShowDialog();
+        }
+
+        public void SetPacienteSeleccionado(string cedula, string nombreCompleto, string edad) {
+            txtCedula.Text = cedula;
+            txtNombreCompleto.Text = nombreCompleto;
+            txtEdad.Text = edad;
         }
     }
 }

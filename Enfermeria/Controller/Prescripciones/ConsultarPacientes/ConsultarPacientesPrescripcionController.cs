@@ -25,7 +25,7 @@ namespace Enfermeria.Controller.Prescripciones {
         }
 
         private void SeleccionarPaciente(object sender, DataGridViewCellEventArgs e) {
-            throw new NotImplementedException();
+            frm_ConsultarPacientes.PacienteSeleccionado(e.RowIndex);
         }
 
         private void CerrarVentana(object sender, FormClosedEventArgs e) {

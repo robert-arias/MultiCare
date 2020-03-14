@@ -638,7 +638,7 @@
             this.btnAgregarPrescripcion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnAgregarPrescripcion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgregarPrescripcion.BorderRadius = 0;
-            this.btnAgregarPrescripcion.ButtonText = "   Agregar";
+            this.btnAgregarPrescripcion.ButtonText = "   Nueva";
             this.btnAgregarPrescripcion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregarPrescripcion.DisabledColor = System.Drawing.Color.Gray;
             this.btnAgregarPrescripcion.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -663,7 +663,7 @@
             this.btnAgregarPrescripcion.selected = false;
             this.btnAgregarPrescripcion.Size = new System.Drawing.Size(241, 86);
             this.btnAgregarPrescripcion.TabIndex = 7;
-            this.btnAgregarPrescripcion.Text = "   Agregar";
+            this.btnAgregarPrescripcion.Text = "   Nueva";
             this.btnAgregarPrescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarPrescripcion.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnAgregarPrescripcion.TextFont = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -700,9 +700,6 @@
         public Bunifu.Framework.UI.BunifuFlatButton btnCerrarSesion;
         public Bunifu.Framework.UI.BunifuFlatButton btnPrescripciones;
         public Bunifu.Framework.UI.BunifuFlatButton btnMedicamentos;
-        private Bunifu.Framework.UI.BunifuFlatButton btnBuscarPrescripcion;
-        private Bunifu.Framework.UI.BunifuFlatButton btnModificarPrescripcion;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAgregarPrescripcion;
         private System.Windows.Forms.TabControl subMenu;
         private System.Windows.Forms.TabPage tbMenu;
         private System.Windows.Forms.TabPage tbPacientes;
@@ -714,5 +711,8 @@
         public Bunifu.Framework.UI.BunifuFlatButton btnBuscarPacientes;
         public Bunifu.Framework.UI.BunifuFlatButton btnModificarPacientes;
         public Bunifu.Framework.UI.BunifuFlatButton btnAgregarPacientes;
+        public Bunifu.Framework.UI.BunifuFlatButton btnBuscarPrescripcion;
+        public Bunifu.Framework.UI.BunifuFlatButton btnModificarPrescripcion;
+        public Bunifu.Framework.UI.BunifuFlatButton btnAgregarPrescripcion;
     }
 }

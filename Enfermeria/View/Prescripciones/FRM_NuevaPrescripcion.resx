@@ -190,7 +190,7 @@
         /gJkPVKddWlXEQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtNombre.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtNombreCompleto.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAdsAAAArCAYAAAAwnyKZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFYSURBVHhe7dcxTsNAFEXRKVkaG2AJLII9ULEaOsexnSoS
@@ -202,7 +202,7 @@
         bZrmqmYWAMgp5Qux8OD/fPbGAwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="txtApellidos.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtEdad.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAdsAAAArCAYAAAAwnyKZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFYSURBVHhe7dcxTsNAFEXRKVkaG2AJLII9ULEaOsexnSoS
