@@ -15,7 +15,6 @@ namespace Enfermeria.Controller {
             this.frm_AgregarPaciente = frm_AgregarPaciente;
             conexion = new ConexionPacientes();
             AgregarEventosPaciente();
-
         }
 
         private void AgregarEventosPaciente()

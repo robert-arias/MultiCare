@@ -26,6 +26,7 @@ namespace Enfermeria.Model {
                 return data;
             }
             catch (SQLiteException e) {
+                sqlConnection.Close();
                 Debug.WriteLine(e.ToString());
                 throw;
             }
@@ -44,6 +45,7 @@ namespace Enfermeria.Model {
                 return data;
             }
             catch (SQLiteException e) {
+                sqlConnection.Close();
                 Debug.WriteLine(e.ToString());
                 throw;
             }
@@ -71,6 +73,7 @@ namespace Enfermeria.Model {
                 sqlConnection.Close();
             }
             catch (SQLiteException e) {
+                sqlConnection.Close();
                 Debug.WriteLine(e.ToString());
                 throw;
             }

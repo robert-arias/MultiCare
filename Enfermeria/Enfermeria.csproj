@@ -106,9 +106,12 @@
     <Compile Include="Controller\Pacientes\AgregarPacienteController.cs" />
     <Compile Include="Controller\Pacientes\ConsultarPacienteController.cs" />
     <Compile Include="Controller\Pacientes\ModificarPacienteController.cs" />
+    <Compile Include="Controller\Prescripciones\ConsultarPacientes\ConsultarPacientesPrescripcionController.cs" />
+    <Compile Include="Controller\Prescripciones\NuevaPrescripcionController.cs" />
     <Compile Include="Model\ConexionMedicamentos.cs" />
     <Compile Include="Model\Conexion.cs" />
     <Compile Include="Model\ConexionPacientes.cs" />
+    <Compile Include="Model\ConexionPacientesPrescripcion.cs" />
     <Compile Include="Model\ConexionUsuarios.cs" />
     <Compile Include="Model\Medicamento.cs" />
     <Compile Include="Model\Paciente.cs" />
@@ -213,11 +216,11 @@
     <Compile Include="View\Pacientes\FRM_ReportePacientes.Designer.cs">
       <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientes.cs">
+    <Compile Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientesPrescripcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientes.Designer.cs">
-      <DependentUpon>FRM_ConsultarPacientes.cs</DependentUpon>
+    <Compile Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientesPrescripcion.Designer.cs">
+      <DependentUpon>FRM_ConsultarPacientesPrescripcion.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Prescripciones\FRM_NuevaPrescripcion.cs">
       <SubType>Form</SubType>
@@ -277,8 +280,8 @@
     <EmbeddedResource Include="View\Pacientes\FRM_ReportePacientes.resx">
       <DependentUpon>FRM_ReportePacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientes.resx">
-      <DependentUpon>FRM_ConsultarPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="View\Prescripciones\ConsultarPacientes\FRM_ConsultarPacientesPrescripcion.resx">
+      <DependentUpon>FRM_ConsultarPacientesPrescripcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Prescripciones\FRM_NuevaPrescripcion.resx">
       <DependentUpon>FRM_NuevaPrescripcion.cs</DependentUpon>
@@ -322,9 +325,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\Prescripciones\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Image1.bmp" />
   </ItemGroup>
