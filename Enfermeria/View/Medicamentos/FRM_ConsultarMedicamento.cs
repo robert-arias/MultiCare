@@ -44,12 +44,7 @@ namespace Enfermeria.View.Medicamentos {
 
         public bool Verificar()
         {
-            if (!string.IsNullOrEmpty(txtBuscar.Text))
-            {
-                return true;
-            }
-            else
-                return false;
+            return !string.IsNullOrEmpty(txtBuscar.Text);
         }
 
         public void FillBusqueda(DataSet medicamentos)

@@ -16,8 +16,7 @@ namespace Enfermeria.View.Prescripciones {
         }
 
         public void AbrirConsultarPacientes() {
-            Hide();
-            frm_ConsultarPacientes.Show();
+            frm_ConsultarPacientes.ShowDialog();
         }
     }
 }

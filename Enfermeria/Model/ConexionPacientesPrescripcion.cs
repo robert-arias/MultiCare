@@ -20,7 +20,7 @@ namespace Enfermeria.Model {
         public DataTable GetResultadosBusqueda(string nombreCompleto) {
             nombreCompleto = "%" + nombreCompleto + "%";
             string busqueda = "select cedula, nombre, apellidos, edad from " +
-                "(select cedula, nombre, apellidos, edad, nombre || ' ' || apellidos as fullname from usuarios) " +
+                "(select cedula, nombre, apellidos, edad, nombre || ' ' || apellidos as fullname from pacientes) " +
                 "where fullname like @nombreCompleto";
             try {
                 sqlConnection.Open();

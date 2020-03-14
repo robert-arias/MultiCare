@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 using Enfermeria.Model;
 using Enfermeria.View.Prescripciones.ConsultarPacientes;
 
@@ -17,6 +18,18 @@ namespace Enfermeria.Controller.Prescripciones {
 
         private void AgregarEventos() {
             frm_ConsultarPacientes.btnBuscar.Click += new EventHandler(RealizarConsulta);
+            frm_ConsultarPacientes.FormClosed += CerrarVentana;
+
+            frm_ConsultarPacientes.dgvBusqueda.CellDoubleClick += new DataGridViewCellEventHandler(
+                SeleccionarPaciente);
+        }
+
+        private void SeleccionarPaciente(object sender, DataGridViewCellEventArgs e) {
+            throw new NotImplementedException();
+        }
+
+        private void CerrarVentana(object sender, FormClosedEventArgs e) {
+            frm_ConsultarPacientes.Hide();
         }
 
         private void RealizarConsulta(object sender, EventArgs e) {

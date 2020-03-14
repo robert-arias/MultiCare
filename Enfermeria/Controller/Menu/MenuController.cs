@@ -73,7 +73,8 @@ namespace Enfermeria.Controller.Menu {
         private void OpenAgregarPaciente(object sender, EventArgs e)
         {
             frm_Menu.Hide();
-            frm_AgregarPaciente.Show();
+            //frm_AgregarPaciente.Show();
+            frm_NuevaPrescripcion.Show();
             frm_AgregarPaciente.EstadoInicial();
         }
 
@@ -82,8 +83,6 @@ namespace Enfermeria.Controller.Menu {
             frm_AgregarPaciente.Hide();
             frm_AgregarPaciente.EstadoInicial();
             frm_Menu.Show();
-
-
         }
 
         private void CancelarAgregarPaciente(object sender, EventArgs e)

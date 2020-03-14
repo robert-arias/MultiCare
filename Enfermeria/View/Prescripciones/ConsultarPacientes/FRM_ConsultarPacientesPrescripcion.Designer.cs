@@ -44,12 +44,12 @@
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvBusqueda = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -317,7 +317,7 @@
             this.dgvBusqueda.ColumnHeadersHeight = 50;
             this.dgvBusqueda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cedula,
-            this.nombre_paciente,
+            this.nombre,
             this.apellidos,
             this.edad});
             this.dgvBusqueda.DoubleBuffered = true;
@@ -330,37 +330,11 @@
             this.dgvBusqueda.Name = "dgvBusqueda";
             this.dgvBusqueda.ReadOnly = true;
             this.dgvBusqueda.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBusqueda.RowHeadersVisible = false;
             this.dgvBusqueda.RowTemplate.Height = 24;
+            this.dgvBusqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBusqueda.Size = new System.Drawing.Size(707, 277);
             this.dgvBusqueda.TabIndex = 141;
-            // 
-            // cedula
-            // 
-            this.cedula.DataPropertyName = "cedula";
-            this.cedula.HeaderText = "Cédula";
-            this.cedula.Name = "cedula";
-            this.cedula.ReadOnly = true;
-            // 
-            // nombre_paciente
-            // 
-            this.nombre_paciente.DataPropertyName = "nombre_paciente";
-            this.nombre_paciente.HeaderText = "Nombre";
-            this.nombre_paciente.Name = "nombre_paciente";
-            this.nombre_paciente.ReadOnly = true;
-            // 
-            // apellidos
-            // 
-            this.apellidos.DataPropertyName = "apellidos";
-            this.apellidos.HeaderText = "Apellidos";
-            this.apellidos.Name = "apellidos";
-            this.apellidos.ReadOnly = true;
-            // 
-            // edad
-            // 
-            this.edad.DataPropertyName = "edad";
-            this.edad.HeaderText = "Edad";
-            this.edad.Name = "edad";
-            this.edad.ReadOnly = true;
             // 
             // label1
             // 
@@ -380,7 +354,35 @@
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this.dgvBusqueda;
             // 
-            // FRM_ConsultarPacientes
+            // cedula
+            // 
+            this.cedula.DataPropertyName = "cedula";
+            this.cedula.HeaderText = "Cédula";
+            this.cedula.Name = "cedula";
+            this.cedula.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellidos
+            // 
+            this.apellidos.DataPropertyName = "apellidos";
+            this.apellidos.HeaderText = "Apellidos";
+            this.apellidos.Name = "apellidos";
+            this.apellidos.ReadOnly = true;
+            // 
+            // edad
+            // 
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "Edad";
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
+            // FRM_ConsultarPacientesPrescripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -395,8 +397,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuLabel2);
             this.MaximizeBox = false;
-            this.Name = "FRM_ConsultarPacientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Name = "FRM_ConsultarPacientesPrescripcion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar paciente por nombre";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusqueda)).EndInit();
             this.ResumeLayout(false);
@@ -412,12 +414,12 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnBuscar;
         public Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtBuscar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBusqueda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad;
+        public Bunifu.Framework.UI.BunifuCustomDataGrid dgvBusqueda;
     }
 }
